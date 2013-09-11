@@ -1,0 +1,5 @@
+name = Flag dual
+description = Flag dual.
+core = 7.x
+dependencies[] = flag
+scripts[] = flag_dual.js

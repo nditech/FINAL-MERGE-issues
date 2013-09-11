@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Town Hall feature strongarm feature.
+ */
+
+include_once 'town_hall_feature_strongarm.features.inc';

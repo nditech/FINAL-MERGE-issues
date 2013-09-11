@@ -1,0 +1,34 @@
+; town_hall make file for local development
+core = "7.x"
+api = "2"
+
+projects[drupal][version] = "7.x"
+; include the d.o. profile base
+includes[] = "drupal-org.make"
+
+; +++++ TODO modules without versions +++++
+
+projects[flag_dual][version] = "" ; TODO add version
+projects[flag_dual][subdir] = "custom"
+
+projects[issue_random][version] = "" ; TODO add version
+projects[issue_random][subdir] = "custom"
+
+projects[main_menu][version] = "" ; TODO add version
+projects[main_menu][subdir] = "custom"
+
+projects[newsletter_email_validate][version] = "" ; TODO add version
+projects[newsletter_email_validate][subdir] = "custom"
+
+projects[questions_block][version] = "" ; TODO add version
+projects[questions_block][subdir] = "custom"
+
+projects[questions_comments][version] = "" ; TODO add version
+projects[questions_comments][subdir] = "custom"
+
+projects[town_hall_blocks][version] = "" ; TODO add version
+projects[town_hall_blocks][subdir] = "custom"
+
+projects[video_view_count][version] = "" ; TODO add version
+projects[video_view_count][subdir] = "custom"
+

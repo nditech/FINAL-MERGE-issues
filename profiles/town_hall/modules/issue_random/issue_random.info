@@ -1,0 +1,4 @@
+name = Issue random
+description = Issue random
+core = 7.x
+dependencies[] = views

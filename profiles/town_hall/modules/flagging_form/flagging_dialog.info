@@ -1,0 +1,13 @@
+name = Flag dialog
+description = Makes the flag form show in a dialog box.
+core = 7.x
+package = Flags
+dependencies[] = flagging_form
+dependencies[] = dialog
+
+; Information added by drupal.org packaging script on 2013-04-22
+version = "7.x-3.x-dev"
+core = "7.x"
+project = "flagging_form"
+datestamp = "1366633167"
+

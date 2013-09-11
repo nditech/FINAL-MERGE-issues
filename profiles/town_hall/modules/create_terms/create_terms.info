@@ -1,0 +1,5 @@
+name = Create terms
+description = Create terms.
+core = 7.x
+dependencies[] = taxonomy
+dependencies[] = taxonomy_manager
