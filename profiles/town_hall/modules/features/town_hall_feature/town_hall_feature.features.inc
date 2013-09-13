@@ -98,11 +98,11 @@ function town_hall_feature_flag_default_flags() {
     'access_author' => '',
     'show_contextual_link' => FALSE,
     'i18n' => 0,
-    'api_version' => 3,
     'module' => 'town_hall_feature',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 3,
   );
   // Exported flag: "Like video".
   $flags['like'] = array(
@@ -134,11 +134,11 @@ function town_hall_feature_flag_default_flags() {
     'access_author' => '',
     'show_contextual_link' => 0,
     'i18n' => 0,
-    'api_version' => 3,
     'module' => 'town_hall_feature',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 3,
   );
   // Exported flag: "Like questions".
   $flags['like_questions'] = array(
@@ -171,11 +171,11 @@ function town_hall_feature_flag_default_flags() {
     'access_author' => '',
     'show_contextual_link' => 0,
     'i18n' => 0,
-    'api_version' => 3,
     'module' => 'town_hall_feature',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 3,
   );
   // Exported flag: "Dislike video".
   $flags['unlike'] = array(
@@ -208,11 +208,11 @@ function town_hall_feature_flag_default_flags() {
     'access_author' => '',
     'show_contextual_link' => 0,
     'i18n' => 0,
-    'api_version' => 3,
     'module' => 'town_hall_feature',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 3,
   );
   // Exported flag: "Unlike questions".
   $flags['unlike_questions'] = array(
@@ -245,11 +245,11 @@ function town_hall_feature_flag_default_flags() {
     'access_author' => '',
     'show_contextual_link' => 0,
     'i18n' => 0,
-    'api_version' => 3,
     'module' => 'town_hall_feature',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 3,
   );
   return $flags;
 

@@ -114,11 +114,54 @@ function profiler_system_info_alter(&$info, $file, $type) {
 function profiler_install_profile_complete(&$install_state) {
   $profile_name = $install_state['parameters']['profile'];
   $config = profiler_v2_load_config($profile_name);
+  function town_hall_blocks_block_info_alter(&$blocks, $theme, $code_blocks) {
+    if ($theme != 'townhalltheme') {
+      return;
+    }
+    if (isset($blocks['views'])) {
 
-  // Disable all DB blocks
+      if (isset($blocks['views']['candidates_videos-block'])) {
+        $blocks['views']['candidates_videos-block']['status'] = 1;
+        $blocks['views']['candidates_videos-block']['region'] = 'content';
+      }
+
+      if (isset($blocks['views']['th_party_page_videos-block'])) {
+        $blocks['views']['th_party_page_videos-block']['status'] = 1;
+        $blocks['views']['th_party_page_videos-block']['region'] = 'content';
+      }
+
+      if (isset($blocks['views']['issues_videos-block'])) {
+        $blocks['views']['issues_videos-block']['status'] = 1;
+        $blocks['views']['issues_videos-block']['region'] = 'content';
+      }
+
+      if (isset($blocks['views']['all_questions_block-block'])) {
+        $blocks['views']['all_questions_block-block']['status'] = 1;
+        $blocks['views']['all_questions_block-block']['region'] = 'sidebar_first';
+      }
+
+      if (isset($blocks['views']['th_ef_newsletter_signup-block'])) {
+        $blocks['views']['th_ef_newsletter_signup-block']['status'] = 1;
+        $blocks['views']['th_ef_newsletter_signup-block']['region'] = 'footer';
+      }
+    }
+
+    if (isset($blocks['user']) && isset($blocks['user']['login'])) {
+      $blocks['user']['login']['status'] = 1;
+      $blocks['user']['login']['region'] = 'sidebar_second';
+    }
+
+    if (isset($blocks['quicktabs']) && isset($blocks['quicktabs']['most_shared_watched_tabs'])) {
+      $blocks['quicktabs']['most_shared_watched_tabs']['status'] = 1;
+      $blocks['quicktabs']['most_shared_watched_tabs']['region'] = 'sidebar_second';
+    }
+  }
+//  Disable all DB blocks
 //  if (module_exists('block')) {
 //    db_query("UPDATE {block} SET status = 0, region = ''");
 //  }
+
+  theme_enable(array('townhalltheme'));
 
   // We flush caches at the beginning to ensure that any necessary module
   // tasks, such as Features component rebuilding, is complete before the
