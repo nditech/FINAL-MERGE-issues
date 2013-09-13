@@ -4,14 +4,12 @@ function questions_block_block_info() {
   $block['questions_block'] = array(
     'info' => t('Ask a question'),
     'cache' => DRUPAL_NO_CACHE,
-    'region' => 'sidebar_second',
     'status' => 1,
   );
 
   $block['questions_block_user'] = array(
     'info' => t('User questions as votes'),
     'cache' => DRUPAL_NO_CACHE,
-    'region' => 'sidebar_second',
     'status' => 1,
   );
 

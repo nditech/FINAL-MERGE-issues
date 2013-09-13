@@ -21,7 +21,7 @@ function town_hall_feature_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'auto_entitylabel_pattern_node_candidate';
-  $strongarm->value = '[node:field_th_first_name] [node:field_th_last_name]';
+  $strongarm->value = '[node:field-th-first-name] [node:field-th-last-name]';
   $export['auto_entitylabel_pattern_node_candidate'] = $strongarm;
 
   $strongarm = new stdClass();

@@ -114,6 +114,7 @@ function profiler_system_info_alter(&$info, $file, $type) {
 function profiler_install_profile_complete(&$install_state) {
   $profile_name = $install_state['parameters']['profile'];
   $config = profiler_v2_load_config($profile_name);
+
   function town_hall_blocks_block_info_alter(&$blocks, $theme, $code_blocks) {
     if ($theme != 'townhalltheme') {
       return;
@@ -138,6 +139,7 @@ function profiler_install_profile_complete(&$install_state) {
       if (isset($blocks['views']['all_questions_block-block'])) {
         $blocks['views']['all_questions_block-block']['status'] = 1;
         $blocks['views']['all_questions_block-block']['region'] = 'sidebar_first';
+        $blocks['views']['all_questions_block-block']['pages'] = 'all-questions' . PHP_EOL . 'all-questions/issue/*' . PHP_EOL;
       }
 
       if (isset($blocks['views']['th_ef_newsletter_signup-block'])) {
@@ -154,6 +156,40 @@ function profiler_install_profile_complete(&$install_state) {
     if (isset($blocks['quicktabs']) && isset($blocks['quicktabs']['most_shared_watched_tabs'])) {
       $blocks['quicktabs']['most_shared_watched_tabs']['status'] = 1;
       $blocks['quicktabs']['most_shared_watched_tabs']['region'] = 'sidebar_second';
+      $blocks['quicktabs']['most_shared_watched_tabs']['weight'] = 1;
+    }
+
+    if (isset($blocks['town_hall_blocks'])) {
+
+      if (isset($blocks['town_hall_blocks']['th_block_search'])) {
+        $blocks['town_hall_blocks']['th_block_search']['region'] = 'header';
+      }
+
+      if (isset($blocks['town_hall_blocks']['th_block_social_links'])) {
+        $blocks['town_hall_blocks']['th_block_social_links']['region'] = 'sidebar_second';
+      }
+
+      if (isset($blocks['town_hall_blocks']['th_block_social_links_footer'])) {
+        $blocks['town_hall_blocks']['th_block_social_links_footer']['region'] = 'footer';
+      }
+
+      if (isset($blocks['town_hall_blocks']['th_block_share_this'])) {
+        $blocks['town_hall_blocks']['th_block_share_this']['region'] = 'header';
+      }
+
+      if (isset($blocks['town_hall_blocks']['th_block_partners'])) {
+        $blocks['town_hall_blocks']['th_block_partners']['region'] = 'sidebar_second';
+      }
+    }
+
+    if (isset($blocks['questions_block'])) {
+      if (isset($blocks['questions_block']['questions_block'])) {
+        $blocks['questions_block']['questions_block']['region'] = 'sidebar_second';
+      }
+
+      if (isset($blocks['questions_block']['questions_block_user'])) {
+        $blocks['questions_block']['questions_block_user']['region'] = 'sidebar_second';
+      }
     }
   }
 //  Disable all DB blocks
@@ -162,6 +198,8 @@ function profiler_install_profile_complete(&$install_state) {
 //  }
 
   theme_enable(array('townhalltheme'));
+
+  module_enable( array('create_terms'), true);
 
   // We flush caches at the beginning to ensure that any necessary module
   // tasks, such as Features component rebuilding, is complete before the

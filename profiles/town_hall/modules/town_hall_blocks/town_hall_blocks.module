@@ -6,25 +6,21 @@ function town_hall_blocks_block_info() {
     'info' => t('Town hall: Search'),
     'cache' => DRUPAL_NO_CACHE,
     'status' => 1,
-    'region' => 'header',
   );
 
   $blocks['th_block_social_links'] = array(
     'info' => t('Town hall: TH Social links (Footer)'),
     'status' => 1,
-    'region' => 'sidebar_second',
   );
 
   $blocks['th_block_social_links_footer'] = array(
     'info' => t('Town hall: TH Social links (Footer)'),
     'status' => 1,
-    'region' => 'footer',
   );
 
   $blocks['th_block_share_this'] = array(
     'info' => t('Town hall: Share this'),
     'status' => 1,
-    'region' => 'header',
   );
 
   $blocks['th_block_partners'] = array(
@@ -124,25 +120,5 @@ function town_hall_blocks_block_save($delta = '', $edit = array()) {
   if (isset($edit[$delta]['values']) && isset($edit[$delta]['format'])) {
     variable_set($delta . '_content', $edit[$delta]['values']);
     variable_set($delta . '_content', $edit[$delta]['format']);
-  }
-}
-
-function town_hall_blocks_block_info_alter(&$blocks, $theme, $code_blocks) {
-  if (isset($blocks['views'])) {
-
-    if (isset($blocks['views']['candidates_videos-block'])) {
-      $blocks['views']['candidates_videos-block']['status'] = 1;
-      $blocks['views']['candidates_videos-block']['region'] = 'content';
-    }
-
-    if (isset($blocks['views']['th_party_page_videos-block'])) {
-      $blocks['views']['th_party_page_videos-block']['status'] = 1;
-      $blocks['views']['th_party_page_videos-block']['region'] = 'content';
-    }
-
-    if (isset($blocks['views']['issues_videos-block'])) {
-      $blocks['views']['issues_videos-block']['status'] = 1;
-      $blocks['views']['issues_videos-block']['region'] = 'content';
-    }
   }
 }
