@@ -10,6 +10,32 @@
 function town_hall_feature_file_default_displays() {
   $export = array();
 
+  //
+
+  $display = new stdClass();
+  $display->api_version = 1;
+  $display->status = TRUE;
+  $display->weight = -99;
+  $display->settings = array(
+    'image_style' => 'thumbnail'
+  );
+  $display->name = "video__preview__media_vimeo_image";
+  $export['video__preview__media_vimeo_image'] = $display;
+
+  //
+
+  $display = new stdClass();
+  $display->api_version = 1;
+  $display->status = TRUE;
+  $display->weight = -99;
+  $display->settings = array(
+    'image_style' => 'thumbnail'
+  );
+  $display->name = "video__preview__media_youtube_image";
+  $export['video__preview__media_youtube_image'] = $display;
+
+  //
+
   $file_display = new stdClass();
   $file_display->api_version = 1;
   $file_display->name = 'image__full__file_image';
