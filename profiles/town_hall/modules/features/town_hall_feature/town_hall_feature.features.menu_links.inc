@@ -10,66 +10,6 @@
 function town_hall_feature_menu_default_menu_links() {
   $menu_links = array();
 
-  // Exported menu link: main-menu:<front>
-  $menu_links['main-menu:<front>'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => '<front>',
-    'router_path' => '',
-    'link_title' => 'Home',
-    'options' => array(),
-    'module' => 'menu',
-    'hidden' => 1,
-    'external' => 1,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -50,
-  );
-  // Exported menu link: main-menu:node/add/question
-  $menu_links['main-menu:node/add/question'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'node/add/question',
-    'router_path' => 'node/add/question',
-    'link_title' => 'Ask a Question',
-    'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => 1,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => -47,
-  );
-  // Exported menu link: main-menu:th/admin/most-shared
-  $menu_links['main-menu:th/admin/most-shared'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'th/admin/most-shared',
-    'router_path' => 'th/admin/most-shared',
-    'link_title' => 'Most Shared',
-    'options' => array(),
-    'module' => 'system',
-    'hidden' => 1,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-  );
-  // Exported menu link: main-menu:th/admin/most-watched
-  $menu_links['main-menu:th/admin/most-watched'] = array(
-    'menu_name' => 'main-menu',
-    'link_path' => 'th/admin/most-watched',
-    'router_path' => 'th/admin/most-watched',
-    'link_title' => 'Most watched',
-    'options' => array(),
-    'module' => 'system',
-    'hidden' => 1,
-    'external' => 0,
-    'has_children' => 0,
-    'expanded' => 0,
-    'weight' => 0,
-  );
   // Exported menu link: management:admin
   $menu_links['management:admin'] = array(
     'menu_name' => 'management',

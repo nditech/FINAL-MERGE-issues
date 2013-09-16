@@ -138,6 +138,7 @@ function profiler_install_profile_complete(&$install_state) {
 
       if (isset($blocks['views']['all_questions_block-block'])) {
         $blocks['views']['all_questions_block-block']['status'] = 1;
+        $blocks['views']['all_questions_block-block']['visibility'] = BLOCK_VISIBILITY_LISTED;
         $blocks['views']['all_questions_block-block']['region'] = 'sidebar_first';
         $blocks['views']['all_questions_block-block']['pages'] = 'all-questions' . PHP_EOL . 'all-questions/issue/*' . PHP_EOL;
       }
@@ -145,6 +146,7 @@ function profiler_install_profile_complete(&$install_state) {
       if (isset($blocks['views']['th_ef_newsletter_signup-block'])) {
         $blocks['views']['th_ef_newsletter_signup-block']['status'] = 1;
         $blocks['views']['th_ef_newsletter_signup-block']['region'] = 'footer';
+        $blocks['views']['th_ef_newsletter_signup-block']['wieght'] = 2;
       }
     }
 
