@@ -1,0 +1,25 @@
+<?php
+/**
+ * @file
+ * Code for the TH search db feature.
+ */
+
+include_once 'th_search_db.features.inc';
+
+function th_search_db_search_db_block_info() {
+  $blocks['th_block_search'] = array(
+    'info' => t('Town hall: Search'),
+    'cache' => DRUPAL_NO_CACHE,
+    'status' => 1,
+    'region' => 'header',
+  );
+
+  return $blocks;
+}
+
+function th_search_db_search_db_block_view($delta = '') {
+  if ($delta == 'th_block_search') {
+    $block['subject'] = '';
+    $block['content'] = array('#markup' => town_hall_blocks_content($delta));
+  }
+}

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the TH content type (Candidate) feature.
+ */
+
+include_once 'th_content_type_candidate_.features.inc';

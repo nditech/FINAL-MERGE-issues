@@ -47,6 +47,15 @@ function town_hall_form_settings() {
 function town_hall_form_settings_submit($form, $form_state) {
   variable_set('th_search_settings', $form_state['values']['th_search_settings']);
   variable_set('th_permission_mode', $form_state['values']['th_permission_mode']);
+
+  if ($form_state['values']['th_search_settings'] == 'thd_search') {
+    module_enable(array('th_search_db'));
+    db_query("UPDATE {system} SET weight = 99 WHERE name = 'th_search_db'");
+  }
+  else if ($form_state['values']['th_search_settings'] == 'thd_search') {
+    module_enable(array('th_search_solr2'));
+    db_query("UPDATE {system} SET weight = 99 WHERE name = 'th_search_solr2'");
+  }
 }
 
 /**

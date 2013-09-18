@@ -2,11 +2,11 @@
 
 function town_hall_blocks_block_info() {
 
-  $blocks['th_block_search'] = array(
-    'info' => t('Town hall: Search'),
-    'cache' => DRUPAL_NO_CACHE,
-    'status' => 1,
-  );
+//  $blocks['th_block_search'] = array(
+//    'info' => t('Town hall: Search'),
+//    'cache' => DRUPAL_NO_CACHE,
+//    'status' => 1,
+//  );
 
   $blocks['th_block_social_links'] = array(
     'info' => t('Town hall: TH Social links (Footer)'),

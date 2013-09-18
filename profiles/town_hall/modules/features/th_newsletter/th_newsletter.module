@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the TH Newsletter feature.
+ */
+
+include_once 'th_newsletter.features.inc';

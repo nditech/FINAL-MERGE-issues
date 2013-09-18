@@ -1,0 +1,15 @@
+name = TH Newsletter
+core = 7.x
+package = TH
+dependencies[] = email
+dependencies[] = entityform
+dependencies[] = features
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[entityform_type][] = th_newsletter
+features[features_api][] = api:2
+features[field_base][] = field_th_email
+features[field_instance][] = entityform-th_newsletter-field_th_email
+features[views_view][] = th_ef_newsletter_signup
+features_exclude[dependencies][ctools] = ctools
+features_exclude[dependencies][entity] = entity

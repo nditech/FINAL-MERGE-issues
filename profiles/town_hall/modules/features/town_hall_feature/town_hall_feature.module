@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Town Hall feature feature.
- */
-
-include_once 'town_hall_feature.features.inc';
