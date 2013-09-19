@@ -6,7 +6,7 @@
 
 include_once 'th_search_db.features.inc';
 
-function th_search_db_search_db_block_info() {
+function th_search_db_block_info() {
   $blocks['th_block_search'] = array(
     'info' => t('Town hall: Search'),
     'cache' => DRUPAL_NO_CACHE,
@@ -17,9 +17,11 @@ function th_search_db_search_db_block_info() {
   return $blocks;
 }
 
-function th_search_db_search_db_block_view($delta = '') {
+function th_search_db_block_view($delta = '') {
   if ($delta == 'th_block_search') {
     $block['subject'] = '';
     $block['content'] = array('#markup' => town_hall_blocks_content($delta));
   }
+
+  return $block;
 }
