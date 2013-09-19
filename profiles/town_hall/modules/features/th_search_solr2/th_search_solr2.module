@@ -7,7 +7,7 @@
 include_once 'th_search_solr2.features.inc';
 
 function th_search_solr2_block_info() {
-  $blocks['th_block_search'] = array(
+  $blocks['th_block_search_solr'] = array(
     'info' => t('Town hall: Search'),
     'cache' => DRUPAL_NO_CACHE,
     'status' => 1,
@@ -18,10 +18,10 @@ function th_search_solr2_block_info() {
 }
 
 function th_search_solr2_block_view($delta = '') {
-  if ($delta == 'th_block_search') {
+  if ($delta == 'th_block_search_solr') {
     $block['subject'] = '';
-    $block['content'] = array('#markup' => town_hall_blocks_content($delta));
+    $block['content'] = array('#markup' => town_hall_blocks_content('th_block_search'));
   }
-  
+
   return $block;
 }

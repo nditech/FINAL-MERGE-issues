@@ -127,6 +127,7 @@ dependencies[] = th_newsletter
 ;dependencies[] = th_search_db
 ;dependencies[] = th_search_solr2
 dependencies[] = th_blocks
+dependencies[] = town_hall_config
 
 ; ----------
 ; Variables
