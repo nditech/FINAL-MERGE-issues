@@ -1,4 +1,0 @@
-name = Main menu
-description = Main menu block.
-core = 7.x
-dependencies[] = views

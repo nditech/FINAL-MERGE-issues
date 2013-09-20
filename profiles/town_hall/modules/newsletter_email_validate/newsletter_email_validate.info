@@ -1,4 +1,0 @@
-name = Newsletter form validate
-description = Newsletter form validate.
-core = 7.x
-dependencies[] = entityform

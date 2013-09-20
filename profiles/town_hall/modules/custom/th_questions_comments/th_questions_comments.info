@@ -1,0 +1,4 @@
+name = Questions comments
+description = Questions comments enable/disable.
+core = 7.x
+package = Town Hall

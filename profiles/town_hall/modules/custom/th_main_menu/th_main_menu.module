@@ -1,0 +1,33 @@
+<?php
+
+function th_main_menu_block_info() {
+  $blocks['th_main_menu_block'] = array(
+    'info' => t('Main menu: block'),
+    'cache' => DRUPAL_NO_CACHE,
+    'region' => 'header',
+    'status' => 1,
+  );
+
+  return $blocks;
+}
+
+function th_main_menu_block_view($delta = '') {
+  if ($delta = 'th_main_menu_block') {
+    $candidates_output = views_embed_view('candidates', 'block_1');
+    $parteis_output = views_embed_view('parties', 'block_1');
+
+    $output = '<ul>';
+
+    $output .= '<li>' . l('Issues', 'questions') . '</li>';
+    $output .= '<li>' . $candidates_output . '</li>';
+    $output .= '<li>' . $parteis_output . '</li>';
+    $output .= '<li>' . l('Ask a question','node/add/questions') . '</li>';
+    $output .= '<li>' . l('About', 'about') . '</li>';
+
+    $output .= '</ul>';
+
+    $block['content'] = array('#markup' => $output);
+
+    return $block;
+  }
+}

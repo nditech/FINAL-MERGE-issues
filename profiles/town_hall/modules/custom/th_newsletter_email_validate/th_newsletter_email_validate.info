@@ -1,0 +1,5 @@
+name = Newsletter form validate
+description = Newsletter form validate.
+core = 7.x
+package = Town Hall
+dependencies[] = entityform

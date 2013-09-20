@@ -79,21 +79,21 @@ dependencies[] = mediafield
 dependencies[] = auto_entitylabel
 dependencies[] = entity
 dependencies[] = entity_token
-dependencies[] = flag_dual
-dependencies[] = issue_random
-dependencies[] = main_menu
-dependencies[] = newsletter_email_validate
-dependencies[] = profile2
-dependencies[] = profile2_page
-dependencies[] = questions_block
-dependencies[] = questions_comments
 dependencies[] = quicktabs
 dependencies[] = quicktabs_tabstyles
-dependencies[] = share_count
 dependencies[] = strongarm
 dependencies[] = token
-dependencies[] = town_hall_blocks
-dependencies[] = video_view_count
+; Town Hall
+dependencies[] = th_share_count
+dependencies[] = th_flag_dual
+dependencies[] = th_issue_random
+dependencies[] = th_main_menu
+dependencies[] = th_newsletter_email_validate
+dependencies[] = th_questions_block
+dependencies[] = th_questions_comments
+dependencies[] = th_blocks
+dependencies[] = th_video_view_count
+dependencies[] = th_config
 ; Rules
 dependencies[] = rules
 ; Search
@@ -127,7 +127,6 @@ dependencies[] = th_newsletter
 ;dependencies[] = th_search_db
 ;dependencies[] = th_search_solr2
 dependencies[] = th_blocks
-dependencies[] = town_hall_config
 
 ; ----------
 ; Variables

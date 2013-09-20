@@ -1,4 +1,0 @@
-name = Town hall blocks
-description = Town hall blocks.
-core = 7.x
-dependencies[] = block

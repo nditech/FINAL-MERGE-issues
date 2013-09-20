@@ -1,0 +1,5 @@
+name = Share count
+description = Share count field.
+core = 7.x
+package = Town Hall
+dependencies[] = sharethis

@@ -1,0 +1,82 @@
+<?php
+
+function th_flag_dual_form_flag_form_alter(&$form, &$form_state, $form_id) {
+  $form['messages']['flag_message']['#maxlength'] = 255;
+  $form['messages']['unflag_message']['#maxlength'] = 255;
+}
+
+function th_flag_dual_menu() {
+
+  $items['th_flag_dual/get_json/%/%'] = array(
+    'page callback' => 'th_flag_dual_json',
+    'page arguments' => array(2,3),
+    'access callback' => true,
+    'type' => MENU_CALLBACK,
+  );
+
+  return $items;
+}
+
+function th_flag_dual_json($flag_name, $entity_id) {
+  global $user;
+  $json = array();
+  $flag_name = th_flag_dual_config($flag_name);
+  $flags = flag_get_flags(NULL, NULL, $user);
+  if (isset($flags[$flag_name])) {
+    $flag = $flags[$flag_name];
+    if ($flag->show_as_field) {
+      $action = $flag->is_flagged($entity_id) ? 'unflag' : 'flag';
+
+      $link_type = $flag->get_link_type();
+      $link = module_invoke($link_type['module'], 'flag_link', $flag, $action, $entity_id);
+
+      if (isset($link['title']) && empty($link['html'])) {
+        $link['title'] = check_plain($link['title']);
+      }
+
+      unset($link['query']['destination']);
+
+      $json['link_href'] = check_url(url($link['href'], $link));
+      $json['link_text'] = isset($link['title']) ? $link['title'] : $flag->get_label($action . '_short', $entity_id);
+      $json['link_title'] = isset($link['attributes']['title']) ? check_plain($link['attributes']['title']) : check_plain(strip_tags($flag->get_label($action . '_long', $entity_id)));
+      $json['selector'] = '.flag-' . str_replace('_', '-', $flag->name) . '-' . $entity_id;
+      $json['action_class'] = $action . '-action';
+
+
+      drupal_json_output($json);
+      drupal_exit();
+    }
+  }
+
+}
+
+function th_flag_dual_config($key) {
+  $pair = array(
+    'like' => 'unlike',
+    'unlike' => 'like',
+    'unlike_questions' => 'like_questions',
+    'like_questions' => 'unlike_questions',
+  );
+
+  if (!isset($pair[$key])) {
+    return NULL;
+  }
+
+  return $pair[$key];
+}
+
+function th_flag_dual_flag_flag($flag, $entity_id, $account, $flagging) {
+  $flags = flag_get_flags(NULL, NULL, $account);
+
+  if ($pair = th_flag_dual_config($flag->name)) {
+    if (isset($flags[$pair])) {
+      $flag_pair = $flags[$pair];
+
+      if ($flag_pair->is_flagged($entity_id)) {
+        $flag_pair->flag('unflag', $entity_id, $account);
+
+      }
+
+    }
+  }
+}

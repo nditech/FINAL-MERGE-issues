@@ -1,0 +1,6 @@
+name = Flag dual
+description = Flag dual.
+core = 7.x
+package = Town Hall
+dependencies[] = flag
+scripts[] = th_flag_dual.js

@@ -1,0 +1,4 @@
+name = Questions block.
+description = Questions block.
+core = 7.x
+package = Town Hall

@@ -13,6 +13,10 @@ function profiler_install_tasks($config) {
       'display_name' => st('Additional options'),
       'type' => 'form',
     ),
+    'th_install_finished' => array(
+      'display_name' => st('Finished'),
+      'type' => 'normal',
+    ),
   );
 }
 
@@ -24,8 +28,8 @@ function town_hall_form_settings() {
       '#title' => "Search options",
       '#description' => 'By default, "Database" index is enabled. If you have Apache Solr , please enable "Apache Solr"',
       '#options' => array(
-        'thd_search' => t('Database'),
-        'ths_search' => t('Apache Solr'),
+        'thd_search' => st('DB Search backend (default)'),
+        'ths_search' => st('Solr Search backend'),
       ),
     ),
     'th_permission_mode' => array(
@@ -33,8 +37,8 @@ function town_hall_form_settings() {
       '#title' => "Permission mode",
       '#description' => "Site Permissions",
       '#options' => array(
-        0 => t('Registration required'),
-        1 => t('Anonymous'),
+        0 => t('Registered mode'),
+        1 => t('Anonym'),
       ),
     ),
     'submit' => array(
@@ -67,9 +71,36 @@ function town_hall_form_settings_submit($form, $form_state) {
 function profiler_install_tasks_alter($config, &$tasks, $install_state) {
   // Replace the modules profile task function with our custom callback.
   $tasks['install_profile_modules']['function'] = 'profiler_install_profile_modules';
+  unset($tasks['install_finished']);
 }
 
+function th_install_finished() {
+  drupal_set_title(st('Town Halll installation complete'), PASS_THROUGH);
+  $messages = drupal_set_message();
+  $output = '<p>' . st('Congratulations, you installed Town Hall!') . '</p>';
+  $output .= '<p>' . (isset($messages['error']) ? st('Review the messages above before visiting <a href="@url">your new site</a>.', array('@url' => url(''))) : st('<a href="@url">Visit your new site</a>.', array('@url' => url('')))) . '</p>';
 
+  if ($search_mode = variable_get('th_search_settings')) {
+    if ($search_mode == 'ths_search') {
+    }
+  }
+
+  drupal_flush_all_caches();
+
+  variable_set('install_profile', drupal_get_profile());
+
+  db_update('system')->fields(array('weight' => 1000))->condition('type', 'module')->condition('name', drupal_get_profile())->execute();
+
+  // Cache a fully-built schema.
+  drupal_get_schema(NULL, TRUE);
+
+  // Run cron to populate update status tables (if available) so that users
+  // will be warned if they've installed an out of date Drupal version.
+  // Will also trigger indexing of profile-supplied content or feeds.
+  drupal_cron_run();
+
+  return $output;
+}
 /**
  * @see install_profile_modules().
  *
@@ -124,7 +155,7 @@ function profiler_install_profile_complete(&$install_state) {
   $profile_name = $install_state['parameters']['profile'];
   $config = profiler_v2_load_config($profile_name);
 
-  function town_hall_blocks_block_info_alter(&$blocks, $theme, $code_blocks) {
+  function th_blocks_block_info_alter(&$blocks, $theme, $code_blocks) {
     if ($theme != 'townhalltheme') {
       return;
     }
@@ -145,11 +176,11 @@ function profiler_install_profile_complete(&$install_state) {
         $blocks['views']['issues_videos-block']['region'] = 'content';
       }
 
-      if (isset($blocks['views']['all_questions_block-block'])) {
-        $blocks['views']['all_questions_block-block']['status'] = 1;
-        $blocks['views']['all_questions_block-block']['visibility'] = BLOCK_VISIBILITY_LISTED;
-        $blocks['views']['all_questions_block-block']['region'] = 'sidebar_first';
-        $blocks['views']['all_questions_block-block']['pages'] = 'all-questions' . PHP_EOL . 'all-questions/issue/*' . PHP_EOL;
+      if (isset($blocks['views']['all_th_questions_block-block'])) {
+        $blocks['views']['all_th_questions_block-block']['status'] = 1;
+        $blocks['views']['all_th_questions_block-block']['visibility'] = BLOCK_VISIBILITY_LISTED;
+        $blocks['views']['all_th_questions_block-block']['region'] = 'sidebar_first';
+        $blocks['views']['all_th_questions_block-block']['pages'] = 'all-questions' . PHP_EOL . 'all-questions/issue/*' . PHP_EOL;
       }
 
       if (isset($blocks['views']['th_ef_newsletter_signup-block'])) {
@@ -170,36 +201,36 @@ function profiler_install_profile_complete(&$install_state) {
       $blocks['quicktabs']['most_shared_watched_tabs']['weight'] = 1;
     }
 
-    if (isset($blocks['town_hall_blocks'])) {
+    if (isset($blocks['th_blocks'])) {
 
-      if (isset($blocks['town_hall_blocks']['th_block_search'])) {
-        $blocks['town_hall_blocks']['th_block_search']['region'] = 'header';
+      if (isset($blocks['th_blocks']['th_block_search'])) {
+        $blocks['th_blocks']['th_block_search']['region'] = 'header';
       }
 
-      if (isset($blocks['town_hall_blocks']['th_block_social_links'])) {
-        $blocks['town_hall_blocks']['th_block_social_links']['region'] = 'sidebar_second';
+      if (isset($blocks['th_blocks']['th_block_social_links'])) {
+        $blocks['th_blocks']['th_block_social_links']['region'] = 'sidebar_second';
       }
 
-      if (isset($blocks['town_hall_blocks']['th_block_social_links_footer'])) {
-        $blocks['town_hall_blocks']['th_block_social_links_footer']['region'] = 'footer';
+      if (isset($blocks['th_blocks']['th_block_social_links_footer'])) {
+        $blocks['th_blocks']['th_block_social_links_footer']['region'] = 'footer';
       }
 
-      if (isset($blocks['town_hall_blocks']['th_block_share_this'])) {
-        $blocks['town_hall_blocks']['th_block_share_this']['region'] = 'header';
+      if (isset($blocks['th_blocks']['th_block_share_this'])) {
+        $blocks['th_blocks']['th_block_share_this']['region'] = 'header';
       }
 
-      if (isset($blocks['town_hall_blocks']['th_block_partners'])) {
-        $blocks['town_hall_blocks']['th_block_partners']['region'] = 'sidebar_second';
+      if (isset($blocks['th_blocks']['th_block_partners'])) {
+        $blocks['th_blocks']['th_block_partners']['region'] = 'sidebar_second';
       }
     }
 
-    if (isset($blocks['questions_block'])) {
-      if (isset($blocks['questions_block']['questions_block'])) {
-        $blocks['questions_block']['questions_block']['region'] = 'sidebar_second';
+    if (isset($blocks['th_questions_block'])) {
+      if (isset($blocks['th_questions_block']['th_questions_block'])) {
+        $blocks['th_questions_block']['th_questions_block']['region'] = 'sidebar_second';
       }
 
-      if (isset($blocks['questions_block']['questions_block_user'])) {
-        $blocks['questions_block']['questions_block_user']['region'] = 'sidebar_second';
+      if (isset($blocks['th_questions_block']['th_questions_block_user'])) {
+        $blocks['th_questions_block']['th_questions_block_user']['region'] = 'sidebar_second';
       }
     }
   }

@@ -1,4 +1,0 @@
-name = Video view count
-description = Video view count.
-core = 7.x
-scripts[] = video_view_count.js
