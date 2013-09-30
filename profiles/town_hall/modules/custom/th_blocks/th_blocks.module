@@ -26,7 +26,6 @@ function th_blocks_block_info() {
   $blocks['th_block_partners'] = array(
     'info' => t('Town hall: Partners'),
     'status' => 1,
-    'region' => 'sidebar_second',
     'pages' => '<front>' . PHP_EOL . 'home' . PHP_EOL . 'node/*' . PHP_EOL . 'thd_search' . PHP_EOL. 'ths_search' . PHP_EOL,
   );
 

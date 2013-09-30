@@ -14,6 +14,9 @@ function th_content_type_ansver__ctools_plugin_api($module = NULL, $api = NULL) 
   if ($module == "quicktabs" && $api == "quicktabs") {
     return array("version" => "1");
   }
+  if ($module == "strongarm" && $api == "strongarm") {
+    return array("version" => "1");
+  }
 }
 
 /**
@@ -36,7 +39,6 @@ function th_content_type_ansver__flag_default_flags() {
     'types' => array(
       0 => 'video',
     ),
-    'errors' => array(),
     'flag_short' => 'Like',
     'flag_long' => 'I like this',
     'flag_message' => 'Thank you for supporting [node:field-th-candidate:field_th_first_name] of [node:field-th-question:field-region:name] from [node:field-th-candidate:field-th-party:title]',
@@ -58,11 +60,11 @@ function th_content_type_ansver__flag_default_flags() {
     'access_author' => '',
     'show_contextual_link' => 0,
     'i18n' => 0,
-    'api_version' => 3,
     'module' => 'th_content_type_ansver_',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 3,
   );
   // Exported flag: "Dislike video".
   $flags['unlike'] = array(
@@ -72,7 +74,6 @@ function th_content_type_ansver__flag_default_flags() {
     'types' => array(
       0 => 'video',
     ),
-    'errors' => array(),
     'flag_short' => 'Dislike',
     'flag_long' => 'I dislike this',
     'flag_message' => '',
@@ -95,11 +96,11 @@ function th_content_type_ansver__flag_default_flags() {
     'access_author' => '',
     'show_contextual_link' => 0,
     'i18n' => 0,
-    'api_version' => 3,
     'module' => 'th_content_type_ansver_',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 3,
   );
   return $flags;
 
@@ -111,7 +112,7 @@ function th_content_type_ansver__flag_default_flags() {
 function th_content_type_ansver__node_info() {
   $items = array(
     'video' => array(
-      'name' => t('Answer'),
+      'name' => t('Ansver'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',

@@ -4,7 +4,6 @@ function th_main_menu_block_info() {
   $blocks['th_main_menu_block'] = array(
     'info' => t('Main menu: block'),
     'cache' => DRUPAL_NO_CACHE,
-    'region' => 'header',
     'status' => 1,
   );
 

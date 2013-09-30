@@ -26,7 +26,7 @@ function town_hall_form_settings() {
     'th_search_settings' => array(
       '#type' => 'select',
       '#title' => "Search options",
-      '#description' => 'By default, "Database" index is enabled. If you have Apache Solr , please enable "Apache Solr"',
+      '#description' => 'By default, DB search index is enabled. If you have Apache Solr configured on your server, please choose Solr Search option. You can also do it later by enabling TH Search API - Solr module.',
       '#options' => array(
         'thd_search' => st('DB Search backend (default)'),
         'ths_search' => st('Solr Search backend'),
@@ -82,6 +82,7 @@ function th_install_finished() {
 
   if ($search_mode = variable_get('th_search_settings')) {
     if ($search_mode == 'ths_search') {
+      $output .= '<p>' . st('Configure Apache Sorl <a href="@url">here</a>.', array('@url' => url('admin/config/search/search_api/server/solr_server/edit'))) . '</p>';
     }
   }
 
@@ -213,6 +214,8 @@ function profiler_install_profile_complete(&$install_state) {
 
       if (isset($blocks['th_blocks']['th_block_social_links_footer'])) {
         $blocks['th_blocks']['th_block_social_links_footer']['region'] = 'footer';
+        $blocks['th_blocks']['th_block_social_links_footer']['weight'] = 1;
+
       }
 
       if (isset($blocks['th_blocks']['th_block_share_this'])) {
@@ -221,6 +224,10 @@ function profiler_install_profile_complete(&$install_state) {
 
       if (isset($blocks['th_blocks']['th_block_partners'])) {
         $blocks['th_blocks']['th_block_partners']['region'] = 'sidebar_second';
+      }
+
+      if (isset($blocks['th_blocks']['th_block_partners'])) {
+        $blocks['th_blocks']['th_block_partners']['regions'] = 'sidebar_second';
       }
     }
 
@@ -232,6 +239,10 @@ function profiler_install_profile_complete(&$install_state) {
       if (isset($blocks['th_questions_block']['th_questions_block_user'])) {
         $blocks['th_questions_block']['th_questions_block_user']['region'] = 'sidebar_second';
       }
+    }
+
+    if (isset($blocks['th_main_menu_block'])) {
+      $blocks['th_main_menu_block']['th_main_menu_block']['region'] = 'header';
     }
   }
 //  Disable all DB blocks
