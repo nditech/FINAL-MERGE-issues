@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * th_content_type_ansver_.features.inc
+ * th_content_type_answer_.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function th_content_type_ansver__ctools_plugin_api($module = NULL, $api = NULL) {
+function th_content_type_answer__ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "file_entity" && $api == "file_default_displays") {
     return array("version" => "1");
   }
@@ -22,14 +22,14 @@ function th_content_type_ansver__ctools_plugin_api($module = NULL, $api = NULL) 
 /**
  * Implements hook_views_api().
  */
-function th_content_type_ansver__views_api($module = NULL, $api = NULL) {
+function th_content_type_answer__views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
 }
 
 /**
  * Implements hook_flag_default_flags().
  */
-function th_content_type_ansver__flag_default_flags() {
+function th_content_type_answer__flag_default_flags() {
   $flags = array();
   // Exported flag: "Like video".
   $flags['like'] = array(
@@ -60,7 +60,7 @@ function th_content_type_ansver__flag_default_flags() {
     'access_author' => '',
     'show_contextual_link' => 0,
     'i18n' => 0,
-    'module' => 'th_content_type_ansver_',
+    'module' => 'th_content_type_answer_',
     'locked' => array(
       0 => 'name',
     ),
@@ -96,7 +96,7 @@ function th_content_type_ansver__flag_default_flags() {
     'access_author' => '',
     'show_contextual_link' => 0,
     'i18n' => 0,
-    'module' => 'th_content_type_ansver_',
+    'module' => 'th_content_type_answer_',
     'locked' => array(
       0 => 'name',
     ),
@@ -109,10 +109,10 @@ function th_content_type_ansver__flag_default_flags() {
 /**
  * Implements hook_node_info().
  */
-function th_content_type_ansver__node_info() {
+function th_content_type_answer__node_info() {
   $items = array(
     'video' => array(
-      'name' => t('Ansver'),
+      'name' => t('answer'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',

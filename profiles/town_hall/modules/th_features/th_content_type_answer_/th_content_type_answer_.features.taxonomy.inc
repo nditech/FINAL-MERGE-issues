@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * th_content_type_ansver_.features.taxonomy.inc
+ * th_content_type_answer_.features.taxonomy.inc
  */
 
 /**
  * Implements hook_taxonomy_default_vocabularies().
  */
-function th_content_type_ansver__taxonomy_default_vocabularies() {
+function th_content_type_answer__taxonomy_default_vocabularies() {
   return array(
     'tags' => array(
       'name' => 'Tags',

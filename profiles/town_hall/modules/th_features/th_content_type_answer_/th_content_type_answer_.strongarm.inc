@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * th_content_type_ansver_.strongarm.inc
+ * th_content_type_answer_.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function th_content_type_ansver__strongarm() {
+function th_content_type_answer__strongarm() {
   $export = array();
 
   $strongarm = new stdClass();

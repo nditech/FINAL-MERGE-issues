@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the TH content type (Ansver) feature.
- */
-
-include_once 'th_content_type_ansver_.features.inc';

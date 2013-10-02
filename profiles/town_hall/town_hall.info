@@ -119,7 +119,7 @@ dependencies[] = views_load_more
 dependencies[] = views_ui
 ; Features
 dependencies[] = features
-dependencies[] = th_content_type_ansver_
+dependencies[] = th_content_type_answer_
 dependencies[] = th_content_type_candidate_
 dependencies[] = th_content_type_party_
 dependencies[] = th_content_type_question_

@@ -1,4 +1,4 @@
-name = TH content type (Ansver)
+name = TH content type (Answer)
 core = 7.x
 package = TH
 dependencies[] = ctools

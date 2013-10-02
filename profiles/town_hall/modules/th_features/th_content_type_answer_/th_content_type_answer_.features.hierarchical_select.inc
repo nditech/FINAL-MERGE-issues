@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * th_content_type_ansver_.features.hierarchical_select.inc
+ * th_content_type_answer_.features.hierarchical_select.inc
  */
 
 /**
  * Implements hook_hierarchical_select_default_configs().
  */
-function th_content_type_ansver__hierarchical_select_default_configs() {
+function th_content_type_answer__hierarchical_select_default_configs() {
 $configs = array();
 $config = array(
   'config_id'       => 'taxonomy-2',

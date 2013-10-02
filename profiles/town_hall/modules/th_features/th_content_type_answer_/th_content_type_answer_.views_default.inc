@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * th_content_type_ansver_.views_default.inc
+ * th_content_type_answer_.views_default.inc
  */
 
 /**
  * Implements hook_views_default_views().
  */
-function th_content_type_ansver__views_default_views() {
+function th_content_type_answer__views_default_views() {
   $export = array();
 
   $view = new view();

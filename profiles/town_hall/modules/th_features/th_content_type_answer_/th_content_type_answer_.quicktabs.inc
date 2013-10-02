@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * th_content_type_ansver_.quicktabs.inc
+ * th_content_type_answer_.quicktabs.inc
  */
 
 /**
  * Implements hook_quicktabs_default_quicktabs().
  */
-function th_content_type_ansver__quicktabs_default_quicktabs() {
+function th_content_type_answer__quicktabs_default_quicktabs() {
   $export = array();
 
   $quicktabs = new stdClass();

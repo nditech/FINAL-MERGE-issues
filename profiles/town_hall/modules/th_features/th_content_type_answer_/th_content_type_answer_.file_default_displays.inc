@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * th_content_type_ansver_.file_default_displays.inc
+ * th_content_type_answer_.file_default_displays.inc
  */
 
 /**
  * Implements hook_file_default_displays().
  */
-function th_content_type_ansver__file_default_displays() {
+function th_content_type_answer__file_default_displays() {
   $export = array();
 
   //

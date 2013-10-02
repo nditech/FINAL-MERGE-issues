@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * th_content_type_ansver_.features.field_base.inc
+ * th_content_type_answer_.features.field_base.inc
  */
 
 /**
  * Implements hook_field_default_field_bases().
  */
-function th_content_type_ansver__field_default_field_bases() {
+function th_content_type_answer__field_default_field_bases() {
   $field_bases = array();
 
   // Exported field_base: 'field_html_code'
