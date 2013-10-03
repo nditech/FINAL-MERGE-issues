@@ -33,6 +33,7 @@ function th_content_type_question__flag_default_flags() {
     'types' => array(
       0 => 'question',
     ),
+    'errors' => array(),
     'flag_short' => 'Vote up',
     'flag_long' => 'Vote up',
     'flag_message' => '',
@@ -55,11 +56,11 @@ function th_content_type_question__flag_default_flags() {
     'access_author' => '',
     'show_contextual_link' => 0,
     'i18n' => 0,
+    'api_version' => 3,
     'module' => 'th_content_type_question_',
     'locked' => array(
       0 => 'name',
     ),
-    'api_version' => 3,
   );
   // Exported flag: "Unlike questions".
   $flags['unlike_questions'] = array(
@@ -69,6 +70,7 @@ function th_content_type_question__flag_default_flags() {
     'types' => array(
       0 => 'question',
     ),
+    'errors' => array(),
     'flag_short' => 'Vote down',
     'flag_long' => 'Vote down',
     'flag_message' => '',
@@ -91,11 +93,11 @@ function th_content_type_question__flag_default_flags() {
     'access_author' => '',
     'show_contextual_link' => 0,
     'i18n' => 0,
+    'api_version' => 3,
     'module' => 'th_content_type_question_',
     'locked' => array(
       0 => 'name',
     ),
-    'api_version' => 3,
   );
   return $flags;
 

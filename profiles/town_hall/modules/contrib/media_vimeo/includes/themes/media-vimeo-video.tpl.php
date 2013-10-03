@@ -28,7 +28,7 @@
     player.addEvent('ready', function() {
       player.addEvent('play', function(){
         var id = '<?php print $video_id; ?>';
-        Drupal.video_views_count(id);
+        Drupal.th_video_view_count(id);
       });
     });
   })(jQuery);

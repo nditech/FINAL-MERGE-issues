@@ -1,7 +1,7 @@
 (function ($) {
-  Drupal.th_video_views_count = function (id) {
+  Drupal.th_video_view_count = function (id) {
 
-    var players = Drupal.settings.th_video_views_count;
+    var players = Drupal.settings.th_video_view_count;
 
     for(var key in players) {
       var player = players[key];
@@ -10,7 +10,7 @@
           $.ajax({
             type: "POST",
             dataType: "json",
-            url: Drupal.settings.basePath + 'th_video_views_count',
+            url: Drupal.settings.basePath + 'th_video_view_count',
             data: {'nid': player['nid']},
             success : function(data) {
               player['counted'] = 1;
