@@ -36,7 +36,7 @@
           var id = '<?php print $video_id; ?>';
           if (event !== undefined && event.data !== undefined) {
             if (event.data == 1) {
-              Drupal.video_views_count(id);
+              Drupal.th_video_view_count(id);
             }
           }
         }

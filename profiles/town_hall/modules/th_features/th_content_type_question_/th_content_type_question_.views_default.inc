@@ -560,6 +560,7 @@ function th_content_type_question__views_default_views() {
   $handler->display->display_options['arguments']['field_issue_tid']['validate_options']['vocabularies'] = array(
     'th_issues' => 'th_issues',
   );
+  $handler->display->display_options['arguments']['field_issue_tid']['validate']['fail'] = 'ignore';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
