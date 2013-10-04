@@ -1,6 +1,6 @@
 name = TH blocks
 core = 7.x
-package = TH
+package = Town Hall
 dependencies[] = comment
 dependencies[] = fe_block
 dependencies[] = hybridauth

@@ -1,6 +1,6 @@
 name = TH search solr
 core = 7.x
-package = TH
+package = Town Hall
 dependencies[] = search_api
 dependencies[] = search_api_solr
 dependencies[] = views

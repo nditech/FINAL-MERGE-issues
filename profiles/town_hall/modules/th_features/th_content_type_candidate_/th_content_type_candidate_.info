@@ -1,6 +1,6 @@
 name = TH content type (Candidate)
 core = 7.x
-package = TH
+package = Town Hall
 dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = image

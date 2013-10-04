@@ -112,7 +112,7 @@ function th_content_type_answer__flag_default_flags() {
 function th_content_type_answer__node_info() {
   $items = array(
     'video' => array(
-      'name' => t('answer'),
+      'name' => t('Answer'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
