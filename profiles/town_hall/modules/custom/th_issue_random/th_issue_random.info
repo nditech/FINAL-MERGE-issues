@@ -1,5 +1,5 @@
-name = Issue random
-description = Issue random
+name = Random issue
+description = Displays questions based on random issue selected.
 core = 7.x
 package = Town Hall
 dependencies[] = views

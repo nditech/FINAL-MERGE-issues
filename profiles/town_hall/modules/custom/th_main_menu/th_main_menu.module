@@ -1,8 +1,8 @@
 <?php
 
 function th_main_menu_block_info() {
-  $blocks['th_main_menu_block'] = array(
-    'info' => t('Main menu: block'),
+  $blocks['th_main_menu'] = array(
+    'info' => 'Town hall: Main menu',
     'cache' => DRUPAL_NO_CACHE,
     'status' => 1,
   );
@@ -11,7 +11,7 @@ function th_main_menu_block_info() {
 }
 
 function th_main_menu_block_view($delta = '') {
-  if ($delta = 'th_main_menu_block') {
+  if ($delta == 'th_main_menu') {
     $candidates_output = views_embed_view('candidates', 'block_1');
     $parteis_output = views_embed_view('parties', 'block_1');
 

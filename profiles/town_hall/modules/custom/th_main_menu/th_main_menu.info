@@ -1,5 +1,5 @@
 name = Main menu
-description = Main menu block.
+description = Town Hall main menu block.
 core = 7.x
 package = Town Hall
 dependencies[] = views

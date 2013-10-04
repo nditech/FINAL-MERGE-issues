@@ -1,5 +1,5 @@
-name = Video view count
-description = Video view count.
+name = Video views count
+description = Counts embedded Youtube and Vimeo videos views based on player APIs.
 core = 7.x
 package = Town Hall
 scripts[] = th_video_view_count.js

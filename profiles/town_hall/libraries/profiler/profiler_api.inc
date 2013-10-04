@@ -41,6 +41,10 @@ function town_hall_form_settings() {
         1 => t('Anonym'),
       ),
     ),
+    'th_issue_install' => array(
+      '#type' => 'checkbox',
+      '#title' => 'Populate Issues vocabulary with default values',
+    ),
     'submit' => array(
       '#type' => 'submit',
       '#value' => t('Save')
@@ -52,6 +56,13 @@ function town_hall_form_settings_submit($form, $form_state) {
   variable_set('th_search_settings', $form_state['values']['th_search_settings']);
   variable_set('th_permission_mode', $form_state['values']['th_permission_mode']);
 
+  $th_issue_installed = $form_state['values']['th_issue_install'];
+
+  if ($th_issue_installed) {
+    variable_set('th_issue_install', $th_issue_installed);
+    module_enable(array('th_create_terms'));
+  }
+
   if ($form_state['values']['th_search_settings'] == 'thd_search') {
     module_enable(array('th_search_db'));
     db_query("UPDATE {system} SET weight = 99 WHERE name = 'th_search_db'");
@@ -60,6 +71,8 @@ function town_hall_form_settings_submit($form, $form_state) {
     module_enable(array('th_search_solr2'));
     db_query("UPDATE {system} SET weight = 99 WHERE name = 'th_search_solr2'");
   }
+
+  theme_enable(array('townhalltheme'));
 }
 
 /**
@@ -241,18 +254,14 @@ function profiler_install_profile_complete(&$install_state) {
       }
     }
 
-    if (isset($blocks['th_main_menu_block'])) {
-      $blocks['th_main_menu_block']['th_main_menu_block']['region'] = 'header';
+    if (isset($blocks['th_main_menu'])) {
+      $blocks['th_main_menu']['th_main_menu']['region'] = 'header';
     }
   }
 //  Disable all DB blocks
 //  if (module_exists('block')) {
 //    db_query("UPDATE {block} SET status = 0, region = ''");
 //  }
-
-  theme_enable(array('townhalltheme'));
-
-  module_enable( array('create_terms'), true);
 
   // We flush caches at the beginning to ensure that any necessary module
   // tasks, such as Features component rebuilding, is complete before the

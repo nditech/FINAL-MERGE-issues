@@ -1,5 +1,5 @@
 name = Share count
-description = Share count field.
+description = Counts number of shares through Share This.
 core = 7.x
 package = Town Hall
 dependencies[] = sharethis

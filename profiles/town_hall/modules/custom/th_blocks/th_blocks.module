@@ -55,6 +55,7 @@ function th_blocks_block_view($delta = '') {
     case 'th_block_partners' :
       $block['subject'] = '';
       $block['content'] = array('#markup' => th_blocks_content($delta));
+      break;
   }
 
   return $block;

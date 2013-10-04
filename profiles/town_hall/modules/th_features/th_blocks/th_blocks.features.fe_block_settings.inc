@@ -76,38 +76,6 @@ function th_blocks_default_fe_block_settings() {
     'visibility' => 0,
   );
 
-  $export['main_menu-main_menu'] = array(
-    'cache' => -1,
-    'custom' => 0,
-    'delta' => 'main_menu',
-    'module' => 'main_menu',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'bartik' => array(
-        'region' => 'header',
-        'status' => 1,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => 0,
-      ),
-      'townhalltheme' => array(
-        'region' => 'header',
-        'status' => 1,
-        'theme' => 'townhalltheme',
-        'weight' => -24,
-      ),
-    ),
-    'title' => '',
-    'visibility' => 0,
-  );
-
   $export['menu-devel'] = array(
     'cache' => -1,
     'custom' => 0,

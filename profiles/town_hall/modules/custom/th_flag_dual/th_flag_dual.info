@@ -1,5 +1,5 @@
-name = Flag dual
-description = Flag dual.
+name = Dual flag
+description = Provides Like/Dislike functionality.
 core = 7.x
 package = Town Hall
 dependencies[] = flag
