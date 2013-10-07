@@ -151,7 +151,7 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['sorts']['totalcount']['table'] = 'node_counter';
   $handler->display->display_options['sorts']['totalcount']['field'] = 'totalcount';
   $handler->display->display_options['sorts']['totalcount']['order'] = 'DESC';
-  /* Sort criterion: Content: Share count (share_count) */
+  /* Sort criterion: Broken/missing handler */
   $handler->display->display_options['sorts']['share_count_value']['id'] = 'share_count_value';
   $handler->display->display_options['sorts']['share_count_value']['table'] = 'field_data_share_count';
   $handler->display->display_options['sorts']['share_count_value']['field'] = 'share_count_value';
@@ -435,22 +435,11 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['field_issue']['element_label_type'] = 'span';
   $handler->display->display_options['fields']['field_issue']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_issue']['delta_offset'] = '0';
-  /* Field: Content: Share count */
-  $handler->display->display_options['fields']['share_count']['id'] = 'share_count';
-  $handler->display->display_options['fields']['share_count']['table'] = 'field_data_share_count';
-  $handler->display->display_options['fields']['share_count']['field'] = 'share_count';
-  $handler->display->display_options['fields']['share_count']['label'] = 'Shares';
-  $handler->display->display_options['fields']['share_count']['element_type'] = 'span';
-  $handler->display->display_options['fields']['share_count']['element_label_type'] = 'span';
-  $handler->display->display_options['fields']['share_count']['settings'] = array(
-    'thousand_separator' => '',
-    'prefix_suffix' => 0,
-  );
-  /* Sort criterion: Content: Share count (share_count) */
-  $handler->display->display_options['sorts']['share_count_value']['id'] = 'share_count_value';
-  $handler->display->display_options['sorts']['share_count_value']['table'] = 'field_data_share_count';
-  $handler->display->display_options['sorts']['share_count_value']['field'] = 'share_count_value';
-  $handler->display->display_options['sorts']['share_count_value']['order'] = 'DESC';
+  /* Sort criterion: Content: Share count (th_share_count) */
+  $handler->display->display_options['sorts']['th_share_count_value']['id'] = 'th_share_count_value';
+  $handler->display->display_options['sorts']['th_share_count_value']['table'] = 'field_data_th_share_count';
+  $handler->display->display_options['sorts']['th_share_count_value']['field'] = 'th_share_count_value';
+  $handler->display->display_options['sorts']['th_share_count_value']['order'] = 'DESC';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -517,14 +506,10 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Share count */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['share_count']['id'] = 'share_count';
   $handler->display->display_options['fields']['share_count']['table'] = 'field_data_share_count';
   $handler->display->display_options['fields']['share_count']['field'] = 'share_count';
-  $handler->display->display_options['fields']['share_count']['settings'] = array(
-    'thousand_separator' => ' ',
-    'prefix_suffix' => 1,
-  );
   $handler->display->display_options['path'] = 'th/admin/most-shared';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'Most Shared';

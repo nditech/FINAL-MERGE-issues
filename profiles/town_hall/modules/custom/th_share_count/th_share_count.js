@@ -1,6 +1,6 @@
 (function ($) {
   $(document).ready(function(){
-    $('.share_count').click(function(){
+    $('.th_share_count').click(function(){
 
       debugger;
       $this = $(this);
@@ -11,7 +11,7 @@
       $.ajax({
         type: "POST",
         dataType: "json",
-        url: "/share_count_get_count",
+        url: "/th_share_count_get_count",
         data: data,
         success : function( json ) {
           console.log(json);
