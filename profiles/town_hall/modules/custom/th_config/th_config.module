@@ -16,6 +16,7 @@ function th_config_form($form, &$form_state) {
 
   $form['#submit'][] = 'th_config_form_submit';
   $default_search = variable_get('th_search_settings');
+  $default_perm_mode = variable_get('th_permission_mode');
     $form['th_search_settings'] = array (
     '#type' => 'select',
     '#title' => "Search options",
@@ -31,9 +32,10 @@ function th_config_form($form, &$form_state) {
     '#title' => "Permission mode",
     '#description' => "Site Permissions",
     '#options' => array(
-      0 => t('Registration required'),
-      1 => t('Anonymous'),
+      0 => t('Registered mode'),
+      1 => t('Anonym'),
     ),
+    '#default_value' => $default_perm_mode ? $default_perm_mode : '',
   );
 
   return $form;
@@ -54,6 +56,21 @@ function th_config_form_submit($form, &$form_state) {
     }
     module_enable(array('th_search_solr2'));
     db_query("UPDATE {system} SET weight = 99 WHERE name = 'th_search_solr2'");
+  }
+
+  if ($form_state['values']['th_permission_mode'] == 0) {
+    if (module_exists('th_permissions_anonym_mode')) {
+      module_disable(array('th_permissions_anonym_mode'));
+    }
+    module_enable(array('th_permissions_register_mode'));
+    db_query("UPDATE {system} SET weight = 99 WHERE name = 'th_permissions_register_mode'");
+  }
+  else if ($form_state['values']['th_permission_mode'] == 1) {
+    if (module_exists('th_permissions_register_mode')) {
+      module_disable(array('th_permissions_register_mode'));
+    }
+    module_enable(array('th_permissions_anonym_mode'));
+    db_query("UPDATE {system} SET weight = 99 WHERE name = 'th_permissions_anonym_mode'");
   }
 
   drupal_flush_all_caches();

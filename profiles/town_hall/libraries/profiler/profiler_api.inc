@@ -72,6 +72,15 @@ function town_hall_form_settings_submit($form, $form_state) {
     db_query("UPDATE {system} SET weight = 99 WHERE name = 'th_search_solr2'");
   }
 
+  if ($form_state['values']['th_permission_mode'] == 0) {
+    module_enable(array('th_permissions_register_mode'));
+    db_query("UPDATE {system} SET weight = 99 WHERE name = 'th_permissions_register_mode'");
+  }
+  else if ($form_state['values']['th_permission_mode'] == 1) {
+    module_enable(array('th_permissions_anonym_mode'));
+    db_query("UPDATE {system} SET weight = 99 WHERE name = 'th_permissions_anonym_mode'");
+  }
+
   theme_enable(array('townhalltheme'));
 }
 
