@@ -3,6 +3,7 @@
 function th_newsletter_email_validate_form_alter(&$form, $form_state, $form_id) {
   if ($form_id == 'th_newsletter_entityform_edit_form') {
     $form['#validate'][] = 'th_newsletter_email_validate_form';
+    $form['#submit'][] = 'th_newsletter_email_validate_form_submit';
   }
 }
 
@@ -15,6 +16,7 @@ function th_newsletter_email_validate_form($form, $form_state) {
 
   $query->entityCondition('entity_type', 'entityform')
     ->entityCondition('bundle', 'th_newsletter')
+    ->entityCondition('deleted', 0, '=')
     ->fieldCondition('field_th_email', 'email', $email, '=')
     ->count();
 

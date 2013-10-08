@@ -27,4 +27,5 @@ regions[footer_fourthcolumn] = Footer fourth column
 regions[footer] = Footer
 
 settings[shortcut_module_link] = 0
+settings[main_menu] = 0
 

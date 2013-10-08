@@ -1239,7 +1239,6 @@ function th_permissions_register_mode_user_default_permissions() {
     'name' => 'skip comment approval',
     'roles' => array(
       'administrator' => 'administrator',
-      'authenticated user' => 'authenticated user',
     ),
     'module' => 'comment',
   );

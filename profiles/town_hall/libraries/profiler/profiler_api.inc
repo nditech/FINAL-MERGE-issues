@@ -82,6 +82,8 @@ function town_hall_form_settings_submit($form, $form_state) {
   }
 
   theme_enable(array('townhalltheme'));
+
+
 }
 
 /**
