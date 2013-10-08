@@ -13,8 +13,15 @@ function th_content_type_question__strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_anonymous_question';
+  $strongarm->value = '0';
+  $export['comment_anonymous_question'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_mode_question';
-  $strongarm->value = '1';
+  $strongarm->value = 1;
   $export['comment_default_mode_question'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -28,7 +35,7 @@ function th_content_type_question__strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_form_location_question';
-  $strongarm->value = '1';
+  $strongarm->value = 1;
   $export['comment_form_location_question'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -44,6 +51,13 @@ function th_content_type_question__strongarm() {
   $strongarm->name = 'comment_question';
   $strongarm->value = '2';
   $export['comment_question'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'comment_subject_field_question';
+  $strongarm->value = 1;
+  $export['comment_subject_field_question'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -88,6 +102,15 @@ function th_content_type_question__strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'menu_options_question';
+  $strongarm->value = array(
+    0 => 'main-menu',
+  );
+  $export['menu_options_question'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_parent_question';
   $strongarm->value = 'main-menu:0';
   $export['menu_parent_question'] = $strongarm;
@@ -96,9 +119,7 @@ function th_content_type_question__strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_question';
-  $strongarm->value = array(
-    0 => 'status',
-  );
+  $strongarm->value = array();
   $export['node_options_question'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -107,6 +128,13 @@ function th_content_type_question__strongarm() {
   $strongarm->name = 'node_preview_question';
   $strongarm->value = '0';
   $export['node_preview_question'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_submitted_question';
+  $strongarm->value = 1;
+  $export['node_submitted_question'] = $strongarm;
 
   return $export;
 }
