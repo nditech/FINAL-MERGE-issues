@@ -80,11 +80,6 @@ function town_hall_form_settings_submit($form, $form_state) {
     module_enable(array('th_permissions_anonym_mode'));
     db_query("UPDATE {system} SET weight = 99 WHERE name = 'th_permissions_anonym_mode'");
   }
-
-  theme_enable(array('townhalltheme'));
-  drupal_theme_initialize();
-
-
 }
 
 /**
@@ -181,95 +176,6 @@ function profiler_install_profile_complete(&$install_state) {
   $profile_name = $install_state['parameters']['profile'];
   $config = profiler_v2_load_config($profile_name);
 
-  function th_blocks_block_info_alter(&$blocks, $theme, $code_blocks) {
-    if ($theme != 'townhalltheme') {
-      return;
-    }
-    if (isset($blocks['views'])) {
-
-      if (isset($blocks['views']['candidates_videos-block'])) {
-        $blocks['views']['candidates_videos-block']['status'] = 1;
-        $blocks['views']['candidates_videos-block']['region'] = 'content';
-      }
-
-      if (isset($blocks['views']['th_party_page_videos-block'])) {
-        $blocks['views']['th_party_page_videos-block']['status'] = 1;
-        $blocks['views']['th_party_page_videos-block']['region'] = 'content';
-      }
-
-      if (isset($blocks['views']['issues_videos-block'])) {
-        $blocks['views']['issues_videos-block']['status'] = 1;
-        $blocks['views']['issues_videos-block']['region'] = 'content';
-      }
-
-      if (isset($blocks['views']['all_th_questions_block-block'])) {
-        $blocks['views']['all_th_questions_block-block']['status'] = 1;
-        $blocks['views']['all_th_questions_block-block']['visibility'] = BLOCK_VISIBILITY_LISTED;
-        $blocks['views']['all_th_questions_block-block']['region'] = 'sidebar_first';
-        $blocks['views']['all_th_questions_block-block']['pages'] = 'all-questions' . PHP_EOL . 'all-questions/issue/*' . PHP_EOL;
-      }
-
-      if (isset($blocks['views']['th_ef_newsletter_signup-block'])) {
-        $blocks['views']['th_ef_newsletter_signup-block']['status'] = 1;
-        $blocks['views']['th_ef_newsletter_signup-block']['region'] = 'footer';
-        $blocks['views']['th_ef_newsletter_signup-block']['wieght'] = 2;
-      }
-    }
-
-    if (isset($blocks['user']) && isset($blocks['user']['login'])) {
-      $blocks['user']['login']['status'] = 1;
-      $blocks['user']['login']['region'] = 'sidebar_second';
-    }
-
-    if (isset($blocks['quicktabs']) && isset($blocks['quicktabs']['most_shared_watched_tabs'])) {
-      $blocks['quicktabs']['most_shared_watched_tabs']['status'] = 1;
-      $blocks['quicktabs']['most_shared_watched_tabs']['region'] = 'sidebar_second';
-      $blocks['quicktabs']['most_shared_watched_tabs']['weight'] = 1;
-    }
-
-    if (isset($blocks['th_blocks'])) {
-
-      if (isset($blocks['th_blocks']['th_block_search'])) {
-        $blocks['th_blocks']['th_block_search']['region'] = 'header';
-      }
-
-      if (isset($blocks['th_blocks']['th_block_social_links'])) {
-        $blocks['th_blocks']['th_block_social_links']['region'] = 'sidebar_second';
-      }
-
-      if (isset($blocks['th_blocks']['th_block_social_links_footer'])) {
-        $blocks['th_blocks']['th_block_social_links_footer']['region'] = 'footer';
-        $blocks['th_blocks']['th_block_social_links_footer']['weight'] = 1;
-
-      }
-
-      if (isset($blocks['th_blocks']['th_block_share_this'])) {
-        $blocks['th_blocks']['th_block_share_this']['region'] = 'header';
-      }
-
-      if (isset($blocks['th_blocks']['th_block_partners'])) {
-        $blocks['th_blocks']['th_block_partners']['region'] = 'sidebar_second';
-      }
-
-      if (isset($blocks['th_blocks']['th_block_partners'])) {
-        $blocks['th_blocks']['th_block_partners']['regions'] = 'sidebar_second';
-      }
-    }
-
-    if (isset($blocks['th_questions_block'])) {
-      if (isset($blocks['th_questions_block']['th_questions_block'])) {
-        $blocks['th_questions_block']['th_questions_block']['region'] = 'sidebar_second';
-      }
-
-      if (isset($blocks['th_questions_block']['th_questions_block_user'])) {
-        $blocks['th_questions_block']['th_questions_block_user']['region'] = 'sidebar_second';
-      }
-    }
-
-    if (isset($blocks['th_main_menu'])) {
-      $blocks['th_main_menu']['th_main_menu']['region'] = 'header';
-    }
-  }
 //  Disable all DB blocks
 //  if (module_exists('block')) {
 //    db_query("UPDATE {block} SET status = 0, region = ''");
@@ -455,8 +361,8 @@ function user_profiler_components() {
  * Component install callback for 'theme'.
  */
 function profiler_install_theme($theme_name, $config, &$identifiers) {
-  theme_enable(array($theme_name));
-  variable_set('theme_default', $theme_name);
+  theme_enable(array('townhalltheme'));
+  variable_set('theme_default', 'townhalltheme');
 }
 
 /**

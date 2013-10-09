@@ -122,3 +122,95 @@ function th_blocks_block_save($delta = '', $edit = array()) {
     variable_set($delta . '_content', $edit[$delta]['format']);
   }
 }
+
+function th_blocks_block_info_alter(&$blocks, $theme, $code_blocks) {
+
+  if ($theme != 'townhalltheme') {
+    return;
+  }
+
+  if (isset($blocks['views'])) {
+
+    if (isset($blocks['views']['candidates_videos-block'])) {
+      $blocks['views']['candidates_videos-block']['status'] = 1;
+      $blocks['views']['candidates_videos-block']['region'] = 'content';
+    }
+
+    if (isset($blocks['views']['th_party_page_videos-block'])) {
+      $blocks['views']['th_party_page_videos-block']['status'] = 1;
+      $blocks['views']['th_party_page_videos-block']['region'] = 'content';
+    }
+
+    if (isset($blocks['views']['issues_videos-block'])) {
+      $blocks['views']['issues_videos-block']['status'] = 1;
+      $blocks['views']['issues_videos-block']['region'] = 'content';
+    }
+
+    if (isset($blocks['views']['all_questions_block-block'])) {
+      $blocks['views']['all_questions_block-block']['status'] = 1;
+      $blocks['views']['all_questions_block-block']['visibility'] = BLOCK_VISIBILITY_LISTED;
+      $blocks['views']['all_questions_block-block']['region'] = 'sidebar_first';
+      $blocks['views']['all_questions_block-block']['pages'] = 'all-questions' . PHP_EOL . 'all-questions/issue/*' . PHP_EOL;
+    }
+
+    if (isset($blocks['views']['th_ef_newsletter_signup-block'])) {
+      $blocks['views']['th_ef_newsletter_signup-block']['status'] = 1;
+      $blocks['views']['th_ef_newsletter_signup-block']['region'] = 'footer';
+      $blocks['views']['th_ef_newsletter_signup-block']['wieght'] = 2;
+    }
+  }
+
+  if (isset($blocks['user']) && isset($blocks['user']['login'])) {
+    $blocks['user']['login']['status'] = 1;
+    $blocks['user']['login']['region'] = 'sidebar_second';
+  }
+
+  if (isset($blocks['quicktabs']) && isset($blocks['quicktabs']['most_shared_watched_tabs'])) {
+    $blocks['quicktabs']['most_shared_watched_tabs']['status'] = 1;
+    $blocks['quicktabs']['most_shared_watched_tabs']['region'] = 'sidebar_second';
+    $blocks['quicktabs']['most_shared_watched_tabs']['weight'] = 1;
+  }
+
+  if (isset($blocks['th_blocks'])) {
+
+    if (isset($blocks['th_blocks']['th_block_search'])) {
+      $blocks['th_blocks']['th_block_search']['region'] = 'header';
+    }
+
+    if (isset($blocks['th_blocks']['th_block_social_links'])) {
+      $blocks['th_blocks']['th_block_social_links']['region'] = 'sidebar_second';
+    }
+
+    if (isset($blocks['th_blocks']['th_block_social_links_footer'])) {
+      $blocks['th_blocks']['th_block_social_links_footer']['region'] = 'footer';
+      $blocks['th_blocks']['th_block_social_links_footer']['weight'] = 1;
+
+    }
+
+    if (isset($blocks['th_blocks']['th_block_share_this'])) {
+      $blocks['th_blocks']['th_block_share_this']['region'] = 'header';
+    }
+
+    if (isset($blocks['th_blocks']['th_block_partners'])) {
+      $blocks['th_blocks']['th_block_partners']['region'] = 'sidebar_second';
+    }
+
+    if (isset($blocks['th_blocks']['th_block_partners'])) {
+      $blocks['th_blocks']['th_block_partners']['regions'] = 'sidebar_second';
+    }
+  }
+
+  if (isset($blocks['th_questions_block'])) {
+    if (isset($blocks['th_questions_block']['th_questions_block'])) {
+      $blocks['th_questions_block']['th_questions_block']['region'] = 'sidebar_second';
+    }
+
+    if (isset($blocks['th_questions_block']['th_questions_block_user'])) {
+      $blocks['th_questions_block']['th_questions_block_user']['region'] = 'sidebar_second';
+    }
+  }
+
+  if (isset($blocks['th_main_menu'])) {
+    $blocks['th_main_menu']['th_main_menu']['region'] = 'header';
+  }
+}

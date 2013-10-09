@@ -128,6 +128,7 @@ dependencies[] = th_newsletter
 ;dependencies[] = th_search_solr2
 dependencies[] = th_blocks
 dependencies[] = th_theme_settings
+dependencies[] = th_text_formats
 
 ; ----------
 ; Variables

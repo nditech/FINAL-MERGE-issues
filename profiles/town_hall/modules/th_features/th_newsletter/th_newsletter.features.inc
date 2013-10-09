@@ -32,8 +32,8 @@ function th_newsletter_default_entityform_type() {
       "submissions_view" : "entityforms",
       "user_submissions_view" : "user_entityforms",
       "form_status" : "ENTITYFORM_OPEN",
-      "roles" : { "1" : "1", "2" : "2", "3" : 0, "4" : 0, "5" : 0 },
-      "resubmit_action" : "disallow",
+      "roles" : { "1" : "1", "2" : "2", "3" : 0 },
+      "resubmit_action" : "old",
       "access_rules" : [],
       "redirect_path" : "[current-page:url]",
       "instruction_pre" : { "value" : "", "format" : "filtered_html" }

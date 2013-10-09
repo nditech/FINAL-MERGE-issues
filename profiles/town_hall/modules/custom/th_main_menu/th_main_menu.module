@@ -20,7 +20,7 @@ function th_main_menu_block_view($delta = '') {
     $output .= '<li>' . l('Issues', 'questions') . '</li>';
     $output .= '<li>' . $candidates_output . '</li>';
     $output .= '<li>' . $parteis_output . '</li>';
-    $output .= '<li>' . l('Ask a question','node/add/questions') . '</li>';
+    $output .= '<li>' . l('Ask a question','node/add/question') . '</li>';
     $output .= '<li>' . l('About', 'about') . '</li>';
 
     $output .= '</ul>';
