@@ -168,7 +168,7 @@ function th_blocks_block_info_alter(&$blocks, $theme, $code_blocks) {
   if (isset($blocks['quicktabs']) && isset($blocks['quicktabs']['most_shared_watched_tabs'])) {
     $blocks['quicktabs']['most_shared_watched_tabs']['status'] = 1;
     $blocks['quicktabs']['most_shared_watched_tabs']['region'] = 'sidebar_second';
-    $blocks['quicktabs']['most_shared_watched_tabs']['weight'] = 1;
+    $blocks['quicktabs']['most_shared_watched_tabs']['weight'] = -9;
   }
 
   if (isset($blocks['th_blocks'])) {
@@ -203,10 +203,12 @@ function th_blocks_block_info_alter(&$blocks, $theme, $code_blocks) {
   if (isset($blocks['th_questions_block'])) {
     if (isset($blocks['th_questions_block']['th_questions_block'])) {
       $blocks['th_questions_block']['th_questions_block']['region'] = 'sidebar_second';
+      $blocks['th_questions_block']['th_questions_block']['weight'] = -8;
     }
 
     if (isset($blocks['th_questions_block']['th_questions_block_user'])) {
-      $blocks['th_questions_block']['th_questions_block_user']['region'] = 'sidebar_second';
+      $blocks['th_questions_block']['th_questions_block_user']['region'] = 'sidebar_first';
+      $blocks['th_questions_block']['th_questions_block_user']['weight'] = -9;
     }
   }
 

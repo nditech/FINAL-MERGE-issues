@@ -200,7 +200,7 @@ function th_content_type_party__field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => '',
+          'image_style' => 'party_logo',
         ),
         'type' => 'image',
         'weight' => 1,

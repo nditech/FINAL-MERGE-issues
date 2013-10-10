@@ -10,6 +10,8 @@ function th_questions_block_block_info() {
   $block['th_questions_block_user'] = array(
     'info' => t('User questions as votes'),
     'cache' => DRUPAL_NO_CACHE,
+    'visibility' => BLOCK_VISIBILITY_LISTED,
+    'pages' => 'all-questions' . PHP_EOL . 'all-questions/issue/*' . PHP_EOL,
     'status' => 1,
   );
 
