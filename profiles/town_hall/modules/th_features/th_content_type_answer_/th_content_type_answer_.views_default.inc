@@ -266,7 +266,7 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: VIdeo */
+  /* Field: Content: Party video */
   $handler->display->display_options['fields']['field_th_video']['id'] = 'field_th_video';
   $handler->display->display_options['fields']['field_th_video']['table'] = 'field_data_field_th_video';
   $handler->display->display_options['fields']['field_th_video']['field'] = 'field_th_video';
@@ -396,7 +396,7 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: VIdeo */
+  /* Field: Content: Party video */
   $handler->display->display_options['fields']['field_th_video']['id'] = 'field_th_video';
   $handler->display->display_options['fields']['field_th_video']['table'] = 'field_data_field_th_video';
   $handler->display->display_options['fields']['field_th_video']['field'] = 'field_th_video';
@@ -427,9 +427,10 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['comment_count']['label'] = '';
   $handler->display->display_options['fields']['comment_count']['alter']['text'] = '<span class="th-count">[comment_count';
   $handler->display->display_options['fields']['comment_count']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['comment_count']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['comment_count']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['separator'] = '';
-  $handler->display->display_options['fields']['comment_count']['format_plural_singular'] = '1 comment';
-  $handler->display->display_options['fields']['comment_count']['format_plural_plural'] = '@count comments';
+  $handler->display->display_options['fields']['comment_count']['format_plural_singular'] = '';
   /* Field: Content: Add comment link */
   $handler->display->display_options['fields']['comments_link']['id'] = 'comments_link';
   $handler->display->display_options['fields']['comments_link']['table'] = 'node';

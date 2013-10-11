@@ -21,6 +21,11 @@ function th_questions_comments_node_save($node) {
     }
   }
 }
+
 function th_questions_comments_node_update($node) {
   th_questions_comments_node_save($node);
 }
+//
+//function th_questions_comments_comment_view($node, $view_mode) {
+//  $foo = "bar";
+//}

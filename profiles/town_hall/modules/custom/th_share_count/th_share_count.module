@@ -27,6 +27,7 @@ function th_share_count_enable() {
       'widget' => array('type' => 'number_integer'),
       'settings' => array(),
       'display' => array(),
+      'weight' => 99,
     );
     $instance = field_create_instance($instance);
   }
