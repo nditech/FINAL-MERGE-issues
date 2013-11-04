@@ -27,10 +27,12 @@ function th_issue_random_get_tids() {
     (field_data_field_issue.field_issue_tid)
 from
     field_data_field_issue
-        left join
+left join
     field_data_field_th_question ON field_data_field_th_question.field_th_question_target_id = field_data_field_issue.entity_id
+left join
+    field_data_field_th_status ON field_data_field_th_status.entity_id = field_data_field_th_question.field_th_question_target_id
 where
-    field_data_field_th_question.bundle = 'video'")->fetchCol();
+    field_data_field_th_question.bundle = 'video' and field_data_field_th_status.field_th_status_value = 1")->fetchCol();
 
     if (empty($tids)) {
       return;
@@ -45,7 +47,8 @@ where
 
 function th_issue_random_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'views_exposed_form') {
-    if (isset($form['issue'])) {
+    if (isset($form['issue'])
+      && isset($form_state['view']) && $form_state['view']->name = 'home_page_videos') {
       if ($default_tid = th_issue_random_get_tids()) {
         $form['issue']['#value'] = th_issue_random_get_tids();
       }
