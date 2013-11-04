@@ -23,6 +23,7 @@ function th_issue_random_get_tids() {
   }
 
   if (!$tids) {
+    $tids = array();
     $tids = db_query("select distinct
     (field_data_field_issue.field_issue_tid)
 from
