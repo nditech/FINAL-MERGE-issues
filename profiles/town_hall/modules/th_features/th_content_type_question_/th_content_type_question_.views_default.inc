@@ -549,11 +549,16 @@ function th_content_type_question__views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'div';
+  $handler->display->display_options['fields']['title']['element_class'] = 'issue_title_style';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['element_type'] = 'div';
+  $handler->display->display_options['fields']['body']['element_class'] = 'issue_body_style';
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   /* Field: Global: View (Videos) */
   $handler->display->display_options['fields']['view']['id'] = 'view';
@@ -561,6 +566,8 @@ function th_content_type_question__views_default_views() {
   $handler->display->display_options['fields']['view']['field'] = 'view';
   $handler->display->display_options['fields']['view']['ui_name'] = 'Global: View (Videos)';
   $handler->display->display_options['fields']['view']['label'] = '';
+  $handler->display->display_options['fields']['view']['element_type'] = 'div';
+  $handler->display->display_options['fields']['view']['element_class'] = 'videos_block_wrapper';
   $handler->display->display_options['fields']['view']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view']['view'] = 'issues_videos';
   $handler->display->display_options['fields']['view']['display'] = 'block';
@@ -609,7 +616,6 @@ function th_content_type_question__views_default_views() {
   $handler->display->display_options['arguments']['field_issue_tid']['validate_options']['vocabularies'] = array(
     'th_issues' => 'th_issues',
   );
-  $handler->display->display_options['arguments']['field_issue_tid']['validate']['fail'] = 'ignore';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -626,10 +632,20 @@ function th_content_type_question__views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'question' => 'question',
   );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Content: Answered? (field_th_status) */
+  $handler->display->display_options['filters']['field_th_status_value']['id'] = 'field_th_status_value';
+  $handler->display->display_options['filters']['field_th_status_value']['table'] = 'field_data_field_th_status';
+  $handler->display->display_options['filters']['field_th_status_value']['field'] = 'field_th_status_value';
+  $handler->display->display_options['filters']['field_th_status_value']['value'] = array(
+    1 => '1',
+  );
+  $handler->display->display_options['filters']['field_th_status_value']['group'] = 1;
   /* Filter criterion: Content: Issue (field_issue) */
   $handler->display->display_options['filters']['field_issue_tid']['id'] = 'field_issue_tid';
   $handler->display->display_options['filters']['field_issue_tid']['table'] = 'field_data_field_issue';
   $handler->display->display_options['filters']['field_issue_tid']['field'] = 'field_issue_tid';
+  $handler->display->display_options['filters']['field_issue_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_issue_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_issue_tid']['expose']['operator_id'] = 'field_issue_tid_op';
   $handler->display->display_options['filters']['field_issue_tid']['expose']['operator'] = 'field_issue_tid_op';
