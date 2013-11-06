@@ -4,7 +4,10 @@ core = 7.x
 base theme = bartik
 
 stylesheets[all][] = css/townhalltheme.css
-
+scripts[] = 'js/chosen/chosen.jquery.min.js'
+scripts[] = 'js/script.js'
+scripts[] = 'js/PIE.js'
+scripts[] = 'js/PIE.htc'
 regions[header] = Header
 regions[help] = Help
 regions[page_top] = Page top
@@ -27,5 +30,4 @@ regions[footer_fourthcolumn] = Footer fourth column
 regions[footer] = Footer
 
 settings[shortcut_module_link] = 0
-settings[main_menu] = 0
 

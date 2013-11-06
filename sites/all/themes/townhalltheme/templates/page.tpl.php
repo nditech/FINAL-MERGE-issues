@@ -187,7 +187,7 @@
       <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
-      <?php if ($title): ?>
+      <?php if ($title && isset($node) && $node->type != 'party' && $node->type != 'candidate'): ?>
         <h1 class="title" id="page-title">
           <?php print $title; ?>
         </h1>
