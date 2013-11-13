@@ -13,11 +13,10 @@ function th_blocks_block_info() {
     'status' => 1,
   );
 
-
-  $blocks['th_block_scroll_up_footer'] = array(
-    'info' => t('Town hall: Top (Footer)'),
-    'status' => 1
-  );
+//  $blocks['th_block_scroll_up_footer'] = array(
+//    'info' => t('Town hall: Top (Footer)'),
+//    'status' => 1,
+//  );
 
   $blocks['th_block_social_links_footer'] = array(
     'info' => t('Town hall: TH Social links (Footer)'),
@@ -65,6 +64,7 @@ function th_blocks_block_view($delta = '') {
     case 'th_block_scroll_up_footer' :
       $block['subject'] = '';
       $block['content'] = array('#markup' => th_blocks_content($delta));
+      break;
   }
 
   return $block;
@@ -87,15 +87,15 @@ function th_blocks_content($delta) {
                               . '</form>'. PHP_EOL;
 
   $content['th_block_social_links'] = '<ul>'. PHP_EOL
-                                    . '<li><a href="http://facebook.com">Facebook</a></li>'. PHP_EOL
-                                    . '<li><a href="http://twitter.com">Twitter</a></li>'. PHP_EOL
-                                    . '<li><a href="http://plus.google.com">Google+</a></li>'. PHP_EOL
+                                    . '<li><a href="http://facebook.com"><img src="/profiles/town_hall/themes/townhalltheme/images/facebook.gif" /></a></li>'. PHP_EOL
+                                    . '<li><a href="http://twitter.com"><img src="/profiles/town_hall/themes/townhalltheme/images/twitter.gif" /></a></li>'. PHP_EOL
+                                    . '<li><a href="http://plus.google.com"><img src="/profiles/town_hall/themes/townhalltheme/images/google.gif" /></a></li>'. PHP_EOL
                                     . '</ul>'. PHP_EOL;
 
   $content['th_block_social_links_footer'] = '<ul>'. PHP_EOL
-                                           . '<li><a href="http://facebook.com">Facebook</a></li>'. PHP_EOL
-                                           . '<li><a href="http://twitter.com">Twitter</a></li>'. PHP_EOL
-                                           . '<li><a href="http://plus.google.com">Google+</a></li>'. PHP_EOL
+                                           . '<li><a href="http://facebook.com"><img src="/profiles/town_hall/themes/townhalltheme/images/facebook.gif" /></a></li>'. PHP_EOL
+                                           . '<li><a href="http://twitter.com"><img src="/profiles/town_hall/themes/townhalltheme/images/twitter.gif" /></a></li>'. PHP_EOL
+                                           . '<li><a href="http://plus.google.com"><img src="/profiles/town_hall/themes/townhalltheme/images/google.gif" /></a></li>'. PHP_EOL
                                            . '</ul>'. PHP_EOL;
   $content['th_block_scroll_up_footer'] = '<div id="scroll-top">' . PHP_EOL
                                  . '<img src="profiles/town_hall/themes/townhalltheme/images/scroll.png" />' . PHP_EOL
@@ -199,8 +199,8 @@ function th_blocks_block_info_alter(&$blocks, $theme, $code_blocks) {
     }
 
     if (isset($blocks['th_blocks']['th_block_scroll_up_footer'])) {
-      $blocks['th_blocks']['th_block_up_footer']['region'] = 'footer';
-      $blocks['th_blocks']['th_block_up_footer']['weight'] = 1;
+      $blocks['th_blocks']['th_block_scroll_up_footer']['region'] = 'footer';
+      $blocks['th_blocks']['th_block_scroll_up_footer']['weight'] = 1;
     }
 
     if (isset($blocks['th_blocks']['th_block_social_links_footer'])) {
