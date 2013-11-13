@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the th_demworks_sites feature.
+ */
+
+include_once 'th_demworks_sites.features.inc';
