@@ -426,7 +426,7 @@ user-select: none;
 	margin-top: 4px;
 }
 input.form-submit {
-	background: url("/sites/all/themes/townhalltheme/images/submit_bg.jpg");
+	background: url("../images/submit_bg.jpg");
 	border-radius: 3px 3px 3px 3px;
 	text-transform:uppercase;
 	text-shadow: 0 1px rgba(255, 255, 255, 0.75);
@@ -604,7 +604,7 @@ h3 {
 font-weight: 600;
 }
 #block-questions-block-questions-block h2 {
-	background: url("/sites/all/themes/townhalltheme/images/question_bg.jpg");
+	background: url("../images/question_bg.jpg");
 	border-radius: 6px 6px 6px 6px;
 	behavior: url(../js/PIE.htc);
     color: #FFFFFF !important;
@@ -640,7 +640,7 @@ font-weight: 600;
 	font: 18px/25px "open_sans_condensedbold", Helvetica,Arial,sans-serif;
 }
 .issue_title_style {
- 	background: url("/sites/all/themes/townhalltheme/images/question_green_bg.gif") no-repeat;
+ 	background: url("../images/question_green_bg.gif") no-repeat;
     display: block;
     float: left;
     height: 100px;
@@ -690,7 +690,7 @@ td ul li.comment_forbidden, td ul li.comment-comments {
 .flag-unlike a, .flag-unlike-questions a {
 	text-indent: -9999px;
 	overflow: hidden;
-	background: url("/sites/all/themes/townhalltheme/images/dislike.gif") no-repeat;
+	background: url("../images/dislike.gif") no-repeat;
 	display: block;
 	width: 22px;
 	margin-right: 8px;
@@ -698,7 +698,7 @@ td ul li.comment_forbidden, td ul li.comment-comments {
 .flag-like a, .flag-like-questions a {
 	text-indent: -9999px;
 	overflow: hidden;
-	background: url("/sites/all/themes/townhalltheme/images/like.gif") no-repeat;
+	background: url("../images/like.gif") no-repeat;
 	display: block;
 	width: 22px;
 	margin-right: 8px;
@@ -744,7 +744,7 @@ td ul li.comment_forbidden, td ul li.comment-comments {
 	overflow: hidden;
 	display: block;
 	width: 25px;
-	background: url("/sites/all/themes/townhalltheme/images/comments.gif") no-repeat;
+	background: url("../images/comments.gif") no-repeat;
 }
 .node-candidate .field-name-field-th-party, .node-candidate .field-type-text-with-summary {
 	float: right;
@@ -788,7 +788,7 @@ h1.title-candidates {
 	font: 14px/21px "open_sanssemibold", Helvetica, Arial;
 }
 .field-name-field-th-fb-page a, .field-name-field-th-website a {	
-	background: url("/sites/all/themes/townhalltheme/images/separator.gif") center right no-repeat;
+	background: url("../images/separator.gif") center right no-repeat;
 }
 .field-name-field-fb-social-networks div.field-item {
 	float: left;	
@@ -808,7 +808,7 @@ h1.title-candidates {
 }
 #views-exposed-form-th-party-page-videos-block .views-exposed-form, #views-exposed-form-candidates-videos-block .views-exposed-form {
 	padding-left: 115px;
-	background: url("/sites/all/themes/townhalltheme/images/filter_by.gif") 0 5px no-repeat;
+	background: url("../images/filter_by.gif") 0 5px no-repeat;
 	margin-left: 30px;
 }
 #question-node-form {
@@ -829,7 +829,7 @@ h1.title-candidates {
     padding: 7px 4px;
 }
 #question-node-form #edit-field-issue-und-hierarchical-select-dropbox-add {
-	background: url("/sites/all/themes/townhalltheme/images/submit_bg.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background: url("../images/submit_bg.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
     border: 1px solid #AAAAAA;
     border-radius: 3px 3px 3px 3px;
     color: #444444;
