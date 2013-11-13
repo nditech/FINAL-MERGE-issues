@@ -9,14 +9,14 @@ function th_blocks_block_info() {
   );
 
   $blocks['th_block_social_links'] = array(
-    'info' => t('Town hall: TH Social links (Footer)'),
+    'info' => t('Town hall: TH Social links (SideBar)'),
     'status' => 1,
   );
 
-//  $blocks['th_block_scroll_up_footer'] = array(
-//    'info' => t('Town hall: Top (Footer)'),
-//    'status' => 1,
-//  );
+  $blocks['th_block_scroll_up_footer'] = array(
+    'info' => t('Town hall: Top (Footer)'),
+    'status' => 1,
+  );
 
   $blocks['th_block_social_links_footer'] = array(
     'info' => t('Town hall: TH Social links (Footer)'),
@@ -196,6 +196,7 @@ function th_blocks_block_info_alter(&$blocks, $theme, $code_blocks) {
 
     if (isset($blocks['th_blocks']['th_block_social_links'])) {
       $blocks['th_blocks']['th_block_social_links']['region'] = 'sidebar_second';
+      $blocks['th_blocks']['th_block_social_links']['weight'] = -10;
     }
 
     if (isset($blocks['th_blocks']['th_block_scroll_up_footer'])) {
