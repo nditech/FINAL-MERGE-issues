@@ -46,7 +46,7 @@ function th_blocks_block_view($delta = '') {
       $block['content'] = array('#markup' => th_blocks_content($delta));
       break;
     case 'th_block_social_links' :
-      $block['subject'] = '';
+      $block['subject'] = 'Connect with us';
       $block['content'] = array('#markup' => th_blocks_content($delta));
       break;
     case 'th_block_social_links_footer' :
@@ -96,7 +96,8 @@ function th_blocks_content($delta) {
                                            . '<li><a href="http://facebook.com"><img src="/profiles/town_hall/themes/townhalltheme/images/facebook.gif" /></a></li>'. PHP_EOL
                                            . '<li><a href="http://twitter.com"><img src="/profiles/town_hall/themes/townhalltheme/images/twitter.gif" /></a></li>'. PHP_EOL
                                            . '<li><a href="http://plus.google.com"><img src="/profiles/town_hall/themes/townhalltheme/images/google.gif" /></a></li>'. PHP_EOL
-                                           . '</ul>'. PHP_EOL;
+                                           . '</ul>' . PHP_EOL
+                                           . '<a class="privacy_policy">Privacy and Use Policy</a>' . PHP_EOL;
   $content['th_block_scroll_up_footer'] = '<div id="scroll-top">' . PHP_EOL
                                  . '<img src="profiles/town_hall/themes/townhalltheme/images/scroll.png" />' . PHP_EOL
                                  .'<p class="top_text">TOP</p>'. PHP_EOL
