@@ -501,15 +501,15 @@ input.form-submit {
 	text-shadow:none;
 	text-align:center;
 }
-#block-block-5 .content {
+#block-th-blocks-th-block-social-links .content {
 	margin-top: 0;
 }
-#block-block-5 ul {
+#block-th-blocks-th-block-social-links ul {
 	overflow: hidden;
 	width: 136px;
 	margin: 0 auto;
 }
-#block-block-5 ul li {
+#block-th-blocks-th-block-social-links ul li {
 	list-style-type:none;
 	float: left;
 	margin: 0 7px;
@@ -603,7 +603,7 @@ ul.quicktabs-tabs li {
 h3 {
 font-weight: 600;
 }
-#block-questions-block-questions-block h2 {
+#block-th-questions-block-th-questions-block h2 {
 	background: url("../images/question_bg.jpg");
 	border-radius: 6px 6px 6px 6px;
 	behavior: url(../js/PIE.htc);
@@ -618,15 +618,15 @@ font-weight: 600;
     width: 100%;
 	letter-spacing: 0;
 }
-#block-questions-block-questions-block .content {
+#block-th-questions-block-th-questions-block .content {
 	margin: 0 0 0 12px;
 }
-#block-questions-block-questions-block .content p {
+#block-th-questions-block-th-questions-block .content p {
 	font-family: "open_sanscondensed_light", Helvetica,Arial,sans-serif;
     font-size: 18px;
     line-height: 25px;
 }
-#block-questions-block-questions-block .content p a {
+#block-th-questions-block-th-questions-block .content p a {
 	color: #D04B0A;		
     font-weight: bold;    
     text-transform: uppercase;
