@@ -50,11 +50,11 @@ function th_blocks_block_view($delta = '') {
       $block['content'] = array('#markup' => th_blocks_content($delta));
       break;
     case 'th_block_social_links_footer' :
-      $block['subject'] = '';
+      $block['subject'] = 'Connect with us';
       $block['content'] = array('#markup' => th_blocks_content($delta));
       break;
     case 'th_block_share_this' :
-      $block['subject'] = 'Connect with us';
+      $block['subject'] = '';
       $block['content'] = array('#markup' => th_blocks_content($delta));
       break;
     case 'th_block_partners' :
