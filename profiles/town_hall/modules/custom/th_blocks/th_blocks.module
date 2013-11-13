@@ -54,7 +54,7 @@ function th_blocks_block_view($delta = '') {
       $block['content'] = array('#markup' => th_blocks_content($delta));
       break;
     case 'th_block_share_this' :
-      $block['subject'] = '';
+      $block['subject'] = 'Connect with us';
       $block['content'] = array('#markup' => th_blocks_content($delta));
       break;
     case 'th_block_partners' :
