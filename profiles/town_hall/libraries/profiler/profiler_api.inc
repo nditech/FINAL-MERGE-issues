@@ -153,7 +153,8 @@ function profiler_install_profile_modules(&$install_state) {
  * Helper to hook_form_install_configure_form_alter().
  */
 function profiler_form_install_configure_form_alter($config, &$form, &$form_state) {
-  $form['site_information']['site_name']['#default_value'] = $_SERVER['SERVER_NAME'];
+  $form['site_information']['site_name']['#default_value'] = 'Town Hall';
+  $form['site_information']['site_mail']['#default_value'] = 'nditech@ndi.org';
 }
 
 /**
@@ -173,8 +174,11 @@ function profiler_system_info_alter(&$info, $file, $type) {
  *   An array of information about the current installation state.
  */
 function profiler_install_profile_complete(&$install_state) {
-  $profile_name = $install_state['parameters']['profile'];
-  $config = profiler_v2_load_config($profile_name);
+//  $profile_name = $install_state['parameters']['profile'];
+//  $config = profiler_v2_load_config($profile_name);
+
+  theme_enable(array('townhalltheme'));
+  variable_set('theme_default', 'townhalltheme');
 
 //  Disable all DB blocks
 //  if (module_exists('block')) {
@@ -184,17 +188,17 @@ function profiler_install_profile_complete(&$install_state) {
   // We flush caches at the beginning to ensure that any necessary module
   // tasks, such as Features component rebuilding, is complete before the
   // remaining tasks are run.
-  drupal_flush_all_caches();
-
-  // Run any component installations
-  profiler_install_components($config);
-
-  // Rebuild key tables/caches
-  menu_rebuild();
-  if (isset($config['node'])) {
-    node_access_rebuild();
-  }
-  drupal_flush_all_caches();
+//  drupal_flush_all_caches();
+//
+//  // Run any component installations
+//  //profiler_install_components($config);
+//
+//  // Rebuild key tables/caches
+//  menu_rebuild();
+//  if (isset($config['node'])) {
+//    node_access_rebuild();
+//  }
+//  drupal_flush_all_caches();
 }
 
 /**

@@ -62,7 +62,7 @@ function th_blocks_block_view($delta = '') {
 }
 
 function th_blocks_content($delta) {
-  $block_content = variable_get($delta . '_content');
+  $block_content = variable_get($delta . '_content', false);
 
   $content['th_block_search'] = '<form action="/' . variable_get('th_search_settings') . '" method="get" id="search-block-form" accept-charset="UTF-8">' . PHP_EOL
                               . '<div>' . PHP_EOL
@@ -101,7 +101,11 @@ function th_blocks_content($delta) {
   $content['th_block_partners'] = '<img src="" style="width:100%"/>' . PHP_EOL
                                 . '<img src="" style="width:100%"/>'. PHP_EOL;
 
-  return $block_content ? $block_content : isset($content[$delta]) ? $content[$delta] : NULL;
+  if ($block_content){
+    return $block_content;
+  } elseif (isset($content[$delta])) {
+    return $content[$delta];
+  }
 }
 
 function th_blocks_block_configure($delta = '') {
@@ -109,7 +113,7 @@ function th_blocks_block_configure($delta = '') {
   $form[$delta] = array(
     '#type' => 'text_format',
     '#title' => t('Block content'),
-    '#format' => variable_get($delta .'format', 'full_html' ),
+    '#format' => variable_get($delta .'_content_format', 'full_html' ),
     '#default_value' => th_blocks_content($delta),
   );
 
@@ -117,9 +121,9 @@ function th_blocks_block_configure($delta = '') {
 }
 
 function th_blocks_block_save($delta = '', $edit = array()) {
-  if (isset($edit[$delta]['values']) && isset($edit[$delta]['format'])) {
-    variable_set($delta . '_content', $edit[$delta]['values']);
-    variable_set($delta . '_content', $edit[$delta]['format']);
+  if (isset($edit[$delta]['value']) && isset($edit[$delta]['format'])) {
+    variable_set($delta . '_content', $edit[$delta]['value']);
+    variable_set($delta . '_content_format', $edit[$delta]['format']);
   }
 }
 
