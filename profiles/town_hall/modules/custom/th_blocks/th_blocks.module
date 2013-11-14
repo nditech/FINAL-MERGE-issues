@@ -34,10 +34,16 @@ function th_blocks_block_info() {
     'pages' => '<front>' . PHP_EOL . 'home' . PHP_EOL . 'node/*' . PHP_EOL . 'thd_search' . PHP_EOL. 'ths_search' . PHP_EOL,
   );
 
+  $blocks['th_block_user_action'] = array(
+    'info' => t('Town hall: UserName|LogOut'),
+    'status' => 1,
+  );
+
   return $blocks;
 }
 
 function th_blocks_block_view($delta = '') {
+  global $user;
   $block = array();
 
   switch ($delta) {
@@ -64,6 +70,15 @@ function th_blocks_block_view($delta = '') {
     case 'th_block_scroll_up_footer' :
       $block['subject'] = '';
       $block['content'] = array('#markup' => th_blocks_content($delta));
+      break;
+    case 'th_block_user_action' :
+      if (isset($user) && $user->uid) {
+        $block['subject'] = '';
+        $block_content = '<div class="user-action-wrapper"><div class="user-action">';
+        $block_content .= "<a class=\"user-action-name\" href=\"/user/$user->uid\">$user->name</a><span> &brvbar;</span><a class=\"user-action-logout\" href=\"/user/logout\">logout</a>";
+        $block_content .= '</div></div>';
+        $block['content'] = array('#markup'=> $block_content);
+      }
       break;
   }
 
@@ -120,18 +135,19 @@ function th_blocks_content($delta) {
   } elseif (isset($content[$delta])) {
     return $content[$delta];
   }
+  return false;
 }
 
 function th_blocks_block_configure($delta = '') {
-
-  $form[$delta] = array(
-    '#type' => 'text_format',
-    '#title' => t('Block content'),
-    '#format' => variable_get($delta .'_content_format', 'full_html' ),
-    '#default_value' => th_blocks_content($delta),
-  );
-
-  return $form;
+  if ($default_value = th_blocks_content($delta)) {
+    $form[$delta] = array(
+      '#type' => 'text_format',
+      '#title' => t('Block content'),
+      '#format' => variable_get($delta .'_content_format', 'full_html' ),
+      '#default_value' => $default_value,
+    );
+    return $form;
+  }
 }
 
 function th_blocks_block_save($delta = '', $edit = array()) {
@@ -220,6 +236,10 @@ function th_blocks_block_info_alter(&$blocks, $theme, $code_blocks) {
 
     if (isset($blocks['th_blocks']['th_block_partners'])) {
       $blocks['th_blocks']['th_block_partners']['regions'] = 'sidebar_second';
+    }
+    if (isset($blocks['th_blocks']['th_block_user_action'])) {
+      $blocks['th_blocks']['th_block_user_action']['region'] = 'header';
+      $blocks['th_blocks']['th_block_user_action']['weight'] = -10;
     }
   }
 
