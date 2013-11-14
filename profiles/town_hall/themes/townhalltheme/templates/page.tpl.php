@@ -122,8 +122,8 @@
     <?php endif; ?>
 
     <?php if (isset($user) && $user->uid): ?>
-      <div>
-        <div style="float: right;">
+      <div class="user-action-wrapper">
+        <div class="user-action">
           <a href="/user/<?php print $user->uid ?>"><?php print $user->name ?></a>|
           <a href="/user/logout">logout</a>
         </div>

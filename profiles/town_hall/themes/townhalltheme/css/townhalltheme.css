@@ -994,3 +994,9 @@ div.field-type-taxonomy-term-reference {
 .view-id-solr2 .view-footer .view-id-search_learn_more_about_the_candidates, .view-id-solr2 .view-footer .view-id-search_learn_more_about_the_parties {
 	width: 330px;
 }
+.user-action-wrapper {
+    padding-right: 20px;
+}
+.user-action {
+    float: right;
+}
