@@ -3,6 +3,7 @@ core = 7.x
 package = Town Hall
 dependencies[] = flag
 dependencies[] = hs_taxonomy
+dependencies[] = list
 dependencies[] = strongarm
 dependencies[] = text
 dependencies[] = th_content_type_answer_
