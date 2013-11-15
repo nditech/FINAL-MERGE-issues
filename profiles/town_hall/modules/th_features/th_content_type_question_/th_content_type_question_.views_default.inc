@@ -598,6 +598,12 @@ function th_content_type_question__views_default_views() {
   $handler->display->display_options['fields']['view_2']['view'] = 'th_parties_home';
   $handler->display->display_options['fields']['view_2']['display'] = 'block';
   $handler->display->display_options['fields']['view_2']['arguments'] = '[!nid]';
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Issue (field_issue) */
   $handler->display->display_options['arguments']['field_issue_tid']['id'] = 'field_issue_tid';
@@ -607,7 +613,7 @@ function th_content_type_question__views_default_views() {
   $handler->display->display_options['arguments']['field_issue_tid']['title_enable'] = TRUE;
   $handler->display->display_options['arguments']['field_issue_tid']['title'] = 'Issue: %1';
   $handler->display->display_options['arguments']['field_issue_tid']['default_argument_type'] = 'php';
-  $handler->display->display_options['arguments']['field_issue_tid']['default_argument_options']['code'] = 'if (function_exists("th_issue_random_get_tids"){ return th_issue_random_get_tids()}';
+  $handler->display->display_options['arguments']['field_issue_tid']['default_argument_options']['code'] = 'th_issue_random_get_tids()';
   $handler->display->display_options['arguments']['field_issue_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_issue_tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_issue_tid']['summary_options']['items_per_page'] = '25';
@@ -616,6 +622,7 @@ function th_content_type_question__views_default_views() {
   $handler->display->display_options['arguments']['field_issue_tid']['validate_options']['vocabularies'] = array(
     'th_issues' => 'th_issues',
   );
+  $handler->display->display_options['arguments']['field_issue_tid']['validate']['fail'] = 'ignore';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
