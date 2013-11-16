@@ -129,5 +129,6 @@ dependencies[] = th_newsletter
 dependencies[] = th_blocks
 dependencies[] = th_theme_settings
 dependencies[] = th_text_formats
+dependencies[] = pathauto
 
 
