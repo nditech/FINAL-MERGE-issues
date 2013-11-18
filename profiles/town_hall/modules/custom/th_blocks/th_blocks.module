@@ -114,7 +114,7 @@ function th_blocks_content($delta) {
                                            . '</ul>' . PHP_EOL
                                            . '<a class="privacy_policy">Privacy and Use Policy</a>' . PHP_EOL;
   $content['th_block_scroll_up_footer'] = '<div id="scroll-top">' . PHP_EOL
-                                 . '<img src="profiles/town_hall/themes/townhalltheme/images/scroll.png" />' . PHP_EOL
+                                 . '<img src="/profiles/town_hall/themes/townhalltheme/images/scroll.png" />' . PHP_EOL
                                  .'<p class="top_text">TOP</p>'. PHP_EOL
                                  .'</div>'. PHP_EOL;
 
