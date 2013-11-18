@@ -204,8 +204,8 @@ input.form-text, textarea.form-textarea, select.form-select {
 	height: 41px;
 	width: 36px;	
 }
-.region-header .form-text:hover,
-.region-header .form-text:active,
+.region-header .form-text: hover, 
+.region-header .form-text: active, 
 .region-header .form-text:focus {
 	border: 1px solid #CCCCCC;
 }
@@ -230,7 +230,7 @@ input.form-text, textarea.form-textarea, select.form-select {
 	width: auto;
 }
 #block-th-main-menu-th-main-menu ul {
-	background: #fff url("../images/menu_bg.jpg") bottom left;
+	background: #fff url("/profiles/town_hall/themes/townhalltheme/images/menu_bg.jpg") bottom left;
     border: 1px solid #C0C0C0;
     letter-spacing: 0.05em;
     list-style: none outside none;
@@ -251,7 +251,7 @@ input.form-text, textarea.form-textarea, select.form-select {
 #block-th-main-menu-th-main-menu ul li.th-last {
 	border-right: none;
 }
-#featured .chosen-search {
+#block-th-main-menu-th-main-menu .chosen-search {
 	display: none;
 }
 #block-th-main-menu-th-main-menu .chosen-drop {
@@ -281,6 +281,7 @@ input.form-text, textarea.form-textarea, select.form-select {
 	z-index:100; 	
 	height: auto;
 	padding:10px 28px;
+	width
 }
 .chosen-container {
 -webkit-user-select: none;
@@ -314,6 +315,9 @@ user-select: none;
 }
 #block-th-main-menu-th-main-menu li a:hover { 
 	color: #fff;
+}
+#block-th-main-menu-th-main-menu ul li:last-child {
+	border-right: none;
 }
 .chosen-container a.chosen-single div {
 	display: inline-block;
@@ -351,14 +355,14 @@ user-select: none;
 	display: inline;
     float: left;
 }
-#footer #block-block-6 {
+#footer #block-th-blocks-th-block-social-links-footer {
 	width: 190px;
 	display: inline;
     float: left;
     margin-left: 10px;
     margin-right: 10px;
 }
-#footer #block-block-6 h2{
+#footer #block-th-blocks-th-block-social-links-footer h2{
 	color: #181818;
     margin: 0 0 10px;
 	text-align: center;
@@ -368,15 +372,15 @@ user-select: none;
     line-height: 18px;
     margin: 2px 0 4px;
 }
-#footer #block-block-7 {
+#footer #block-th-blocks-th-block-scroll-up-footer {
 	display: inline;
     float: left;
     margin-left: 30px;
     margin-right: 10px;
 	width: 40px;
 }
-#footer #block-block-7 p {margin: 0;}
-#footer #block-block-7 p.top_text {
+#footer #block-th-blocks-th-block-scroll-up-footer p {margin: 0;}
+#footer #block-th-blocks-th-block-scroll-up-footer p.top_text {
 	color: #181818;
     font-family: "open_sanscondensed_light";
     padding-left: 20px;
@@ -426,7 +430,7 @@ user-select: none;
 	margin-top: 4px;
 }
 input.form-submit {
-	background: url("../images/submit_bg.jpg");
+	background: url("/profiles/town_hall/themes/townhalltheme/images/submit_bg.jpg");
 	border-radius: 3px 3px 3px 3px;
 	text-transform:uppercase;
 	text-shadow: 0 1px rgba(255, 255, 255, 0.75);
@@ -479,7 +483,7 @@ input.form-submit {
 	display: block;
 	font: 12px/21px "open_sansregular",Helvetica,Arial,sans-serif;
 }
-#block-block-6 .content {
+#block-th-blocks-th-block-social-links-footer .content {
 	text-align: center;
 }
 .sidebar .section {
@@ -501,15 +505,15 @@ input.form-submit {
 	text-shadow:none;
 	text-align:center;
 }
-#block-block-5 .content {
+#block-th-blocks-th-block-social-links .content {
 	margin-top: 0;
 }
-#block-block-5 ul {
+#block-th-blocks-th-block-social-links ul {
 	overflow: hidden;
 	width: 136px;
 	margin: 0 auto;
 }
-#block-block-5 ul li {
+#block-th-blocks-th-block-social-links ul li {
 	list-style-type:none;
 	float: left;
 	margin: 0 7px;
@@ -603,8 +607,8 @@ ul.quicktabs-tabs li {
 h3 {
 font-weight: 600;
 }
-#block-questions-block-questions-block h2 {
-	background: url("../images/question_bg.jpg");
+#block-th-questions-block-th-questions-block h2 {
+	background: url("/profiles/town_hall/themes/townhalltheme/images/question_bg.jpg");
 	border-radius: 6px 6px 6px 6px;
 	behavior: url(../js/PIE.htc);
     color: #FFFFFF !important;
@@ -618,20 +622,23 @@ font-weight: 600;
     width: 100%;
 	letter-spacing: 0;
 }
-#block-questions-block-questions-block .content {
+#block-th-questions-block-th-questions-block .content {
 	margin: 0 0 0 12px;
 }
-#block-questions-block-questions-block .content p {
+#block-th-questions-block-th-questions-block .content p {
 	font-family: "open_sanscondensed_light", Helvetica,Arial,sans-serif;
     font-size: 18px;
     line-height: 25px;
 }
-#block-questions-block-questions-block .content p a {
+#block-th-questions-block-th-questions-block .content p a {
 	color: #D04B0A;		
     font-weight: bold;    
     text-transform: uppercase;
 	font: 14px/21px "open_sansbold";
 	text-decoration: none;
+}
+#block-th-questions-block-th-questions-block h2 a {
+	color: #fff;
 }
 .issue_body_style {
 	float: left;
@@ -640,7 +647,7 @@ font-weight: 600;
 	font: 18px/25px "open_sans_condensedbold", Helvetica,Arial,sans-serif;
 }
 .issue_title_style {
- 	background: url("../images/question_green_bg.gif") no-repeat;
+ 	background: url("/profiles/town_hall/themes/townhalltheme/images/question_green_bg.gif") no-repeat;
     display: block;
     float: left;
     height: 100px;
@@ -690,7 +697,7 @@ td ul li.comment_forbidden, td ul li.comment-comments {
 .flag-unlike a, .flag-unlike-questions a {
 	text-indent: -9999px;
 	overflow: hidden;
-	background: url("../images/dislike.gif") no-repeat;
+	background: url("/profiles/town_hall/themes/townhalltheme/images/dislike.gif") no-repeat;
 	display: block;
 	width: 22px;
 	margin-right: 8px;
@@ -698,7 +705,7 @@ td ul li.comment_forbidden, td ul li.comment-comments {
 .flag-like a, .flag-like-questions a {
 	text-indent: -9999px;
 	overflow: hidden;
-	background: url("../images/like.gif") no-repeat;
+	background: url("/profiles/town_hall/themes/townhalltheme/images/like.gif") no-repeat;
 	display: block;
 	width: 22px;
 	margin-right: 8px;
@@ -744,7 +751,7 @@ td ul li.comment_forbidden, td ul li.comment-comments {
 	overflow: hidden;
 	display: block;
 	width: 25px;
-	background: url("../images/comments.gif") no-repeat;
+	background: url("/sites/all/themes/townhalltheme/images/comments.gif") no-repeat;
 }
 .node-candidate .field-name-field-th-party, .node-candidate .field-type-text-with-summary {
 	float: right;
@@ -780,7 +787,7 @@ h1.title-candidates {
 	width: 220px;
 	text-align: center;
 }
-.field-name-field-th-party:after {
+.field-name-field-th-party: after {
 	clear: both;
 }
 .node-party .field-name-field-th-fb-page, .node-party .field-name-field-th-website, .node-party .field-name-field-fb-social-networks , .node-party .field-name-field-th-volunteer-link, .node-candidate .field-name-field-th-fb-page, .node-candidate .field-name-field-th-website, .node-candidate .field-name-field-fb-social-networks , .node-candidate .field-name-field-th-volunteer-link {
@@ -788,7 +795,7 @@ h1.title-candidates {
 	font: 14px/21px "open_sanssemibold", Helvetica, Arial;
 }
 .field-name-field-th-fb-page a, .field-name-field-th-website a {	
-	background: url("../images/separator.gif") center right no-repeat;
+	background: url("/profiles/town_hall/themes/townhalltheme/images/separator.gif") center right no-repeat;
 }
 .field-name-field-fb-social-networks div.field-item {
 	float: left;	
@@ -808,7 +815,7 @@ h1.title-candidates {
 }
 #views-exposed-form-th-party-page-videos-block .views-exposed-form, #views-exposed-form-candidates-videos-block .views-exposed-form {
 	padding-left: 115px;
-	background: url("../images/filter_by.gif") 0 5px no-repeat;
+	background: url("/profiles/town_hall/themes/townhalltheme/images/filter_by.gif") 0 5px no-repeat;
 	margin-left: 30px;
 }
 #question-node-form {
@@ -829,7 +836,7 @@ h1.title-candidates {
     padding: 7px 4px;
 }
 #question-node-form #edit-field-issue-und-hierarchical-select-dropbox-add {
-	background: url("../images/submit_bg.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background: url("/profiles/town_hall/themes/townhalltheme/images/submit_bg.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
     border: 1px solid #AAAAAA;
     border-radius: 3px 3px 3px 3px;
     color: #444444;
@@ -837,9 +844,7 @@ h1.title-candidates {
     padding: 7px 5px;    
     text-transform: uppercase;
 }
-#question-node-form #edit-field-region, #question-node-form #edit-field-issue {
-	float: left;
-	width: 50%;
+#question-node-form #edit-field-region, #question-node-form #edit-field-issue {	
 }
 #question-node-form .vertical-tabs {
 	clear: both;
@@ -860,7 +865,6 @@ h1.title-candidates {
 	padding: 6px 0;
 }
 #question-node-form #edit-field-region div.form-item-field-region-und {
-	float: right;
 }
 #question-node-form .captcha div.form-item-captcha-response input {
 	width: 170px;
@@ -994,9 +998,6 @@ div.field-type-taxonomy-term-reference {
 .view-id-solr2 .view-footer .view-id-search_learn_more_about_the_candidates, .view-id-solr2 .view-footer .view-id-search_learn_more_about_the_parties {
 	width: 330px;
 }
-.user-action-wrapper {
-    padding-right: 20px;
-}
-.user-action {
-    float: right;
+.flag-message.flag-success-message {
+	z-index: 1000;
 }

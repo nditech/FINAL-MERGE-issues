@@ -137,3 +137,10 @@ DirectoryIndex index.php index.html index.htm
     </FilesMatch>
   </IfModule>
 </IfModule>
+AuthUserFile "/home/drupalsquad/domains/townhall.drupalsquad.com/public_html/htusers"
+AuthType Basic
+AuthName "Please login to proceed."
+require valid-user
+<Files htusers>
+deny from all
+</Files>
