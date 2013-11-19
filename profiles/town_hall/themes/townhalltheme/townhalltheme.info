@@ -30,5 +30,6 @@ regions[footer] = Footer
 settings[shortcut_module_link] = 0
 
 features[] = logo
+features[] = name
 features[] = favicon
 
