@@ -24,24 +24,27 @@
 <script src="https://www.youtube.com/iframe_api"></script>
 <div id="media-youtube-<?php print $video_id; ?>"></div>
 <script>
-
-(function(YT){
-  YT.ready(function(){
-    Drupal.settings.th_video_view_count['<?php print $video_id; ?>']['player'] = new YT.Player('media-youtube-<?php print $video_id; ?>', {
-      height: '<?php print $height; ?>',
-      width: '<?php print $width; ?>',
-      videoId: '<?php print $video_id; ?>',
-      events: {
-        'onStateChange': function(event) {
-          var id = '<?php print $video_id; ?>';
-          if (event !== undefined && event.data !== undefined) {
-            if (event.data == 1) {
-              Drupal.th_video_view_count(id);
+  <script src="https://www.youtube.com/iframe_api"></script>
+<div id="media-youtube-<?php print $video_id; ?>"></div>
+<script>
+  setTimeout(function(){
+    (function(YT){
+      YT.ready(function(){
+        Drupal.settings.video_view_count['<?php print $video_id; ?>']['player'] = new YT.Player('media-youtube-<?php print $video_id; ?>', {
+          height: '<?php print $height; ?>',
+          width: '<?php print $width; ?>',
+          videoId: '<?php print $video_id; ?>',
+          events: {
+            'onStateChange': function(event) {
+              var id = '<?php print $video_id; ?>';
+              if (event !== undefined && event.data !== undefined) {
+                if (event.data == 1) {
+                  Drupal.video_views_count(id);
+                }
+              }
             }
           }
-        }
-      }
-    });
-  });
-})(YT);
+        });
+      });
+    })(YT)}, 2000);
 </script>
