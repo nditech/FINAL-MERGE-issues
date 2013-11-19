@@ -210,7 +210,7 @@ input.form-text, textarea.form-textarea, select.form-select {
 	border: 1px solid #CCCCCC;
 }
 #featured {
-	padding: 20px 0 50px;
+	padding: 20px 0 30px;
 	border-bottom: none;
 	background:none;
 	width: 940px;
@@ -343,7 +343,7 @@ user-select: none;
 #page #footer-wrapper {
 	background: #fff url("../images/footer_bg.jpg") bottom left;
 	margin: 0;
-	padding: 20px 0 30px !important;
+	padding: 0 30px 20px 0 !important;
 }
 #footer {
 	margin-top: 0;
@@ -491,6 +491,7 @@ input.form-submit {
 }
 .sidebar .block {
 	padding: 15px 0 15px 20px;
+	margin: 0;
 }
 #sidebar-second {
 	width: 220px;
@@ -999,5 +1000,14 @@ div.field-type-taxonomy-term-reference {
 	width: 330px;
 }
 .flag-message.flag-success-message {
-	z-index: 1000;
+	z-index: 1000;	
+	background-color: #ffffcc;	
+	font-size: 1em;
+}
+#block-views-th-ef-newsletter-signup-block h2 {display: none;}
+.comment_forbidden a {
+	text-decoration: underline;
+}
+#main {
+	margin-bottom: 0;
 }
