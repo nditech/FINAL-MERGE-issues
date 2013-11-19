@@ -24,13 +24,10 @@
 <script src="https://www.youtube.com/iframe_api"></script>
 <div id="media-youtube-<?php print $video_id; ?>"></div>
 <script>
-  <script src="https://www.youtube.com/iframe_api"></script>
-<div id="media-youtube-<?php print $video_id; ?>"></div>
-<script>
   setTimeout(function(){
     (function(YT){
       YT.ready(function(){
-        Drupal.settings.video_view_count['<?php print $video_id; ?>']['player'] = new YT.Player('media-youtube-<?php print $video_id; ?>', {
+        Drupal.settings.th_video_view_count['<?php print $video_id; ?>']['player'] = new YT.Player('media-youtube-<?php print $video_id; ?>', {
           height: '<?php print $height; ?>',
           width: '<?php print $width; ?>',
           videoId: '<?php print $video_id; ?>',
