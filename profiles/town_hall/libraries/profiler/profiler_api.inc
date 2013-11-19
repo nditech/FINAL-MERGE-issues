@@ -109,6 +109,8 @@ function th_install_finished() {
   drupal_flush_all_caches();
 
   variable_set('install_profile', drupal_get_profile());
+  variable_set('statistics_count_content_views', 1);
+  variable_set('statistics_enable_access_log', 1);
 
   db_update('system')->fields(array('weight' => 1000))->condition('type', 'module')->condition('name', drupal_get_profile())->execute();
 
