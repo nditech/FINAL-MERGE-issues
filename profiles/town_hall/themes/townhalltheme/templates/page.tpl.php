@@ -173,7 +173,7 @@
 
   <div id="main-wrapper" class="clearfix"><div id="main" class="clearfix">
 
-    <?php if ($breadcrumb && !preg_match("/\>Home\</", $breadcrumb)): ?>
+    <?php if ($breadcrumb && !preg_match("/Home\<\/a\>\<\/div\>/", $breadcrumb)): ?>
       <div id="breadcrumb"><?php print $breadcrumb; ?></div>
     <?php endif; ?>
 
