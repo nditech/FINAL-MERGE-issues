@@ -34,10 +34,10 @@ function th_blocks_block_info() {
     'pages' => '<front>' . PHP_EOL . 'home' . PHP_EOL . 'node/*' . PHP_EOL . 'thd_search' . PHP_EOL. 'ths_search' . PHP_EOL,
   );
 
-//  $blocks['th_block_user_action'] = array(
-//    'info' => t('Town hall: UserName'),
-//    'status' => 1,
-//  );
+  $blocks['th_block_user_action'] = array(
+    'info' => t('Town hall: UserName'),
+    'status' => 1,
+  );
 
   return $blocks;
 }
@@ -71,15 +71,14 @@ function th_blocks_block_view($delta = '') {
       $block['subject'] = '';
       $block['content'] = array('#markup' => th_blocks_content($delta));
       break;
-//    case 'th_block_user_action' :
-//      if (isset($user) && $user->uid) {
-//        $block['subject'] = '';
-//        $block_content = '<div class="user-action-wrapper"><div class="user-action">';
-//        $block_content .= "<a class=\"user-action-name\" href=\"/user/$user->uid\">$user->name</a><span> &brvbar;</span><a class=\"user-action-logout\" href=\"/user/logout\">logout</a>";
-//        $block_content .= '</div></div>';
-//        $block['content'] = array('#markup'=> $block_content);
-//      }
-//      break;
+    case 'th_block_user_action' :
+      if (isset($user) && $user->uid) {
+        $block['subject'] = '';
+        $block_content = "<ul class=\"menu clearfix\"><li class=\"first leaf\"><a href=\"/user\">$user->name</a></li>" .
+          "<li class=\"last leaf\"><a href=\"/user/logout\">Log out</a></li></ul>";
+        $block['content'] = array('#markup'=> $block_content);
+      }
+      break;
   }
 
   return $block;
@@ -237,10 +236,10 @@ function th_blocks_block_info_alter(&$blocks, $theme, $code_blocks) {
     if (isset($blocks['th_blocks']['th_block_partners'])) {
       $blocks['th_blocks']['th_block_partners']['regions'] = 'sidebar_second';
     }
-//    if (isset($blocks['th_blocks']['th_block_user_action'])) {
-//      $blocks['th_blocks']['th_block_user_action']['region'] = 'header';
-//      $blocks['th_blocks']['th_block_user_action']['weight'] = -10;
-//    }
+    if (isset($blocks['th_blocks']['th_block_user_action'])) {
+      $blocks['th_blocks']['th_block_user_action']['region'] = 'header';
+      $blocks['th_blocks']['th_block_user_action']['weight'] = -10;
+    }
   }
 
   if (isset($blocks['th_questions_block'])) {
