@@ -20,7 +20,7 @@ function th_search_db_default_search_api_index() {
     "name" : "Database server index",
     "machine_name" : "database_server_index",
     "description" : null,
-    "server" : "database_server",
+    "server" : null,
     "item_type" : "node",
     "options" : {
       "index_directly" : 0,
@@ -84,7 +84,7 @@ function th_search_db_default_search_api_index() {
         }
       }
     },
-    "enabled" : "1",
+    "enabled" : "0",
     "read_only" : "0",
     "rdf_mapping" : []
   }');
@@ -193,5 +193,3 @@ function th_search_db_default_search_api_server() {
   }');
   return $items;
 }
-
-

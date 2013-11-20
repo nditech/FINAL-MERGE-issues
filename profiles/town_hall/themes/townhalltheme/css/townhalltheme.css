@@ -187,6 +187,24 @@ input.form-text, textarea.form-textarea, select.form-select {
     margin: 15px 0 5px;
 	color: #181818;
 }
+.region-header {
+	width: 270px;
+}
+.region-header #block-system-user-menu ul.menu li {
+	float: left;	
+}
+.region-header #block-system-user-menu ul.menu li a {
+	color: #333333;
+}
+.region-header #block-system-user-menu ul.menu li a:hover {
+ 	text-decoration: underline;
+}
+.region-header .block-menu {
+	border: none;
+}
+.region-header .block-menu li a {
+	border-bottom: none;
+}
 .region-header input.form-text {
 	border: 1px solid #CCCCCC;
 	border-radius: 2px 2px 2px 2px;
@@ -751,8 +769,14 @@ td ul li.comment_forbidden, td ul li.comment-comments {
 	text-indent: -9999px;
 	overflow: hidden;
 	display: block;
+	width: 25px;	
+}
+.views-field-comments-link li.comment-comments a {
+	text-indent: -9999px;
+	overflow: hidden;
 	width: 25px;
-	background: url("/sites/all/themes/townhalltheme/images/comments.gif") no-repeat;
+	display: block;
+	background: url("/profiles/town_hall/themes/townhalltheme/images/comments.gif") no-repeat;
 }
 .node-candidate .field-name-field-th-party, .node-candidate .field-type-text-with-summary {
 	float: right;
@@ -947,7 +971,7 @@ div.field-type-taxonomy-term-reference {
 }
 .view-id-home_page_videos .home-page-videos-pager .view-filters {
 	text-align: center;
-	margin-top: -50px;
+	margin-top: -20px;
 }
 .view-id-home_page_videos .home-page-videos-pager .view-filters form{
 	margin: 0 auto;

@@ -81,6 +81,7 @@ features[views_view][] = issues_videos
 features[views_view][] = most_shared
 features[views_view][] = most_watched
 features[views_view][] = th_party_page_videos
+features[views_view][] = th_taxonomy_terms
 features_exclude[field_base][body] = body
 features_exclude[field_instance][node-video-field_html_code] = node-video-field_html_code
 features_exclude[dependencies][strongarm] = strongarm
