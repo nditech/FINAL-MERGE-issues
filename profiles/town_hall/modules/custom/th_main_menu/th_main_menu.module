@@ -15,6 +15,31 @@ function th_main_menu_block_view($delta = '') {
     $candidates_output = views_embed_view('candidates', 'block_1');
     $parteis_output = views_embed_view('parties', 'block_1');
 
+
+    if (!preg_match('/select/', $candidates_output)) {
+      $form = array(
+        '#type' => 'select',
+        '#options' => array('0'=> '-Candidates-'),
+        '#attributes' => array(
+          'disabled' => 'true',
+          'class' => array('ctools-jump-menu-select'),
+        ),
+      );
+      $candidates_output = drupal_render($form);
+    }
+
+    if (!preg_match('/select/', $parteis_output)) {
+      $form = array(
+        '#type' => 'select',
+        '#options' => array('0'=> '-Parties-'),
+        '#attributes' => array(
+          'disabled' => 'true',
+          'class' => array('ctools-jump-menu-select'),
+        ),
+      );
+      $parteis_output = drupal_render($form);
+    }
+
     $output = '<ul>';
 
     $output .= '<li>' . l('Issues', 'questions') . '</li>';
