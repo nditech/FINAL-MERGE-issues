@@ -50,7 +50,7 @@ function th_content_type_candidate__views_default_views() {
     'image_style' => 'thumbnail',
     'image_link' => 'content',
   );
-  /* Field: Content: Description */
+  /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -86,7 +86,7 @@ function th_content_type_candidate__views_default_views() {
   $handler->display->display_options['style_plugin'] = 'jump_menu';
   $handler->display->display_options['style_options']['hide'] = TRUE;
   $handler->display->display_options['style_options']['path'] = 'nid';
-  $handler->display->display_options['style_options']['choose'] = '- Candidates -';
+  $handler->display->display_options['style_options']['choose'] = 'Candidates';
   $handler->display->display_options['style_options']['default_value'] = TRUE;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;

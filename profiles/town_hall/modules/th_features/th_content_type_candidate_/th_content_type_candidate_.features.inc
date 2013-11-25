@@ -47,6 +47,7 @@ function th_content_type_candidate__image_default_styles() {
         'weight' => 1,
       ),
     ),
+    'label' => 'candidate_image',
   );
 
   return $styles;

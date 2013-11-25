@@ -120,13 +120,6 @@ function th_search_db_views_default_views() {
   $handler->display->display_options['sorts']['daycount']['order'] = 'DESC';
   $handler->display->display_options['sorts']['daycount']['exposed'] = TRUE;
   $handler->display->display_options['sorts']['daycount']['expose']['label'] = 'Views today';
-  /* Sort criterion: Content: Share count (share_count) */
-  $handler->display->display_options['sorts']['share_count_value']['id'] = 'share_count_value';
-  $handler->display->display_options['sorts']['share_count_value']['table'] = 'field_data_share_count';
-  $handler->display->display_options['sorts']['share_count_value']['field'] = 'share_count_value';
-  $handler->display->display_options['sorts']['share_count_value']['order'] = 'DESC';
-  $handler->display->display_options['sorts']['share_count_value']['exposed'] = TRUE;
-  $handler->display->display_options['sorts']['share_count_value']['expose']['label'] = 'Most shared';
   $handler->display->display_options['filter_groups']['operator'] = 'OR';
   /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
@@ -169,9 +162,8 @@ function th_search_db_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'search';
-
-  $export['database'] = $view;
+  $handler->display->display_options['path'] = 'thd_search';
+  $export['search'] = $view;
 
   return $export;
 }

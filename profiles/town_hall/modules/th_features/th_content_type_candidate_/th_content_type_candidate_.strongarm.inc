@@ -27,6 +27,13 @@ function th_content_type_candidate__strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_anonymous_candidate';
+  $strongarm->value = 0;
+  $export['comment_anonymous_candidate'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_candidate';
   $strongarm->value = '1';
   $export['comment_candidate'] = $strongarm;
@@ -35,7 +42,7 @@ function th_content_type_candidate__strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_mode_candidate';
-  $strongarm->value = '1';
+  $strongarm->value = 1;
   $export['comment_default_mode_candidate'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -49,7 +56,7 @@ function th_content_type_candidate__strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_form_location_candidate';
-  $strongarm->value = '1';
+  $strongarm->value = 1;
   $export['comment_form_location_candidate'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -63,7 +70,7 @@ function th_content_type_candidate__strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_subject_field_candidate';
-  $strongarm->value = '1';
+  $strongarm->value = 1;
   $export['comment_subject_field_candidate'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -73,19 +80,22 @@ function th_content_type_candidate__strongarm() {
   $strongarm->value = array(
     'view_modes' => array(
       'full' => array(
-        'custom_settings' => 'false',
+        'custom_settings' => TRUE,
       ),
       'rss' => array(
-        'custom_settings' => 'false',
+        'custom_settings' => TRUE,
       ),
       'search_index' => array(
-        'custom_settings' => 'false',
+        'custom_settings' => TRUE,
       ),
       'search_result' => array(
-        'custom_settings' => 'false',
+        'custom_settings' => TRUE,
       ),
       'token' => array(
-        'custom_settings' => 'false',
+        'custom_settings' => TRUE,
+      ),
+      'teaser' => array(
+        'custom_settings' => TRUE,
       ),
     ),
     'extra_fields' => array(
@@ -93,11 +103,23 @@ function th_content_type_candidate__strongarm() {
         'title' => array(
           'weight' => '0',
         ),
+        'path' => array(
+          'weight' => '9',
+        ),
       ),
       'display' => array(),
     ),
   );
   $export['field_bundle_settings_node__candidate'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'menu_options_candidate';
+  $strongarm->value = array(
+    0 => 'main-menu',
+  );
+  $export['menu_options_candidate'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -121,6 +143,13 @@ function th_content_type_candidate__strongarm() {
   $strongarm->name = 'node_preview_candidate';
   $strongarm->value = '1';
   $export['node_preview_candidate'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_submitted_candidate';
+  $strongarm->value = 0;
+  $export['node_submitted_candidate'] = $strongarm;
 
   return $export;
 }

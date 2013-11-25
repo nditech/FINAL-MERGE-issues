@@ -113,8 +113,6 @@ function th_content_type_question__views_default_views() {
   $handler->display->display_options['fields']['count']['field'] = 'count';
   $handler->display->display_options['fields']['count']['relationship'] = 'flag_count_rel';
   $handler->display->display_options['fields']['count']['label'] = '';
-  $handler->display->display_options['fields']['count']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['count']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['count']['alter']['text'] = '[count] | [ops_1]';
   $handler->display->display_options['fields']['count']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['count']['separator'] = '';
@@ -131,8 +129,6 @@ function th_content_type_question__views_default_views() {
   $handler->display->display_options['fields']['count_1']['field'] = 'count';
   $handler->display->display_options['fields']['count_1']['relationship'] = 'flag_count_rel_1';
   $handler->display->display_options['fields']['count_1']['label'] = '';
-  $handler->display->display_options['fields']['count_1']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['count_1']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['count_1']['alter']['text'] = '[count_1] | [ops]';
   $handler->display->display_options['fields']['count_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['count_1']['separator'] = '';

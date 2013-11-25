@@ -190,13 +190,16 @@ input.form-text, textarea.form-textarea, select.form-select {
 .region-header {
 	width: 270px;
 }
-.region-header #block-system-user-menu ul.menu li {
-	float: left;	
+.region-header #block-th-blocks-th-block-user-action ul.menu li {
+	float: left;
+	margin-right: 20px;		
 }
-.region-header #block-system-user-menu ul.menu li a {
+.region-header #block-th-blocks-th-block-user-action ul.menu li:first-child {			
+}
+.region-header #block-th-blocks-th-block-user-action ul.menu li a {
 	color: #333333;
 }
-.region-header #block-system-user-menu ul.menu li a:hover {
+.region-header #block-th-blocks-th-block-user-action ul.menu li a:hover {
  	text-decoration: underline;
 }
 .region-header .block-menu {
@@ -275,7 +278,7 @@ input.form-text, textarea.form-textarea, select.form-select {
 #block-th-main-menu-th-main-menu .chosen-drop {
 	display: none;	
 	margin-left: -29px;	
-	width: 186px;
+	width: 188px;
 }
 #block-th-main-menu-th-main-menu .chosen-with-drop .chosen-drop {
 	display: block;
@@ -337,6 +340,15 @@ user-select: none;
 #block-th-main-menu-th-main-menu ul li:last-child {
 	border-right: none;
 }
+.chosen-container-single {
+	margin: 0 auto;
+}
+.chosen-container-single a:hover, .chosen-container-single a:active, .chosen-container-single a:focus {
+	text-decoration: none;
+}
+#block-th-main-menu-th-main-menu .form-item {
+	margin-top: 0;
+}
 .chosen-container a.chosen-single div {
 	display: inline-block;
     font-family: "fontello";
@@ -361,7 +373,7 @@ user-select: none;
 #page #footer-wrapper {
 	background: #fff url("../images/footer_bg.jpg") bottom left;
 	margin: 0;
-	padding: 0 30px 20px 0 !important;
+	padding: 10px 30px 20px 0 !important;
 }
 #footer {
 	margin-top: 0;
@@ -1034,4 +1046,49 @@ div.field-type-taxonomy-term-reference {
 }
 #main {
 	margin-bottom: 0;
+}
+.node-party .field-type-media + .field-type-link-field,
+.node-party .field-name-body + .field-type-link-field {
+	clear: both;
+	margin-left: 220px;
+}
+.node-candidate .field-type-media + .field-type-link-field,
+.node-candidate .field-name-body + .field-type-link-field {
+	clear: both;
+	margin-left: 190px;
+}
+.form-actions {
+	margin-bottom: 0;
+}
+.view-id-search td .views-field {
+	font: 14px/16px "open_sanscondensed_light",Helvetica,Arial,sans-serif;
+}
+.view-id-search td .views-field.views-field-field-th-video {
+	width: 340px;
+	float: left;
+}
+.view-id-search td .views-field.views-field-title {
+	font: bold 20px/20px "open_sanscondensed_light",Helvetica,Arial,sans-serif;
+	width: 330px;
+	float: left;
+	margin: 10px 0;
+}
+.view-id-search td .views-field.views-field-body {
+	width: 330px;
+	float: left;
+}
+.views-field-count .views-label, .views-field-count-1 .views-label {
+	display: none;
+}
+.views-field-count, .views-field-count-1 {
+	float: left;
+	font: bold 14px/16px "open_sanscondensed_light",Helvetica,Arial,sans-serif;
+}
+.not-logged-in .views-field-count {
+	padding-right:22px;
+	background: url("/profiles/town_hall/themes/townhalltheme/images/like.gif") no-repeat top right;
+}
+.not-logged-in .views-field-count-1 {
+	padding-right:22px;
+	background: url("/profiles/town_hall/themes/townhalltheme/images/dislike.gif") no-repeat top right;
 }
