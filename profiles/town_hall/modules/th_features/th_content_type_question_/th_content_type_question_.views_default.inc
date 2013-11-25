@@ -169,12 +169,6 @@ function th_content_type_question__views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'question' => 'question',
   );
-  /* Filter criterion: Content: Nid */
-  $handler->display->display_options['filters']['nid']['id'] = 'nid';
-  $handler->display->display_options['filters']['nid']['table'] = 'node';
-  $handler->display->display_options['filters']['nid']['field'] = 'nid';
-  $handler->display->display_options['filters']['nid']['relationship'] = 'reverse_field_th_question_node';
-  $handler->display->display_options['filters']['nid']['operator'] = 'empty';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
