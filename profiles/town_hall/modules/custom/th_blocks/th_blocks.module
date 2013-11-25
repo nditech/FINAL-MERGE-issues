@@ -245,7 +245,7 @@ function th_blocks_block_info_alter(&$blocks, $theme, $code_blocks) {
   if (isset($blocks['th_questions_block'])) {
     if (isset($blocks['th_questions_block']['th_questions_block'])) {
       $blocks['th_questions_block']['th_questions_block']['region'] = 'sidebar_second';
-      $blocks['th_questions_block']['th_questions_block']['weight'] = -8;
+      $blocks['th_questions_block']['th_questions_block']['weight'] = -11;
     }
 
     if (isset($blocks['th_questions_block']['th_questions_block_user'])) {
