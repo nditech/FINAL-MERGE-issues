@@ -19,7 +19,7 @@ function th_main_menu_block_view($delta = '') {
     if (!preg_match('/select/', $candidates_output)) {
       $form = array(
         '#type' => 'select',
-        '#options' => array('0'=> '-Candidates-'),
+        '#options' => array('0'=> 'Candidates'),
         '#attributes' => array(
           'disabled' => 'true',
           'class' => array('ctools-jump-menu-select'),
@@ -31,7 +31,7 @@ function th_main_menu_block_view($delta = '') {
     if (!preg_match('/select/', $parteis_output)) {
       $form = array(
         '#type' => 'select',
-        '#options' => array('0'=> '-Parties-'),
+        '#options' => array('0'=> 'Parties'),
         '#attributes' => array(
           'disabled' => 'true',
           'class' => array('ctools-jump-menu-select'),
