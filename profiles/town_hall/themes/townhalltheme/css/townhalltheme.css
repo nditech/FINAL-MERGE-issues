@@ -628,7 +628,7 @@ ul.quicktabs-tabs li {
 	list-style-type: square;
 	margin: 15px 0 20px 45px;
 }
-#block-block-3 h2 {
+#block-th-blocks-th-block-partners h2 {
 	border-bottom: 1px solid #C0C0C0;
 	text-transform: uppercase;
 	color: #F7921D;	
@@ -1053,7 +1053,7 @@ div.field-type-taxonomy-term-reference {
 	margin-left: 220px;
 }
 .node-candidate .field-type-media + .field-type-link-field,
-.node-candidate .field-name-body + .field-type-link-field {
+.node-candidate .field-name-body + .field-type-link-field, .node-candidate .field-name-field-th-party + .field-type-link-field {
 	clear: both;
 	margin-left: 190px;
 }
@@ -1077,6 +1077,9 @@ div.field-type-taxonomy-term-reference {
 	width: 330px;
 	float: left;
 }
+.view-id-search td .views-field.views-field-field-issue {
+	clear: both;
+}
 .views-field-count .views-label, .views-field-count-1 .views-label {
 	display: none;
 }
@@ -1091,4 +1094,7 @@ div.field-type-taxonomy-term-reference {
 .not-logged-in .views-field-count-1 {
 	padding-right:22px;
 	background: url("/profiles/town_hall/themes/townhalltheme/images/dislike.gif") no-repeat top right;
+}
+.comment_forbidden {
+	width: 160px;
 }
