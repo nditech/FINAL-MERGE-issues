@@ -41,7 +41,7 @@ function th_content_type_answer__flag_default_flags() {
     ),
     'flag_short' => 'Like',
     'flag_long' => 'I like this',
-    'flag_message' => 'Thank you for supporting [node:field-th-candidate:field_th_first_name] of [node:field-th-candidate:field-th-party:title] from [node:field-th-question:field-region:name]',
+    'flag_message' => 'Thank you for supporting [node:field-th-candidate:field-th-first-name] of [node:field-th-candidate:field-th-party:title] from [node:field-th-question:field-region:name]',
     'unflag_short' => 'Cancel like',
     'unflag_long' => 'Cancel your like',
     'unflag_message' => '',
