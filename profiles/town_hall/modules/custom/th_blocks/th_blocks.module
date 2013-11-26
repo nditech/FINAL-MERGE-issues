@@ -64,7 +64,7 @@ function th_blocks_block_view($delta = '') {
       $block['content'] = array('#markup' => th_blocks_content($delta));
       break;
     case 'th_block_partners' :
-      $block['subject'] = '';
+      $block['subject'] = 'Partners';
       $block['content'] = array('#markup' => th_blocks_content($delta));
       break;
     case 'th_block_scroll_up_footer' :
