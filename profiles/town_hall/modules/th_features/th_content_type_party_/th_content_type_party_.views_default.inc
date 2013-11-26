@@ -67,7 +67,7 @@ function th_content_type_party__views_default_views() {
   $handler->display->display_options['style_plugin'] = 'jump_menu';
   $handler->display->display_options['style_options']['hide'] = TRUE;
   $handler->display->display_options['style_options']['path'] = 'nid';
-  $handler->display->display_options['style_options']['choose'] = '- Political Parties -';
+  $handler->display->display_options['style_options']['choose'] = 'Parties';
   $handler->display->display_options['style_options']['default_value'] = TRUE;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
