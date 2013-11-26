@@ -42,6 +42,7 @@ function th_permissions_register_mode_user_default_permissions() {
     'name' => 'access comments',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'comment',
@@ -1257,6 +1258,7 @@ function th_permissions_register_mode_user_default_permissions() {
     'name' => 'unflag like',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'flag',
   );
