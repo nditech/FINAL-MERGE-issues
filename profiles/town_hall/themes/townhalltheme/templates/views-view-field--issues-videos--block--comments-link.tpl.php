@@ -38,6 +38,6 @@
     <span class="field-content">
       <ul class="links inline">
         <li class="comment_forbidden first last">
-          <span><a href="/user/login">Log in</a> or <a href="/user/register">register</a> and/or support this video</span></li>
+          <span><a href="/user/login">Log in</a> or <a href="/user/register">register</a> to post comments and/or support this video</span></li>
       </ul></span>  </div>
 <?php endif; ?>
