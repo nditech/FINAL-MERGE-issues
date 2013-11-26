@@ -47,6 +47,7 @@ function th_content_type_party__image_default_styles() {
         'weight' => 1,
       ),
     ),
+    'label' => 'party_logo',
   );
 
   return $styles;
