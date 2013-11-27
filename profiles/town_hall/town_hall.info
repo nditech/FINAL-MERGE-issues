@@ -131,4 +131,5 @@ dependencies[] = th_theme_settings
 dependencies[] = th_text_formats
 dependencies[] = pathauto
 dependencies[] = th_feed
+dependencies[] = th_hierarchical_select
 
