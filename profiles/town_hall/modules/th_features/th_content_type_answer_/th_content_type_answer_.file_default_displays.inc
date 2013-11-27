@@ -10,7 +10,7 @@
 function th_content_type_answer__file_default_displays() {
   $export = array();
 
-  //
+//
 
   $file_display = new stdClass();
   $file_display->api_version = 1;

@@ -22,7 +22,7 @@ function th_content_type_party__field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -193,7 +193,7 @@ function th_content_type_party__field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'full' => array(
         'label' => 'hidden',

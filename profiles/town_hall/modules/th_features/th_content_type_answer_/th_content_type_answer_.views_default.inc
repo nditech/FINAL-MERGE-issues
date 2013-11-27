@@ -65,6 +65,20 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['relationships']['flag_content_rel_1']['label'] = 'Flag (Dislike Video)';
   $handler->display->display_options['relationships']['flag_content_rel_1']['required'] = 0;
   $handler->display->display_options['relationships']['flag_content_rel_1']['flag'] = 'unlike';
+  /* Relationship: Flags: like counter */
+  $handler->display->display_options['relationships']['flag_count_rel']['id'] = 'flag_count_rel';
+  $handler->display->display_options['relationships']['flag_count_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_count_rel']['field'] = 'flag_count_rel';
+  $handler->display->display_options['relationships']['flag_count_rel']['label'] = 'likes counter';
+  $handler->display->display_options['relationships']['flag_count_rel']['required'] = 0;
+  $handler->display->display_options['relationships']['flag_count_rel']['flag'] = 'like';
+  /* Relationship: Flags: unlike counter */
+  $handler->display->display_options['relationships']['flag_count_rel_1']['id'] = 'flag_count_rel_1';
+  $handler->display->display_options['relationships']['flag_count_rel_1']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_count_rel_1']['field'] = 'flag_count_rel';
+  $handler->display->display_options['relationships']['flag_count_rel_1']['label'] = 'dislikes counter';
+  $handler->display->display_options['relationships']['flag_count_rel_1']['required'] = 0;
+  $handler->display->display_options['relationships']['flag_count_rel_1']['flag'] = 'unlike';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -74,7 +88,7 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Party video */
+  /* Field: Content: VIdeo */
   $handler->display->display_options['fields']['field_th_video']['id'] = 'field_th_video';
   $handler->display->display_options['fields']['field_th_video']['table'] = 'field_data_field_th_video';
   $handler->display->display_options['fields']['field_th_video']['field'] = 'field_th_video';
@@ -84,6 +98,13 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['field_th_video']['settings'] = array(
     'file_view_mode' => 'teaser',
   );
+  /* Field: Flags: Flag counter */
+  $handler->display->display_options['fields']['count']['id'] = 'count';
+  $handler->display->display_options['fields']['count']['table'] = 'flag_counts';
+  $handler->display->display_options['fields']['count']['field'] = 'count';
+  $handler->display->display_options['fields']['count']['relationship'] = 'flag_count_rel';
+  $handler->display->display_options['fields']['count']['label'] = '';
+  $handler->display->display_options['fields']['count']['element_label_colon'] = FALSE;
   /* Field: Flags: Flag link */
   $handler->display->display_options['fields']['ops']['id'] = 'ops';
   $handler->display->display_options['fields']['ops']['table'] = 'flagging';
@@ -91,6 +112,13 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['ops']['relationship'] = 'flag_content_rel';
   $handler->display->display_options['fields']['ops']['label'] = '';
   $handler->display->display_options['fields']['ops']['element_label_colon'] = FALSE;
+  /* Field: Flags: Flag counter */
+  $handler->display->display_options['fields']['count_1']['id'] = 'count_1';
+  $handler->display->display_options['fields']['count_1']['table'] = 'flag_counts';
+  $handler->display->display_options['fields']['count_1']['field'] = 'count';
+  $handler->display->display_options['fields']['count_1']['relationship'] = 'flag_count_rel_1';
+  $handler->display->display_options['fields']['count_1']['label'] = '';
+  $handler->display->display_options['fields']['count_1']['element_label_colon'] = FALSE;
   /* Field: Flags: Flag link */
   $handler->display->display_options['fields']['ops_1']['id'] = 'ops_1';
   $handler->display->display_options['fields']['ops_1']['table'] = 'flagging';
@@ -98,6 +126,12 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['ops_1']['relationship'] = 'flag_content_rel_1';
   $handler->display->display_options['fields']['ops_1']['label'] = '';
   $handler->display->display_options['fields']['ops_1']['element_label_colon'] = FALSE;
+  /* Field: Content: Comment count */
+  $handler->display->display_options['fields']['comment_count']['id'] = 'comment_count';
+  $handler->display->display_options['fields']['comment_count']['table'] = 'node_comment_statistics';
+  $handler->display->display_options['fields']['comment_count']['field'] = 'comment_count';
+  $handler->display->display_options['fields']['comment_count']['label'] = '';
+  $handler->display->display_options['fields']['comment_count']['element_label_colon'] = FALSE;
   /* Field: Content: Add comment link */
   $handler->display->display_options['fields']['comments_link']['id'] = 'comments_link';
   $handler->display->display_options['fields']['comments_link']['table'] = 'node';
@@ -105,6 +139,14 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['comments_link']['label'] = '';
   $handler->display->display_options['fields']['comments_link']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['comments_link']['teaser'] = TRUE;
+  /* Field: Content statistics: Total views */
+  $handler->display->display_options['fields']['totalcount']['id'] = 'totalcount';
+  $handler->display->display_options['fields']['totalcount']['table'] = 'node_counter';
+  $handler->display->display_options['fields']['totalcount']['field'] = 'totalcount';
+  $handler->display->display_options['fields']['totalcount']['label'] = 'Views';
+  $handler->display->display_options['fields']['totalcount']['element_type'] = 'span';
+  $handler->display->display_options['fields']['totalcount']['element_label_type'] = 'span';
+  $handler->display->display_options['fields']['totalcount']['separator'] = '';
   /* Field: Content: Issue */
   $handler->display->display_options['fields']['field_issue']['id'] = 'field_issue';
   $handler->display->display_options['fields']['field_issue']['table'] = 'field_data_field_issue';
@@ -132,14 +174,6 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['field_video_tags']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_video_tags']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_video_tags']['delta_offset'] = '0';
-  /* Field: Content statistics: Total views */
-  $handler->display->display_options['fields']['totalcount']['id'] = 'totalcount';
-  $handler->display->display_options['fields']['totalcount']['table'] = 'node_counter';
-  $handler->display->display_options['fields']['totalcount']['field'] = 'totalcount';
-  $handler->display->display_options['fields']['totalcount']['label'] = 'Views';
-  $handler->display->display_options['fields']['totalcount']['element_type'] = 'span';
-  $handler->display->display_options['fields']['totalcount']['element_label_type'] = 'span';
-  $handler->display->display_options['fields']['totalcount']['separator'] = '';
   /* Field: Content: ShareThis Link */
   $handler->display->display_options['fields']['sharethis']['id'] = 'sharethis';
   $handler->display->display_options['fields']['sharethis']['table'] = 'node';
@@ -151,11 +185,6 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['sorts']['totalcount']['table'] = 'node_counter';
   $handler->display->display_options['sorts']['totalcount']['field'] = 'totalcount';
   $handler->display->display_options['sorts']['totalcount']['order'] = 'DESC';
-  /* Sort criterion: Broken/missing handler */
-  $handler->display->display_options['sorts']['share_count_value']['id'] = 'share_count_value';
-  $handler->display->display_options['sorts']['share_count_value']['table'] = 'field_data_share_count';
-  $handler->display->display_options['sorts']['share_count_value']['field'] = 'share_count_value';
-  $handler->display->display_options['sorts']['share_count_value']['order'] = 'DESC';
   /* Contextual filter: Content: Candidate (field_th_candidate) */
   $handler->display->display_options['arguments']['field_th_candidate_target_id']['id'] = 'field_th_candidate_target_id';
   $handler->display->display_options['arguments']['field_th_candidate_target_id']['table'] = 'field_data_field_th_candidate';
@@ -257,6 +286,20 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['relationships']['field_th_candidate_target_id']['table'] = 'field_data_field_th_candidate';
   $handler->display->display_options['relationships']['field_th_candidate_target_id']['field'] = 'field_th_candidate_target_id';
   $handler->display->display_options['relationships']['field_th_candidate_target_id']['label'] = 'Candidate';
+  /* Relationship: Flags: like counter */
+  $handler->display->display_options['relationships']['flag_count_rel']['id'] = 'flag_count_rel';
+  $handler->display->display_options['relationships']['flag_count_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_count_rel']['field'] = 'flag_count_rel';
+  $handler->display->display_options['relationships']['flag_count_rel']['label'] = 'Likes Counter';
+  $handler->display->display_options['relationships']['flag_count_rel']['required'] = 0;
+  $handler->display->display_options['relationships']['flag_count_rel']['flag'] = 'like';
+  /* Relationship: Flags: unlike counter */
+  $handler->display->display_options['relationships']['flag_count_rel_1']['id'] = 'flag_count_rel_1';
+  $handler->display->display_options['relationships']['flag_count_rel_1']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_count_rel_1']['field'] = 'flag_count_rel';
+  $handler->display->display_options['relationships']['flag_count_rel_1']['label'] = 'Dislikes counter';
+  $handler->display->display_options['relationships']['flag_count_rel_1']['required'] = 0;
+  $handler->display->display_options['relationships']['flag_count_rel_1']['flag'] = 'unlike';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -266,7 +309,7 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Party video */
+  /* Field: Content: VIdeo */
   $handler->display->display_options['fields']['field_th_video']['id'] = 'field_th_video';
   $handler->display->display_options['fields']['field_th_video']['table'] = 'field_data_field_th_video';
   $handler->display->display_options['fields']['field_th_video']['field'] = 'field_th_video';
@@ -276,6 +319,13 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['field_th_video']['settings'] = array(
     'file_view_mode' => 'teaser',
   );
+  /* Field: Flags: Flag counter */
+  $handler->display->display_options['fields']['count']['id'] = 'count';
+  $handler->display->display_options['fields']['count']['table'] = 'flag_counts';
+  $handler->display->display_options['fields']['count']['field'] = 'count';
+  $handler->display->display_options['fields']['count']['relationship'] = 'flag_count_rel';
+  $handler->display->display_options['fields']['count']['label'] = 'Likes counter';
+  $handler->display->display_options['fields']['count']['separator'] = '';
   /* Field: Flags: Flag link */
   $handler->display->display_options['fields']['ops']['id'] = 'ops';
   $handler->display->display_options['fields']['ops']['table'] = 'flagging';
@@ -283,6 +333,12 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['ops']['relationship'] = 'flag_content_rel';
   $handler->display->display_options['fields']['ops']['label'] = '';
   $handler->display->display_options['fields']['ops']['element_label_colon'] = FALSE;
+  /* Field: Flags: Flag counter */
+  $handler->display->display_options['fields']['count_1']['id'] = 'count_1';
+  $handler->display->display_options['fields']['count_1']['table'] = 'flag_counts';
+  $handler->display->display_options['fields']['count_1']['field'] = 'count';
+  $handler->display->display_options['fields']['count_1']['relationship'] = 'flag_count_rel_1';
+  $handler->display->display_options['fields']['count_1']['label'] = 'Dislikes counter';
   /* Field: Flags: Flag link */
   $handler->display->display_options['fields']['ops_1']['id'] = 'ops_1';
   $handler->display->display_options['fields']['ops_1']['table'] = 'flagging';
@@ -444,6 +500,15 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['field_issue']['element_label_type'] = 'span';
   $handler->display->display_options['fields']['field_issue']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_issue']['delta_offset'] = '0';
+  /* Field: Content: Share count */
+  $handler->display->display_options['fields']['th_share_count']['id'] = 'th_share_count';
+  $handler->display->display_options['fields']['th_share_count']['table'] = 'field_data_th_share_count';
+  $handler->display->display_options['fields']['th_share_count']['field'] = 'th_share_count';
+  $handler->display->display_options['fields']['th_share_count']['label'] = 'Shares';
+  $handler->display->display_options['fields']['th_share_count']['settings'] = array(
+    'thousand_separator' => ' ',
+    'prefix_suffix' => 1,
+  );
   /* Sort criterion: Content: Share count (th_share_count) */
   $handler->display->display_options['sorts']['th_share_count_value']['id'] = 'th_share_count_value';
   $handler->display->display_options['sorts']['th_share_count_value']['table'] = 'field_data_th_share_count';
@@ -721,6 +786,20 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['relationships']['flag_content_rel_1']['label'] = 'Flag (Dislike)';
   $handler->display->display_options['relationships']['flag_content_rel_1']['required'] = 0;
   $handler->display->display_options['relationships']['flag_content_rel_1']['flag'] = 'unlike';
+  /* Relationship: Flags: like counter */
+  $handler->display->display_options['relationships']['flag_count_rel']['id'] = 'flag_count_rel';
+  $handler->display->display_options['relationships']['flag_count_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_count_rel']['field'] = 'flag_count_rel';
+  $handler->display->display_options['relationships']['flag_count_rel']['label'] = 'likes counter';
+  $handler->display->display_options['relationships']['flag_count_rel']['required'] = 0;
+  $handler->display->display_options['relationships']['flag_count_rel']['flag'] = 'like';
+  /* Relationship: Flags: unlike counter */
+  $handler->display->display_options['relationships']['flag_count_rel_1']['id'] = 'flag_count_rel_1';
+  $handler->display->display_options['relationships']['flag_count_rel_1']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_count_rel_1']['field'] = 'flag_count_rel';
+  $handler->display->display_options['relationships']['flag_count_rel_1']['label'] = 'dislike counter';
+  $handler->display->display_options['relationships']['flag_count_rel_1']['required'] = 0;
+  $handler->display->display_options['relationships']['flag_count_rel_1']['flag'] = 'unlike';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -730,7 +809,7 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Party video */
+  /* Field: Content: VIdeo */
   $handler->display->display_options['fields']['field_th_video']['id'] = 'field_th_video';
   $handler->display->display_options['fields']['field_th_video']['table'] = 'field_data_field_th_video';
   $handler->display->display_options['fields']['field_th_video']['field'] = 'field_th_video';
@@ -740,6 +819,13 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['field_th_video']['settings'] = array(
     'file_view_mode' => 'teaser',
   );
+  /* Field: Flags: Flag counter */
+  $handler->display->display_options['fields']['count']['id'] = 'count';
+  $handler->display->display_options['fields']['count']['table'] = 'flag_counts';
+  $handler->display->display_options['fields']['count']['field'] = 'count';
+  $handler->display->display_options['fields']['count']['relationship'] = 'flag_count_rel';
+  $handler->display->display_options['fields']['count']['label'] = '';
+  $handler->display->display_options['fields']['count']['element_label_colon'] = FALSE;
   /* Field: Flags: Flag link */
   $handler->display->display_options['fields']['ops']['id'] = 'ops';
   $handler->display->display_options['fields']['ops']['table'] = 'flagging';
@@ -747,6 +833,13 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['ops']['relationship'] = 'flag_content_rel';
   $handler->display->display_options['fields']['ops']['label'] = '';
   $handler->display->display_options['fields']['ops']['element_label_colon'] = FALSE;
+  /* Field: Flags: Flag counter */
+  $handler->display->display_options['fields']['count_1']['id'] = 'count_1';
+  $handler->display->display_options['fields']['count_1']['table'] = 'flag_counts';
+  $handler->display->display_options['fields']['count_1']['field'] = 'count';
+  $handler->display->display_options['fields']['count_1']['relationship'] = 'flag_count_rel_1';
+  $handler->display->display_options['fields']['count_1']['label'] = '';
+  $handler->display->display_options['fields']['count_1']['element_label_colon'] = FALSE;
   /* Field: Flags: Flag link */
   $handler->display->display_options['fields']['ops_1']['id'] = 'ops_1';
   $handler->display->display_options['fields']['ops_1']['table'] = 'flagging';
@@ -754,6 +847,12 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['ops_1']['relationship'] = 'flag_content_rel_1';
   $handler->display->display_options['fields']['ops_1']['label'] = '';
   $handler->display->display_options['fields']['ops_1']['element_label_colon'] = FALSE;
+  /* Field: Content: Comment count */
+  $handler->display->display_options['fields']['comment_count']['id'] = 'comment_count';
+  $handler->display->display_options['fields']['comment_count']['table'] = 'node_comment_statistics';
+  $handler->display->display_options['fields']['comment_count']['field'] = 'comment_count';
+  $handler->display->display_options['fields']['comment_count']['label'] = '';
+  $handler->display->display_options['fields']['comment_count']['element_label_colon'] = FALSE;
   /* Field: Content: Add comment link */
   $handler->display->display_options['fields']['comments_link']['id'] = 'comments_link';
   $handler->display->display_options['fields']['comments_link']['table'] = 'node';
@@ -761,6 +860,11 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['comments_link']['label'] = '';
   $handler->display->display_options['fields']['comments_link']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['comments_link']['teaser'] = TRUE;
+  /* Field: Content statistics: Total views */
+  $handler->display->display_options['fields']['totalcount']['id'] = 'totalcount';
+  $handler->display->display_options['fields']['totalcount']['table'] = 'node_counter';
+  $handler->display->display_options['fields']['totalcount']['field'] = 'totalcount';
+  $handler->display->display_options['fields']['totalcount']['label'] = 'views';
   /* Field: Content: Candidate */
   $handler->display->display_options['fields']['field_th_candidate']['id'] = 'field_th_candidate';
   $handler->display->display_options['fields']['field_th_candidate']['table'] = 'field_data_field_th_candidate';
@@ -802,11 +906,6 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['field_video_tags']['element_label_type'] = 'span';
   $handler->display->display_options['fields']['field_video_tags']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_video_tags']['delta_offset'] = '0';
-  /* Field: Content statistics: Total views */
-  $handler->display->display_options['fields']['totalcount']['id'] = 'totalcount';
-  $handler->display->display_options['fields']['totalcount']['table'] = 'node_counter';
-  $handler->display->display_options['fields']['totalcount']['field'] = 'totalcount';
-  $handler->display->display_options['fields']['totalcount']['label'] = 'views';
   /* Field: Content: ShareThis Link */
   $handler->display->display_options['fields']['sharethis']['id'] = 'sharethis';
   $handler->display->display_options['fields']['sharethis']['table'] = 'node';
@@ -951,7 +1050,7 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Party video */
+  /* Field: Content: VIdeo */
   $handler->display->display_options['fields']['field_th_video']['id'] = 'field_th_video';
   $handler->display->display_options['fields']['field_th_video']['table'] = 'field_data_field_th_video';
   $handler->display->display_options['fields']['field_th_video']['field'] = 'field_th_video';

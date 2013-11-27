@@ -309,6 +309,9 @@ input.form-text, textarea.form-textarea, select.form-select {
 -moz-user-select: none;
 user-select: none; 
 }
+#block-th-main-menu-th-main-menu .chosen-single, #block-th-main-menu-th-main-menu .chosen-results li {
+	cursor:pointer;
+}
 #block-th-main-menu-th-main-menu ul.chosen-results li:hover {
 	color: #fff;
 	background-color: #f7921d;
@@ -338,7 +341,7 @@ user-select: none;
 	color: #fff;
 }
 #block-th-main-menu-th-main-menu ul li:last-child {
-	border-right: none;
+	border-right: none;	
 }
 .chosen-container-single {
 	margin: 0 auto;
@@ -429,6 +432,9 @@ user-select: none;
 }
 #footer .block .content {
 	padding: 0;
+}
+#scroll-top {
+	cursor:pointer;
 }
 #footer .view-id-th_ef_newsletter_signup {
 	background: none repeat scroll 0 0 rgba(255, 255, 255, 0.2);
@@ -753,7 +759,7 @@ td ul li.comment_forbidden, td ul li.comment-comments {
 .flag-throbber {
 	display: none;
 }
-.view-id-home_page_videos .views-field-comment-count, .view-id-issues_videos .views-field-comment-count {
+.view-id-home_page_videos .views-field-comment-count, .view-id-issues_videos .views-field-comment-count, .view-candidates-videos .views-field-comment-count, .view-th-party-page-videos .views-field-comment-count{
 	float: left;	
 }
 .file-video-bliptv {
@@ -1098,3 +1104,4 @@ div.field-type-taxonomy-term-reference {
 .comment_forbidden {
 	width: 160px;
 }
+#edit-jump--2, #edit-jump, .ctools-jump-menu-button {display: none;}
