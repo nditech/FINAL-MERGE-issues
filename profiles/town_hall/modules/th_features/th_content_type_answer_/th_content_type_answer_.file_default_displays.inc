@@ -10,7 +10,9 @@
 function th_content_type_answer__file_default_displays() {
   $export = array();
 
- $file_display = new stdClass();
+ //
+
+  $file_display = new stdClass();
   $file_display->api_version = 1;
   $file_display->name = 'video__teaser__media_youtube_video';
   $file_display->weight = -40;
