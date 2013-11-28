@@ -88,7 +88,7 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: VIdeo */
+  /* Field: Content: Party video */
   $handler->display->display_options['fields']['field_th_video']['id'] = 'field_th_video';
   $handler->display->display_options['fields']['field_th_video']['table'] = 'field_data_field_th_video';
   $handler->display->display_options['fields']['field_th_video']['field'] = 'field_th_video';
@@ -309,7 +309,7 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: VIdeo */
+  /* Field: Content: Party video */
   $handler->display->display_options['fields']['field_th_video']['id'] = 'field_th_video';
   $handler->display->display_options['fields']['field_th_video']['table'] = 'field_data_field_th_video';
   $handler->display->display_options['fields']['field_th_video']['field'] = 'field_th_video';
@@ -505,6 +505,7 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['th_share_count']['table'] = 'field_data_th_share_count';
   $handler->display->display_options['fields']['th_share_count']['field'] = 'th_share_count';
   $handler->display->display_options['fields']['th_share_count']['label'] = 'Shares';
+  $handler->display->display_options['fields']['th_share_count']['element_type'] = 'span';
   $handler->display->display_options['fields']['th_share_count']['settings'] = array(
     'thousand_separator' => ' ',
     'prefix_suffix' => 1,
@@ -808,7 +809,7 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: VIdeo */
+  /* Field: Content: Party video */
   $handler->display->display_options['fields']['field_th_video']['id'] = 'field_th_video';
   $handler->display->display_options['fields']['field_th_video']['table'] = 'field_data_field_th_video';
   $handler->display->display_options['fields']['field_th_video']['field'] = 'field_th_video';
@@ -1049,7 +1050,7 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: VIdeo */
+  /* Field: Content: Party video */
   $handler->display->display_options['fields']['field_th_video']['id'] = 'field_th_video';
   $handler->display->display_options['fields']['field_th_video']['table'] = 'field_data_field_th_video';
   $handler->display->display_options['fields']['field_th_video']['field'] = 'field_th_video';

@@ -1,0 +1,10 @@
+name = TH rules config
+core = 7.x
+package = Town Hall
+dependencies[] = entity
+dependencies[] = rules
+features[features_api][] = api:2
+features[rules_config][] = rules_th_create_question
+features[rules_config][] = rules_th_create_video
+features[rules_config][] = rules_th_update_video
+project path = profiles/town_hall/modules/th_features
