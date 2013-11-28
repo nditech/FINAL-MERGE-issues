@@ -27,7 +27,7 @@
     <span class="field-content">
       <ul class="links inline">
         <li class="comment-comments first">
-          <a href="/<?php echo drupal_get_path_alias('node/' . $row->nid) ?>">&ensp;</a>
+          <a href="/<?php echo drupal_get_path_alias('node/' . $row->nid) ?>#comments">&ensp;</a>
         </li>
       </ul>
     </span>
@@ -37,7 +37,7 @@
     <span class="field-content">
       <ul class="links inline">
         <li class="comment-comments first">
-          <a href="<?php echo drupal_get_path_alias('node/' . $row->nid) ?>">&ensp;</a>
+          <a href="<?php echo drupal_get_path_alias('node/' . $row->nid) ?>#comments">&ensp;</a>
         </li>
       </ul>
     </span>
