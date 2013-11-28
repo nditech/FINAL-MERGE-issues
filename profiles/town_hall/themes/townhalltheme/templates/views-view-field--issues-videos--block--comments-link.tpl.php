@@ -23,7 +23,15 @@
  */
 ?>
 <?php if (isset($user) && $user->uid): ?>
-  <?php print $output; ?>
+  <div class="views-field views-field-comments-link">
+    <span class="field-content">
+      <ul class="links inline">
+        <li class="comment-comments first">
+          <a href="/<?php echo drupal_get_path_alias('node/' . $row->nid) ?>">&ensp;</a>
+        </li>
+      </ul>
+    </span>
+  </div>
 <?php else: ?>
   <div class="views-field views-field-comments-link">
     <span class="field-content">
