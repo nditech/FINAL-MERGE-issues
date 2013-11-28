@@ -126,8 +126,8 @@ function th_blocks_content($delta) {
                                   . 'var st_hover_widget = new sharethis.widgets.hoverbuttons(options);'. PHP_EOL
                                   . '</script>'. PHP_EOL;
 
-  $content['th_block_partners'] = '<img src="" style="width:100%"/>' . PHP_EOL
-                                . '<img src="" style="width:100%"/>'. PHP_EOL;
+  $content['th_block_partners'] = '<img src="/profiles/town_hall/themes/townhalltheme/images/placeholder.jpg" style="width:100%"/>' . PHP_EOL
+                                . '<img src="/profiles/town_hall/themes/townhalltheme/images/placeholder.jpg" style="width:100%"/>'. PHP_EOL;
 
   if ($block_content){
     return $block_content;
