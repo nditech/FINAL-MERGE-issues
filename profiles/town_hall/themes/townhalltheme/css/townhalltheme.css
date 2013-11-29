@@ -1100,3 +1100,7 @@ div.field-type-taxonomy-term-reference {
 	width: 160px;
 }
 #edit-jump--2, #edit-jump, .ctools-jump-menu-button {display: none;}
+
+.th_rss {
+    background: url("misc/feed.png");
+}
