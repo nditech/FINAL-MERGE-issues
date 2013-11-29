@@ -39,6 +39,23 @@ function th_blocks_block_info() {
     'status' => 1,
   );
 
+  $blocks['th_block_feed_issue'] = array(
+    'info' => t('Town hall: RSS Issue'),
+    'status' => 1,
+    'visibility' => BLOCK_VISIBILITY_LISTED,
+    'pages' => 'questions' . PHP_EOL . '<front>' . PHP_EOL . 'home',
+  );
+
+  $blocks['th_block_feed_candidates'] = array(
+    'info' => t('Town hall: RSS Candidates'),
+    'status' => 1,
+  );
+
+  $blocks['th_block_feed_parties'] = array(
+    'info' => t('Town hall: RSS Parties'),
+    'status' => 1,
+  );
+
   return $blocks;
 }
 
@@ -79,9 +96,42 @@ function th_blocks_block_view($delta = '') {
         $block['content'] = array('#markup'=> $block_content);
       }
       break;
+    case 'th_block_feed_issue' :
+      $block['subject'] = '';
+      $block['content'] = array(
+        '#markup' => '<a class="th_rss" href="/rss/issue.xml">&ensp;</a>'
+      );
+      break;
+
+    case 'th_block_feed_candidates' :
+      if (th_blocks_display_by_node_type('candidate')) {
+        $block['subject'] = '';
+        $block['content'] = array(
+          '#markup' => '<a class="th_rss" href="/rss/candidate.xml">&ensp;</a>'
+        );
+      }
+      break;
+    case 'th_block_feed_parties' :
+      if (th_blocks_display_by_node_type('party')) {
+        $block['content'] = array(
+          '#markup' => '<a class="th_rss" href="/rss/party.xml">&ensp;</a>'
+        );
+      }
+      break;
+
   }
 
   return $block;
+}
+
+function th_blocks_display_by_node_type($node_type = '') {
+  $match = false;
+  if (arg(0) == 'node' && is_numeric(arg(1))) {
+    $nid = arg(1);
+    $node = node_load($nid);
+    if($node->type == $node_type) {$match = true;}
+  }
+  return $match;
 }
 
 function th_blocks_content($delta) {
@@ -206,6 +256,20 @@ function th_blocks_block_info_alter(&$blocks, $theme, $code_blocks) {
 
   if (isset($blocks['th_blocks'])) {
 
+    if (isset($blocks['th_blocks']['th_block_feed_issue']) ||
+      isset($blocks['th_blocks']['th_block_feed_candidates']) ||
+      isset($blocks['th_blocks']['th_block_feed_parties'])
+    ) {
+      $blocks['th_blocks']['th_block_feed_issue']['region'] = 'sidebar_second';
+      $blocks['th_blocks']['th_block_feed_issue']['weight'] = -10;
+
+      $blocks['th_blocks']['th_block_feed_candidates']['region'] = 'sidebar_second';
+      $blocks['th_blocks']['th_block_feed_candidates']['weight'] = -10;
+
+      $blocks['th_blocks']['th_block_feed_parties']['region'] = 'sidebar_second';
+      $blocks['th_blocks']['th_block_feed_parties']['weight'] = -10;
+    }
+
     if (isset($blocks['th_blocks']['th_block_search'])) {
       $blocks['th_blocks']['th_block_search']['region'] = 'header';
     }
@@ -245,7 +309,7 @@ function th_blocks_block_info_alter(&$blocks, $theme, $code_blocks) {
   if (isset($blocks['th_questions_block'])) {
     if (isset($blocks['th_questions_block']['th_questions_block'])) {
       $blocks['th_questions_block']['th_questions_block']['region'] = 'sidebar_second';
-      $blocks['th_questions_block']['th_questions_block']['weight'] = -10;
+      $blocks['th_questions_block']['th_questions_block']['weight'] = -9;
     }
 
     if (isset($blocks['th_questions_block']['th_questions_block_user'])) {
