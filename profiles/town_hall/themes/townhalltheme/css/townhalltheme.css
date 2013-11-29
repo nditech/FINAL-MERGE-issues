@@ -764,7 +764,7 @@ td ul li.comment_forbidden, td ul li.comment-comments {
 	float: right;	
 	margin-right: 10px;
 }
-.views-field-field-issue, .views-field-sharethis, .views-field-field-th-candidate {
+.views-field-field-issue, .views-field-sharethis, .views-field-field-th-candidate, .views-field-field-region {
 	clear: both;
 }
 .views-field-comments-link li.comment-add {			
@@ -1100,3 +1100,6 @@ div.field-type-taxonomy-term-reference {
 	width: 160px;
 }
 #edit-jump--2, #edit-jump, .ctools-jump-menu-button {display: none;}
+.view-id-search span.views-label-field-issue, .view-id-search span.views-label-field-region, .view-id-search span.views-label-field-th-candidate, .view-id-search span.views-label-field-th-party {
+	font: bold 14px/16px "open_sanscondensed_light",Helvetica,Arial,sans-serif;
+}
