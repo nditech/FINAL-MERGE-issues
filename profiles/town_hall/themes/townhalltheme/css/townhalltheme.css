@@ -225,8 +225,8 @@ input.form-text, textarea.form-textarea, select.form-select {
 	height: 41px;
 	width: 36px;	
 }
-.region-header .form-text: hover, 
-.region-header .form-text: active, 
+.region-header .form-text:hover, 
+.region-header .form-text:active, 
 .region-header .form-text:focus {
 	border: 1px solid #CCCCCC;
 }
@@ -301,8 +301,7 @@ input.form-text, textarea.form-textarea, select.form-select {
 	position: relative; 
 	z-index:100; 	
 	height: auto;
-	padding:10px 28px;
-	width
+	padding:10px 28px;	
 }
 .chosen-container {
 -webkit-user-select: none;
@@ -646,8 +645,7 @@ font-weight: 600;
 }
 #block-th-questions-block-th-questions-block h2 {
 	background: url("/profiles/town_hall/themes/townhalltheme/images/question_bg.jpg");
-	border-radius: 6px 6px 6px 6px;
-	behavior: url(../js/PIE.htc);
+	border-radius: 6px 6px 6px 6px;	
     color: #FFFFFF !important;
     display: block;
     font-family: "open_sans_condensedbold", Helvetica,Arial,sans-serif;
@@ -725,9 +723,6 @@ td ul li.comment_forbidden, td ul li.comment-comments {
 .views-field-sharethis {
 	padding-top: 4px;
 }
-.views-field-comments-link {
-	widht: 150px;
-}
 .sharethis-wrapper {
 	margin-bottom: 3px;
 }
@@ -759,7 +754,7 @@ td ul li.comment_forbidden, td ul li.comment-comments {
 .flag-throbber {
 	display: none;
 }
-.view-id-home_page_videos .views-field-comment-count, .view-id-issues_videos .views-field-comment-count, .view-candidates-videos .views-field-comment-count, .view-th-party-page-videos .views-field-comment-count{
+.view-id-home_page_videos .views-field-comment-count, .view-id-issues_videos .views-field-comment-count, .view-candidates-videos .views-field-comment-count, .view-th-party-page-videos .views-field-comment-count, .view-all-questions .views-field-comment-count{
 	float: left;	
 }
 .file-video-bliptv {
@@ -830,7 +825,7 @@ h1.title-candidates {
 	width: 220px;
 	text-align: center;
 }
-.field-name-field-th-party: after {
+.field-name-field-th-party:after {
 	clear: both;
 }
 .node-party .field-name-field-th-fb-page, .node-party .field-name-field-th-website, .node-party .field-name-field-fb-social-networks , .node-party .field-name-field-th-volunteer-link, .node-candidate .field-name-field-th-fb-page, .node-candidate .field-name-field-th-website, .node-candidate .field-name-field-fb-social-networks , .node-candidate .field-name-field-th-volunteer-link {

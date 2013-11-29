@@ -29,7 +29,7 @@ function th_content_type_party__field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'rss' => array(
         'label' => 'hidden',
@@ -203,7 +203,7 @@ function th_content_type_party__field_default_field_instances() {
           'image_style' => 'party_logo',
         ),
         'type' => 'image',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'rss' => array(
         'label' => 'hidden',

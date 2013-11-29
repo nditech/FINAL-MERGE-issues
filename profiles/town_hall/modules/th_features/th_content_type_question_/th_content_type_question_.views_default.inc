@@ -80,6 +80,12 @@ function th_content_type_question__views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Post date */
+  $handler->display->display_options['fields']['created']['id'] = 'created';
+  $handler->display->display_options['fields']['created']['table'] = 'node';
+  $handler->display->display_options['fields']['created']['field'] = 'created';
+  $handler->display->display_options['fields']['created']['label'] = 'Submitted on';
+  $handler->display->display_options['fields']['created']['date_format'] = 'short';
   /* Field: Content: Description */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
@@ -90,12 +96,6 @@ function th_content_type_question__views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '600',
   );
-  /* Field: Content: ShareThis Link */
-  $handler->display->display_options['fields']['sharethis']['id'] = 'sharethis';
-  $handler->display->display_options['fields']['sharethis']['table'] = 'node';
-  $handler->display->display_options['fields']['sharethis']['field'] = 'sharethis';
-  $handler->display->display_options['fields']['sharethis']['label'] = '';
-  $handler->display->display_options['fields']['sharethis']['element_label_colon'] = FALSE;
   /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid_1']['id'] = 'nid_1';
   $handler->display->display_options['fields']['nid_1']['table'] = 'node';
@@ -144,12 +144,27 @@ function th_content_type_question__views_default_views() {
   $handler->display->display_options['fields']['comment_count']['table'] = 'node_comment_statistics';
   $handler->display->display_options['fields']['comment_count']['field'] = 'comment_count';
   $handler->display->display_options['fields']['comment_count']['label'] = '';
-  $handler->display->display_options['fields']['comment_count']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['alter']['path'] = 'node/[nid]#comments';
   $handler->display->display_options['fields']['comment_count']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['comment_count']['format_plural'] = TRUE;
   $handler->display->display_options['fields']['comment_count']['format_plural_singular'] = '1 response';
   $handler->display->display_options['fields']['comment_count']['format_plural_plural'] = '@count responses';
+  /* Field: Content: Add comment link */
+  $handler->display->display_options['fields']['comments_link']['id'] = 'comments_link';
+  $handler->display->display_options['fields']['comments_link']['table'] = 'node';
+  $handler->display->display_options['fields']['comments_link']['field'] = 'comments_link';
+  $handler->display->display_options['fields']['comments_link']['label'] = '';
+  $handler->display->display_options['fields']['comments_link']['element_label_colon'] = FALSE;
+  /* Field: Content: ShareThis Link */
+  $handler->display->display_options['fields']['sharethis']['id'] = 'sharethis';
+  $handler->display->display_options['fields']['sharethis']['table'] = 'node';
+  $handler->display->display_options['fields']['sharethis']['field'] = 'sharethis';
+  $handler->display->display_options['fields']['sharethis']['label'] = '';
+  $handler->display->display_options['fields']['sharethis']['element_label_colon'] = FALSE;
+  /* Field: Content: Answered? */
+  $handler->display->display_options['fields']['field_th_status']['id'] = 'field_th_status';
+  $handler->display->display_options['fields']['field_th_status']['table'] = 'field_data_field_th_status';
+  $handler->display->display_options['fields']['field_th_status']['field'] = 'field_th_status';
+  $handler->display->display_options['fields']['field_th_status']['element_type'] = 'span';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
