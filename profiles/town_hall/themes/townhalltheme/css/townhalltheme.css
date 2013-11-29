@@ -1100,12 +1100,11 @@ div.field-type-taxonomy-term-reference {
 	width: 160px;
 }
 #edit-jump--2, #edit-jump, .ctools-jump-menu-button {display: none;}
-<<<<<<< HEAD
 .view-id-search span.views-label-field-issue, .view-id-search span.views-label-field-region, .view-id-search span.views-label-field-th-candidate, .view-id-search span.views-label-field-th-party {
 	font: bold 14px/16px "open_sanscondensed_light",Helvetica,Arial,sans-serif;
-=======
-
+}
 .th_rss {
-    background: url("misc/feed.png");
->>>>>>> 19a5feb09ac82cd29940b15354ee2cae604b8d9c
+    display: block;
+    background: url("/misc/feed.png") no-repeat;
+    width: 20px;
 }
