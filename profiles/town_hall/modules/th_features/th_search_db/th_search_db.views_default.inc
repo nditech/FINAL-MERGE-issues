@@ -60,7 +60,7 @@ function th_search_db_views_default_views() {
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
-  /* Field: Content: Body */
+  /* Field: Content: Description */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -75,20 +75,24 @@ function th_search_db_views_default_views() {
   $handler->display->display_options['fields']['field_issue']['table'] = 'field_data_field_issue';
   $handler->display->display_options['fields']['field_issue']['field'] = 'field_issue';
   $handler->display->display_options['fields']['field_issue']['relationship'] = 'field_th_question_target_id';
+  $handler->display->display_options['fields']['field_issue']['element_type'] = 'span';
   $handler->display->display_options['fields']['field_issue']['delta_offset'] = '0';
   /* Field: Content: Region */
   $handler->display->display_options['fields']['field_region']['id'] = 'field_region';
   $handler->display->display_options['fields']['field_region']['table'] = 'field_data_field_region';
   $handler->display->display_options['fields']['field_region']['field'] = 'field_region';
   $handler->display->display_options['fields']['field_region']['relationship'] = 'field_th_question_target_id';
+  $handler->display->display_options['fields']['field_region']['element_type'] = 'span';
   /* Field: Content statistics: Total views */
   $handler->display->display_options['fields']['totalcount']['id'] = 'totalcount';
   $handler->display->display_options['fields']['totalcount']['table'] = 'node_counter';
   $handler->display->display_options['fields']['totalcount']['field'] = 'totalcount';
+  $handler->display->display_options['fields']['totalcount']['element_type'] = 'span';
   /* Field: Content: Candidate */
   $handler->display->display_options['fields']['field_th_candidate']['id'] = 'field_th_candidate';
   $handler->display->display_options['fields']['field_th_candidate']['table'] = 'field_data_field_th_candidate';
   $handler->display->display_options['fields']['field_th_candidate']['field'] = 'field_th_candidate';
+  $handler->display->display_options['fields']['field_th_candidate']['element_type'] = 'span';
   $handler->display->display_options['fields']['field_th_candidate']['settings'] = array(
     'link' => 1,
   );
@@ -159,6 +163,40 @@ function th_search_db_views_default_views() {
     'field_th_candidate' => 'field_th_candidate',
     'field_th_party' => 'field_th_party',
   );
+  /* Filter criterion: Content: Issue (field_issue) */
+  $handler->display->display_options['filters']['field_issue_tid']['id'] = 'field_issue_tid';
+  $handler->display->display_options['filters']['field_issue_tid']['table'] = 'field_data_field_issue';
+  $handler->display->display_options['filters']['field_issue_tid']['field'] = 'field_issue_tid';
+  $handler->display->display_options['filters']['field_issue_tid']['relationship'] = 'field_th_question_target_id';
+  $handler->display->display_options['filters']['field_issue_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_issue_tid']['expose']['operator_id'] = 'field_issue_tid_op';
+  $handler->display->display_options['filters']['field_issue_tid']['expose']['label'] = 'Issue';
+  $handler->display->display_options['filters']['field_issue_tid']['expose']['operator'] = 'field_issue_tid_op';
+  $handler->display->display_options['filters']['field_issue_tid']['expose']['identifier'] = 'field_issue_tid';
+  $handler->display->display_options['filters']['field_issue_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['field_issue_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_issue_tid']['vocabulary'] = 'th_issues';
+  /* Filter criterion: Content: Region (field_region) */
+  $handler->display->display_options['filters']['field_region_tid']['id'] = 'field_region_tid';
+  $handler->display->display_options['filters']['field_region_tid']['table'] = 'field_data_field_region';
+  $handler->display->display_options['filters']['field_region_tid']['field'] = 'field_region_tid';
+  $handler->display->display_options['filters']['field_region_tid']['relationship'] = 'field_th_question_target_id';
+  $handler->display->display_options['filters']['field_region_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_region_tid']['expose']['operator_id'] = 'field_region_tid_op';
+  $handler->display->display_options['filters']['field_region_tid']['expose']['label'] = 'Region';
+  $handler->display->display_options['filters']['field_region_tid']['expose']['operator'] = 'field_region_tid_op';
+  $handler->display->display_options['filters']['field_region_tid']['expose']['identifier'] = 'field_region_tid';
+  $handler->display->display_options['filters']['field_region_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['field_region_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_region_tid']['vocabulary'] = 'th_regions';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');

@@ -20,7 +20,7 @@ function th_search_db_default_search_api_index() {
     "name" : "Database server index",
     "machine_name" : "database_server_index",
     "description" : null,
-    "server" : null,
+    "server" : "database_server",
     "item_type" : "node",
     "options" : {
       "index_directly" : 0,
@@ -28,19 +28,27 @@ function th_search_db_default_search_api_index() {
       "fields" : {
         "type" : { "type" : "string" },
         "title" : { "type" : "string" },
-        "field_video_tags" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
-        "field_th_question" : { "type" : "integer", "entity_type" : "node" },
         "field_th_candidate" : { "type" : "integer", "entity_type" : "node" },
+        "field_th_question" : { "type" : "integer", "entity_type" : "node" },
+        "field_video_tags" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
+        "field_th_party" : { "type" : "integer", "entity_type" : "node" },
         "field_region" : { "type" : "integer", "entity_type" : "taxonomy_term" },
         "search_api_language" : { "type" : "string" },
-        "field_th_question:title" : { "type" : "text" },
-        "field_th_question:field_region" : { "type" : "integer", "entity_type" : "taxonomy_term" },
-        "field_th_question:field_issue" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_th_candidate:field_th_first_name" : { "type" : "text" },
         "field_th_candidate:field_th_last_name" : { "type" : "text" },
-        "field_th_question:field_th_candidate:field_th_party" : { "type" : "integer", "entity_type" : "node" },
+        "field_th_candidate:field_th_party" : { "type" : "integer", "entity_type" : "node" },
+        "field_th_question:title" : { "type" : "text" },
+        "field_th_question:field_th_party" : { "type" : "integer", "entity_type" : "node" },
+        "field_th_question:field_issue" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
+        "field_th_question:field_region" : { "type" : "integer", "entity_type" : "taxonomy_term" },
+        "field_th_candidate:field_th_party:nid" : { "type" : "integer" },
+        "field_th_candidate:field_th_party:title" : { "type" : "text" },
         "field_th_question:field_th_candidate:field_th_first_name" : { "type" : "text" },
         "field_th_question:field_th_candidate:field_th_last_name" : { "type" : "text" },
+        "field_th_question:field_th_candidate:field_th_party" : { "type" : "integer", "entity_type" : "node" },
+        "field_th_question:field_th_party:nid" : { "type" : "integer" },
+        "field_th_question:field_th_party:title" : { "type" : "text" },
+        "field_th_question:field_th_party:field_th_party" : { "type" : "integer", "entity_type" : "node" },
         "field_th_question:field_region:name" : { "type" : "text" }
       },
       "data_alter_callbacks" : {
@@ -84,7 +92,7 @@ function th_search_db_default_search_api_index() {
         }
       }
     },
-    "enabled" : "0",
+    "enabled" : "1",
     "read_only" : "0",
     "rdf_mapping" : []
   }');
@@ -183,6 +191,46 @@ function th_search_db_default_search_api_server() {
           "field_th_question:field_region:name" : {
             "table" : "search_api_db_database_server_index_field_th_question_field__3",
             "type" : "text",
+            "boost" : "1.0"
+          },
+          "field_th_party" : {
+            "table" : "search_api_db_database_server_index_field_th_party",
+            "type" : "integer",
+            "boost" : "1.0"
+          },
+          "field_th_candidate:field_th_party" : {
+            "table" : "search_api_db_database_server_index_field_th_candidate_field_2",
+            "type" : "integer",
+            "boost" : "1.0"
+          },
+          "field_th_question:field_th_party" : {
+            "table" : "search_api_db_database_server_index_field_th_question_field__4",
+            "type" : "integer",
+            "boost" : "1.0"
+          },
+          "field_th_candidate:field_th_party:nid" : {
+            "table" : "search_api_db_database_server_index_field_th_candidate_field_3",
+            "type" : "integer",
+            "boost" : "1.0"
+          },
+          "field_th_candidate:field_th_party:title" : {
+            "table" : "search_api_db_database_server_index_field_th_candidate_field_4",
+            "type" : "text",
+            "boost" : "1.0"
+          },
+          "field_th_question:field_th_party:nid" : {
+            "table" : "search_api_db_database_server_index_field_th_question_field__5",
+            "type" : "integer",
+            "boost" : "1.0"
+          },
+          "field_th_question:field_th_party:title" : {
+            "table" : "search_api_db_database_server_index_field_th_question_field__6",
+            "type" : "text",
+            "boost" : "1.0"
+          },
+          "field_th_question:field_th_party:field_th_party" : {
+            "table" : "search_api_db_database_server_index_field_th_question_field__7",
+            "type" : "integer",
             "boost" : "1.0"
           }
         }
