@@ -118,5 +118,22 @@ function th_demworks_sites_strongarm() {
   $strongarm->value = 'Town Hall';
   $export['site_name'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'user_mail_register_pending_approval_body';
+  $strongarm->value = 'Dear [user:name], 
+Thank you for registering on [site:name]. You account is pending activation and you will receive an email shortly once your account has been activated.
+Best,
+Site Admin';
+  $export['user_mail_register_pending_approval_body'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'user_mail_register_pending_approval_subject';
+  $strongarm->value = 'Account details for [user:name] at [site:name] (pending admin approval)';
+  $export['user_mail_register_pending_approval_subject'] = $strongarm;
+
   return $export;
 }
