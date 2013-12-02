@@ -255,7 +255,7 @@ function th_feed_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'candidate' => 'candidate',
+    'party' => 'party',
   );
 
   /* Display: Feed */
@@ -272,7 +272,7 @@ function th_feed_views_default_views() {
     'guid_field' => 'title',
     'guid_field_is_permalink' => 0,
   );
-  $handler->display->display_options['path'] = 'rss/candidate.xml';
+  $handler->display->display_options['path'] = 'rss/party.xml';
   $export['rss_party'] = $view;
 
   return $export;

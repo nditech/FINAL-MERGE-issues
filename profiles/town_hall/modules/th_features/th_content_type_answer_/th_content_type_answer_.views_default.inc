@@ -504,6 +504,8 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['th_share_count']['field'] = 'th_share_count';
   $handler->display->display_options['fields']['th_share_count']['label'] = 'Shares';
   $handler->display->display_options['fields']['th_share_count']['element_type'] = 'span';
+  $handler->display->display_options['fields']['th_share_count']['empty'] = '0';
+  $handler->display->display_options['fields']['th_share_count']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['th_share_count']['settings'] = array(
     'thousand_separator' => ' ',
     'prefix_suffix' => 1,

@@ -200,7 +200,7 @@ function th_content_type_candidate__field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => '',
+          'image_style' => 'candidate_image',
         ),
         'type' => 'image',
         'weight' => 0,

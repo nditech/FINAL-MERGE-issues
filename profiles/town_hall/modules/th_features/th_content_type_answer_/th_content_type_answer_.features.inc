@@ -47,7 +47,7 @@ function th_content_type_answer__flag_default_flags() {
     'unflag_message' => '',
     'unflag_denied_text' => ' ',
     'link_type' => 'toggle',
-    'weight' => 0,
+    'weight' => -7,
     'show_in_links' => array(
       'full' => 0,
       'teaser' => 0,
@@ -83,7 +83,7 @@ function th_content_type_answer__flag_default_flags() {
     'unflag_message' => '',
     'unflag_denied_text' => '',
     'link_type' => 'toggle',
-    'weight' => 0,
+    'weight' => -6,
     'show_in_links' => array(
       'full' => 0,
       'teaser' => 0,
