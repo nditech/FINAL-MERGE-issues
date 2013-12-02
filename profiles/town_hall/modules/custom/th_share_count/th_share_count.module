@@ -143,6 +143,7 @@ function th_share_count_count($nid = NULL, $request = NULL) {
     }
 
     $node->th_share_count[$node->language][0]['value'] = $th_share_count;
+    $counters['th_sharecount'] = $th_share_count;
     node_save($node);
   }
 
