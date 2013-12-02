@@ -109,6 +109,25 @@ function th_content_type_answer__field_default_field_bases() {
     'type' => 'entityreference',
   );
 
+  // Exported field_base: 'field_th_flag_content'
+  $field_bases['field_th_flag_content'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_th_flag_content',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'foreign keys' => array(),
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'viewfield',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'viewfield',
+  );
+
   // Exported field_base: 'field_th_question'
   $field_bases['field_th_question'] = array(
     'active' => 1,

@@ -159,7 +159,7 @@ function th_content_type_answer__field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -186,7 +186,7 @@ function th_content_type_answer__field_default_field_instances() {
           'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 7,
+        'weight' => 2,
       ),
       'rss' => array(
         'label' => 'inline',
@@ -243,7 +243,108 @@ function th_content_type_answer__field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 6,
+      'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'node-video-field_th_flag_content'
+  $field_instances['node-video-field_th_flag_content'] = array(
+    'bundle' => 'video',
+    'default_value' => array(
+      0 => array(
+        'vname' => 'th_flag_content|block',
+        'vargs' => '[node:nid]',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'viewfield',
+        'settings' => array(),
+        'type' => 'viewfield_default',
+        'weight' => 8,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'viewfield',
+        'settings' => array(),
+        'type' => 'viewfield_default',
+        'weight' => 6,
+      ),
+      'rss' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_th_flag_content',
+    'label' => 'TH Flag Content',
+    'required' => 0,
+    'settings' => array(
+      'allowed_views' => array(
+        'all_questions' => 0,
+        'all_questions_block' => 0,
+        'all_questions_by_issue' => 0,
+        'candidates' => 0,
+        'candidates_videos' => 0,
+        'entityform_type_list' => 0,
+        'entityforms' => 0,
+        'home_page_videos' => 0,
+        'issues_videos' => 0,
+        'media_default' => 0,
+        'most_shared' => 0,
+        'most_watched' => 0,
+        'parties' => 0,
+        'questions_bulk_operations' => 0,
+        'rss_candidate' => 0,
+        'rss_issue' => 0,
+        'rss_party' => 0,
+        'search' => 0,
+        'th_candidates_home' => 0,
+        'th_ef_newsletter_signup' => 0,
+        'th_flag_content' => 'th_flag_content',
+        'th_parties_home' => 0,
+        'th_party_page_videos' => 0,
+        'th_taxonomy_terms' => 0,
+        'user_entityforms' => 0,
+      ),
+      'force_default' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'viewfield',
+      'settings' => array(),
+      'type' => 'viewfield_select',
+      'weight' => 4,
     ),
   );
 
@@ -271,7 +372,7 @@ function th_content_type_answer__field_default_field_instances() {
           'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 6,
+        'weight' => 1,
       ),
       'rss' => array(
         'label' => 'inline',
@@ -338,7 +439,7 @@ function th_content_type_answer__field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -364,7 +465,7 @@ function th_content_type_answer__field_default_field_instances() {
           'file_view_mode' => 'media_original',
         ),
         'type' => 'media',
-        'weight' => 8,
+        'weight' => 3,
       ),
       'rss' => array(
         'label' => 'hidden',
@@ -443,7 +544,7 @@ function th_content_type_answer__field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
@@ -464,7 +565,7 @@ function th_content_type_answer__field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 8,
       ),
       'rss' => array(
         'label' => 'hidden',
@@ -512,7 +613,7 @@ function th_content_type_answer__field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -525,21 +626,15 @@ function th_content_type_answer__field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 0,
-          'thousand_separator' => ' ',
-        ),
-        'type' => 'number_integer',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 1,
       ),
       'full' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 7,
       ),
       'rss' => array(
         'label' => 'above',
@@ -588,7 +683,7 @@ function th_content_type_answer__field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => -4,
+      'weight' => 0,
     ),
   );
 
@@ -598,6 +693,7 @@ function th_content_type_answer__field_default_field_instances() {
   t('Candidate');
   t('Question');
   t('Share count');
+  t('TH Flag Content');
   t('Tags');
   t('Unlike');
   t('VIdeo');
