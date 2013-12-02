@@ -53,7 +53,7 @@ function th_share_count_enable() {
 
 function th_share_count_get_services() {
   $service_array = array();
-  $service_option = variable_get('sharethis_service_option');
+  $service_option = variable_get('sharethis_service_option', '"Tweet:twitter","Facebook:facebook","ShareThis:sharethis"');
   foreach(explode(",", $service_option) as $service) {
     $service = explode(":", $service);
 
@@ -127,7 +127,7 @@ function th_share_count_count($nid = NULL, $request = NULL) {
   if (is_null($nid)) {
 
     $url = parse_url($url);
-    $path = substr($url['path'], 1);
+    $path = urldecode(substr($url['path'], 1));
     $_path = drupal_lookup_path("source", $path) ;
     $path = $_path ? $_path : $path;
     $node = menu_get_object("node", 1, $path);
