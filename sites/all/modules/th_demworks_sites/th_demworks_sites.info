@@ -18,6 +18,7 @@ features[variable][] = sharethis_twitter_handle
 features[variable][] = sharethis_twitter_suffix
 features[variable][] = sharethis_weight
 features[variable][] = sharethis_widget_option
+features[variable][] = site_frontpage
 features[variable][] = site_mail
 features[variable][] = site_name
 features[variable][] = user_mail_register_pending_approval_body

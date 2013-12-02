@@ -177,7 +177,7 @@ function th_content_type_answer__field_default_field_instances() {
           'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 7,
+        'weight' => 3,
       ),
       'full' => array(
         'label' => 'inline',
@@ -262,7 +262,7 @@ function th_content_type_answer__field_default_field_instances() {
           'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 6,
+        'weight' => 2,
       ),
       'full' => array(
         'label' => 'inline',
@@ -355,7 +355,7 @@ function th_content_type_answer__field_default_field_instances() {
           'file_view_mode' => 'media_original',
         ),
         'type' => 'media',
-        'weight' => 8,
+        'weight' => 4,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -458,7 +458,7 @@ function th_content_type_answer__field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 7,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -533,7 +533,7 @@ function th_content_type_answer__field_default_field_instances() {
           'thousand_separator' => ' ',
         ),
         'type' => 'number_integer',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'full' => array(
         'label' => 'above',
