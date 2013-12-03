@@ -1103,8 +1103,22 @@ div.field-type-taxonomy-term-reference {
 .view-id-search span.views-label-field-issue, .view-id-search span.views-label-field-region, .view-id-search span.views-label-field-th-candidate, .view-id-search span.views-label-field-th-party {
 	font: bold 14px/16px "open_sanscondensed_light",Helvetica,Arial,sans-serif;
 }
+#video-node-form #edit-th-share-count {
+	display: none;
+}
+.node-video .flag-outer-unlike, .node-video .flag-outer-like {
+	display: none;
+}
 .th_rss {
     display: block;
     background: url("/misc/feed.png") no-repeat;
     width: 20px;
+	margin: 0 auto;
+}
+.sidebar #block-th-blocks-th-block-feed-issue, .sidebar #block-th-blocks-th-block-feed-candidates, .sidebar #block-th-blocks-th-block-feed-parties {
+	padding: 0;
+}
+#block-th-blocks-th-block-feed-issue .content, #block-th-blocks-th-block-feed-candidates .content, #block-th-blocks-th-block-feed-parties .content {
+	margin-top: 0;
+	padding-left: 25px;
 }
