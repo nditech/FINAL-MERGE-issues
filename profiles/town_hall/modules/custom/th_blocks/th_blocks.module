@@ -158,8 +158,8 @@ function th_blocks_content($delta) {
                                     . '</ul>'. PHP_EOL;
 
   $content['th_block_social_links_footer'] = '<ul>'. PHP_EOL
-                                           . '<li><a href="http://facebook.com"><img src="/profiles/town_hall/themes/townhalltheme/images/facebook.gif" /></a></li>'. PHP_EOL
-                                           . '<li><a href="http://twitter.com"><img src="/profiles/town_hall/themes/townhalltheme/images/twitter.gif" /></a></li>'. PHP_EOL
+                                           . '<li><a href="https://www.facebook.com/Tech4dem"><img src="/profiles/town_hall/themes/townhalltheme/images/facebook.gif" /></a></li>'. PHP_EOL
+                                           . '<li><a href="https://twitter.com/tech4dem"><img src="/profiles/town_hall/themes/townhalltheme/images/twitter.gif" /></a></li>'. PHP_EOL
                                            . '<li><a href="http://plus.google.com"><img src="/profiles/town_hall/themes/townhalltheme/images/google.gif" /></a></li>'. PHP_EOL
                                            . '</ul>' . PHP_EOL
                                            . '<a class="privacy_policy">Privacy and Use Policy</a>' . PHP_EOL;
