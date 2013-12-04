@@ -31,7 +31,8 @@ function th_blocks_block_info() {
   $blocks['th_block_partners'] = array(
     'info' => t('Town hall: Partners'),
     'status' => 1,
-    'pages' => '<front>' . PHP_EOL . 'home' . PHP_EOL . 'node/*' . PHP_EOL . 'thd_search' . PHP_EOL. 'ths_search' . PHP_EOL,
+    'visibility' => BLOCK_VISIBILITY_LISTED,
+    'pages' => 'questions' . PHP_EOL . '<front>' . PHP_EOL . 'home' . PHP_EOL . 'node/*' . PHP_EOL . 'thd_search' . PHP_EOL. 'ths_search' . PHP_EOL,
   );
 
   $blocks['th_block_user_action'] = array(
