@@ -1,6 +1,8 @@
 name = TH Newsletter
 core = 7.x
 package = Town Hall
+version = 7.x-1.0
+project = th_newsletter
 dependencies[] = email
 dependencies[] = entityform
 dependencies[] = features
@@ -16,7 +18,6 @@ features[features_api][] = api:2
 features[field_base][] = field_th_email
 features[field_instance][] = entityform-th_newsletter-field_th_email
 features[rules_config][] = rules_th_subscribe_receive_message
-features[variable][] = menu_masks
 features[variable][] = mimemail_engine
 features[variable][] = mimemail_format
 features[variable][] = mimemail_incoming
