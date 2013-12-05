@@ -99,6 +99,8 @@ function th_questions_block_contents() {
   where
     {flag_counts}.fid = 5 or {flag_counts}.fid = 6")->fetchField();
 
+  $count_votes = is_null($count_votes) ? 0 : $count_votes;
+
   $text_array = array(
     '@count_people' => $count_people,
     '@count_questions' => format_plural($count_questions, '1 ' . t('question'), '@count ' . t('questions')),
@@ -107,7 +109,7 @@ function th_questions_block_contents() {
 
   if ($user->uid) {
     return array(
-      '#markup' => t("<p>@count_people people have submitted @count_questions and cast @count_votes.</p><p>But what do you think?</p>", $text_array) . "<p>" . l(t('submit a question'), 'node/add/question'). "<br />" . l(t('view all'), 'all-questions') . "</p>"
+      '#markup' => t("<p>@count_people people have submitted @count_questions and cast @count_votes.</p><b>But what do you think?</b>", $text_array) . "<p>" . l(t('submit a question'), 'node/add/question'). "<br />" . l(t('view all'), 'all-questions') . "</p>"
     );
   }
   else {
