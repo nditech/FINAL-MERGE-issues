@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Town Hall Demo Content feature.
+ */
+
+include_once 'th_demo_content.features.inc';
