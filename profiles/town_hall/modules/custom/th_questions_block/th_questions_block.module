@@ -78,7 +78,7 @@ function th_questions_block_contents() {
       {users_roles}.rid = 3
     )")->fetchField();
 
-  $count_qustions = db_query("select count(*)
+  $count_questions = db_query("select count(*)
   from
     {node}
   left join {field_data_field_th_status} on {node}.nid = {field_data_field_th_status}.entity_id
@@ -99,25 +99,20 @@ function th_questions_block_contents() {
   where
     {flag_counts}.fid = 5 or {flag_counts}.fid = 6")->fetchField();
 
+  $text_array = array(
+    '@count_people' => $count_people,
+    '@count_questions' => format_plural($count_questions, '1 ' . t('question'), '@count ' . t('questions')),
+    '@count_votes' => format_plural($count_votes, '1 ' . t('vote'), '@count ' . t('votes')),
+  );
+
   if ($user->uid) {
-    return array('#markup' => "<p>$count_people people have<br>".
-                              "submitted $count_qustions question<br>".
-                              "and cast $count_votes votes.<br>".
-                              '<b>But what do you<br>'.
-                              'think?</b><br>'.
-                              l('submit a question', 'node/add/question'). '<br>' .
-                              l('view all', 'all-questions').
-                              '</p>'
+    return array(
+      '#markup' => t("<p>@count_people people have submitted @count_questions and cast @count_votes.</p><p>But what do you think?</p>", $text_array) . "<p>" . l(t('submit a question'), 'node/add/question'). "<br />" . l(t('view all'), 'all-questions') . "</p>"
     );
   }
   else {
-    return array('#markup' => "<p>".
-                              "$count_qustions Questions submitted and<br>".
-                              "$count_votes Votes casted!<br>".
-                              l('submit a question', 'node/add/question'). '<br>' .
-                              l('view all', 'all-questions').
-                              '</p>'
+    return array(
+      '#markup' => t("<p>@count_questions submitted and @count_votes casted!</p>", $text_array) . "<p>" . l(t('submit a question'), 'node/add/question'). "<br />" . l(t('view all'), 'all-questions') . "</p>"
     );
   }
-
 }

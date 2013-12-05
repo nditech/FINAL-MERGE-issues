@@ -4,7 +4,7 @@ function th_questions_comments_node_save($node) {
   $field_name = 'field_th_question';
   $node_type = 'video';
 
-  if ($node->type = $node_type) {
+  if ($node->type == $node_type) {
     if (property_exists($node, $field_name)) {
       $item = field_get_items('node', $node, $field_name);
       if ($item) {
@@ -25,4 +25,3 @@ function th_questions_comments_node_save($node) {
 function th_questions_comments_node_update($node) {
   th_questions_comments_node_save($node);
 }
-//
