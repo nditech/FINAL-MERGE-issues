@@ -828,9 +828,17 @@ h1.title-candidates {
 .field-name-field-th-party:after {
 	clear: both;
 }
-.node-party .field-name-field-th-fb-page, .node-party .field-name-field-th-website, .node-party .field-name-field-fb-social-networks , .node-party .field-name-field-th-volunteer-link, .node-candidate .field-name-field-th-fb-page, .node-candidate .field-name-field-th-website, .node-candidate .field-name-field-fb-social-networks , .node-candidate .field-name-field-th-volunteer-link {
+.node-party .field-name-field-th-fb-page, .node-party .field-name-field-th-website, .node-party .field-name-field-fb-social-networks ,  .node-candidate .field-name-field-th-fb-page, .node-candidate .field-name-field-th-website, .node-candidate .field-name-field-fb-social-networks {
 	float: left;	
 	font: 14px/21px "open_sanssemibold", Helvetica, Arial;
+}
+.node-party .field-name-field-th-volunteer-link {
+	float: right;
+	width: 470px;
+}
+.node-candidate .field-name-field-th-volunteer-link {
+	float: right;
+	width: 500px;
 }
 .field-name-field-th-fb-page a, .field-name-field-th-website a {	
 	background: url("/profiles/town_hall/themes/townhalltheme/images/separator.gif") center right no-repeat;
@@ -1050,7 +1058,6 @@ div.field-type-taxonomy-term-reference {
 }
 .node-party .field-type-media + .field-type-link-field,
 .node-party .field-name-body + .field-type-link-field {
-	clear: both;
 	margin-left: 220px;
 }
 .node-candidate .field-type-media + .field-type-link-field,
@@ -1103,8 +1110,25 @@ div.field-type-taxonomy-term-reference {
 .view-id-search span.views-label-field-issue, .view-id-search span.views-label-field-region, .view-id-search span.views-label-field-th-candidate, .view-id-search span.views-label-field-th-party {
 	font: bold 14px/16px "open_sanscondensed_light",Helvetica,Arial,sans-serif;
 }
+#video-node-form #edit-th-share-count {
+	display: none;
+}
+.node-video .flag-outer-unlike, .node-video .flag-outer-like {
+	display: none;
+}
 .th_rss {
     display: block;
     background: url("/misc/feed.png") no-repeat;
     width: 20px;
+	margin: 0 auto;
+}
+.sidebar #block-th-blocks-th-block-feed-issue, .sidebar #block-th-blocks-th-block-feed-candidates, .sidebar #block-th-blocks-th-block-feed-parties {
+	padding: 0;
+}
+#block-th-blocks-th-block-feed-issue .content, #block-th-blocks-th-block-feed-candidates .content, #block-th-blocks-th-block-feed-parties .content {
+	margin-top: 0;
+	padding-left: 25px;
+}
+#question-node-form #edit-field-th-status label {
+	padding: 0;
 }
