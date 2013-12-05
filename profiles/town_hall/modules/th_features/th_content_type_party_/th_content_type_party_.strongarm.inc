@@ -14,7 +14,7 @@ function th_content_type_party__strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_mode_party';
-  $strongarm->value = '1';
+  $strongarm->value = 1;
   $export['comment_default_mode_party'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -28,7 +28,7 @@ function th_content_type_party__strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_form_location_party';
-  $strongarm->value = '1';
+  $strongarm->value = 1;
   $export['comment_form_location_party'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -49,7 +49,7 @@ function th_content_type_party__strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_subject_field_party';
-  $strongarm->value = '1';
+  $strongarm->value = 1;
   $export['comment_subject_field_party'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -110,6 +110,13 @@ function th_content_type_party__strongarm() {
   $strongarm->name = 'node_preview_party';
   $strongarm->value = '1';
   $export['node_preview_party'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_submitted_party';
+  $strongarm->value = 0;
+  $export['node_submitted_party'] = $strongarm;
 
   return $export;
 }
