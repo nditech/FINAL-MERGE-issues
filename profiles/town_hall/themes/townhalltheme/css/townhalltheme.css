@@ -1132,3 +1132,6 @@ div.field-type-taxonomy-term-reference {
 #question-node-form #edit-field-th-status label {
 	padding: 0;
 }
+#block-th-main-menu-th-main-menu .form-type-select .chosen-container-single {
+	width: 125px !important;
+}

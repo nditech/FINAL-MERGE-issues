@@ -40,7 +40,7 @@ function th_fe_block_default_fe_block_settings() {
     'node_types' => array(
       0 => 'candidate',
     ),
-    'pages' => 'node/*/*',
+    'pages' => '',
     'roles' => array(),
     'themes' => array(
       'seven' => array(
@@ -62,7 +62,7 @@ function th_fe_block_default_fe_block_settings() {
     'node_types' => array(
       0 => 'question',
     ),
-    'pages' => 'node/*/*',
+    'pages' => '',
     'roles' => array(),
     'themes' => array(
       'seven' => array(
