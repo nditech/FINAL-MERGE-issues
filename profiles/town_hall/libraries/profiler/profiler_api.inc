@@ -53,6 +53,20 @@ function town_hall_form_settings() {
 }
 
 function town_hall_form_settings_submit($form, $form_state) {
+  $node = new stdClass();
+  $node->title = "Privacy and Use Policy";
+  $node->type = "page";
+  node_object_prepare($node);
+  $node->language = LANGUAGE_NONE;
+  $node->uid = 1;
+  $node->status = 1;
+  $node->promote = 0;
+  $node->comment = 0;
+  node_save($node);
+
+  if (property_exists($node, 'nid')) {
+    variable_set('th_privacy_page', 'node/' . $node->nid);
+  }
   variable_set('th_search_settings', $form_state['values']['th_search_settings']);
   variable_set('th_permission_mode', $form_state['values']['th_permission_mode']);
 
