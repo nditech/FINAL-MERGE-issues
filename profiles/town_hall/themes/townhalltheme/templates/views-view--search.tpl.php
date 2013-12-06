@@ -35,6 +35,9 @@
   <?php print render($title_suffix); ?>
   <?php if ($header): ?>
     <div class="view-header">
+      <?php if (isset($_GET['search_api_views_fulltext'])): ?>
+        <span>Keyword search for<em><b><?php print htmlspecialchars($_GET['search_api_views_fulltext']) ?></b></em></span>
+      <?php endif; ?>
       <?php print $header; ?>
     </div>
   <?php endif; ?>
