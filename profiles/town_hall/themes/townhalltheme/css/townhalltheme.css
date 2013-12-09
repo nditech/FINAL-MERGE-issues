@@ -1047,7 +1047,7 @@ div.field-type-taxonomy-term-reference {
 .flag-message.flag-success-message {
 	z-index: 1000;	
 	background-color: #ffffcc;	
-	font-size: 1em;
+	font: 14px/21px "open_sansregular",Helvetica,Arial,sans-serif;
 }
 #block-views-th-ef-newsletter-signup-block h2 {display: none;}
 .comment_forbidden a {
@@ -1144,9 +1144,38 @@ div.field-type-taxonomy-term-reference {
 .node-video .link-wrapper {
 	margin-top: -10px;
 }
-#footer-wrapper a {
+#footer-wrapper a, #footer-wrapper a:hover {
 	color: #333;
 }
 .home-page-videos-pager .item-list + .view-filters {
 	margin-top: -50px;
+}
+.field-name-field-th-comments-display .field-label {
+	font:25px/28px "open_sans_condensedbold",Arial,Helvetica;
+}
+.field-name-field-th-comments-display .views-field-subject {
+	font:14px/21px "open_sansbold",Arial,Helvetica;
+}
+.field-name-field-th-comments-display .views-row {
+	clear: both;
+	padding-top: 15px;
+}
+.views-field-ops .flag-comment-up a {
+	background: url("/profiles/town_hall/themes/townhalltheme/images/like.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    margin-right: 8px;
+    overflow: hidden;
+    text-indent: -9999px;
+    width: 22px;
+}
+.views-field-ops-1 .flag-comment-down a{
+	background: url("/profiles/town_hall/themes/townhalltheme/images/dislike.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    margin-right: 8px;
+    overflow: hidden;
+    text-indent: -9999px;
+    width: 22px;
+}
+.field-name-field-th-comments-display .views-field-comment-body p {
+	margin: 0;
 }
