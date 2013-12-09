@@ -95,9 +95,10 @@ function th_questions_block_contents() {
 
   $count_votes = db_query("select sum({flag_counts}.count)
   from
-    {flag_counts}
-  where
-    {flag_counts}.fid = 5 or {flag_counts}.fid = 6")->fetchField();
+    {flag}
+  left join {flag_counts} on {flag}.fid = {flag_counts}.fid
+    where
+  {flag}.name = 'like_questions' or {flag}.name = 'unlike_questions'")->fetchField();
 
   $count_votes = is_null($count_votes) ? 0 : $count_votes;
 

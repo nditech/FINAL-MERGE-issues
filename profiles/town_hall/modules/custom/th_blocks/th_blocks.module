@@ -245,7 +245,7 @@ function th_blocks_block_info_alter(&$blocks, $theme, $code_blocks) {
   }
 
   if (isset($blocks['user']) && isset($blocks['user']['login'])) {
-    $blocks['user']['login']['status'] = 1;
+    $blocks['user']['login']['status'] = 0;
     $blocks['user']['login']['region'] = 'sidebar_second';
   }
 

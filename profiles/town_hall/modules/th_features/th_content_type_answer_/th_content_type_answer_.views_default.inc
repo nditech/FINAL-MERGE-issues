@@ -529,6 +529,17 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'video' => 'video',
   );
+  /* Filter criterion: Content: Share count (th_share_count) */
+  $handler->display->display_options['filters']['th_share_count_value']['id'] = 'th_share_count_value';
+  $handler->display->display_options['filters']['th_share_count_value']['table'] = 'field_data_th_share_count';
+  $handler->display->display_options['filters']['th_share_count_value']['field'] = 'th_share_count_value';
+  $handler->display->display_options['filters']['th_share_count_value']['operator'] = 'not empty';
+  /* Filter criterion: Content: Share count (th_share_count) */
+  $handler->display->display_options['filters']['th_share_count_value_1']['id'] = 'th_share_count_value_1';
+  $handler->display->display_options['filters']['th_share_count_value_1']['table'] = 'field_data_th_share_count';
+  $handler->display->display_options['filters']['th_share_count_value_1']['field'] = 'th_share_count_value';
+  $handler->display->display_options['filters']['th_share_count_value_1']['operator'] = '!=';
+  $handler->display->display_options['filters']['th_share_count_value_1']['value']['value'] = '0';
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
@@ -668,6 +679,17 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'video' => 'video',
   );
+  /* Filter criterion: Content statistics: Total views */
+  $handler->display->display_options['filters']['totalcount']['id'] = 'totalcount';
+  $handler->display->display_options['filters']['totalcount']['table'] = 'node_counter';
+  $handler->display->display_options['filters']['totalcount']['field'] = 'totalcount';
+  $handler->display->display_options['filters']['totalcount']['operator'] = '!=';
+  $handler->display->display_options['filters']['totalcount']['value']['value'] = '0';
+  /* Filter criterion: Content statistics: Total views */
+  $handler->display->display_options['filters']['totalcount_1']['id'] = 'totalcount_1';
+  $handler->display->display_options['filters']['totalcount_1']['table'] = 'node_counter';
+  $handler->display->display_options['filters']['totalcount_1']['field'] = 'totalcount';
+  $handler->display->display_options['filters']['totalcount_1']['operator'] = 'not empty';
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
