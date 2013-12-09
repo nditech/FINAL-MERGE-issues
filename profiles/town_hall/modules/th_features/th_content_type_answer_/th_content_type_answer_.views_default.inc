@@ -993,15 +993,6 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['totalcount']['table'] = 'node_counter';
   $handler->display->display_options['fields']['totalcount']['field'] = 'totalcount';
   $handler->display->display_options['fields']['totalcount']['label'] = 'views';
-  /* Field: Content: Candidate */
-  $handler->display->display_options['fields']['field_th_candidate']['id'] = 'field_th_candidate';
-  $handler->display->display_options['fields']['field_th_candidate']['table'] = 'field_data_field_th_candidate';
-  $handler->display->display_options['fields']['field_th_candidate']['field'] = 'field_th_candidate';
-  $handler->display->display_options['fields']['field_th_candidate']['label'] = '';
-  $handler->display->display_options['fields']['field_th_candidate']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_th_candidate']['settings'] = array(
-    'link' => 1,
-  );
   /* Field:  Region */
   $handler->display->display_options['fields']['field_region']['id'] = 'field_region';
   $handler->display->display_options['fields']['field_region']['table'] = 'field_data_field_region';
@@ -1034,6 +1025,15 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['field_video_tags']['element_label_type'] = 'span';
   $handler->display->display_options['fields']['field_video_tags']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_video_tags']['delta_offset'] = '0';
+  /* Field: Content: Candidate */
+  $handler->display->display_options['fields']['field_th_candidate']['id'] = 'field_th_candidate';
+  $handler->display->display_options['fields']['field_th_candidate']['table'] = 'field_data_field_th_candidate';
+  $handler->display->display_options['fields']['field_th_candidate']['field'] = 'field_th_candidate';
+  $handler->display->display_options['fields']['field_th_candidate']['element_type'] = 'span';
+  $handler->display->display_options['fields']['field_th_candidate']['element_label_type'] = 'span';
+  $handler->display->display_options['fields']['field_th_candidate']['settings'] = array(
+    'link' => 1,
+  );
   /* Field: Content: ShareThis Link */
   $handler->display->display_options['fields']['sharethis']['id'] = 'sharethis';
   $handler->display->display_options['fields']['sharethis']['table'] = 'node';
