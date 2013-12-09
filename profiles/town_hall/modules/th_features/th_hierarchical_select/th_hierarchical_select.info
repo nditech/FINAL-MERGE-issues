@@ -5,4 +5,4 @@ dependencies[] = hierarchical_select
 dependencies[] = hs_taxonomy
 features[features_api][] = api:2
 features[hierarchical_select][] = taxonomy-2
-project path = profiles/town_hall/modules/th_fealtures
+project path = profiles/town_hall/modules/th_features
