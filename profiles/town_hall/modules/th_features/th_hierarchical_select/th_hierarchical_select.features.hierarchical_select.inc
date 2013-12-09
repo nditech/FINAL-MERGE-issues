@@ -11,7 +11,7 @@ function th_hierarchical_select_hierarchical_select_default_configs() {
 $configs = array();
 $config = array(
   'config_id'       => 'taxonomy-2',
-  'save_lineage'    => 0,
+  'save_lineage'    => 1,
   'enforce_deepest' => 0,
   'entity_count'    => 0,
   'require_entity'  => 0,
@@ -24,7 +24,7 @@ $config = array(
     ),
   ),
   'dropbox' => array(
-    'status'    => 0,
+    'status'    => 1,
     'title'     => 'All selections',
     'limit'     => 0,
     'reset_hs'  => 1,
