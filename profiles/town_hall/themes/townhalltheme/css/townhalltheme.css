@@ -1135,3 +1135,18 @@ div.field-type-taxonomy-term-reference {
 #block-th-main-menu-th-main-menu .form-type-select .chosen-container-single {
 	width: 125px !important;
 }
+.node-video .link-wrapper ul {
+	margin:0;
+}
+.node-video .field-name-field-th-flag-content table {
+	margin: 0;
+}
+.node-video .link-wrapper {
+	margin-top: -10px;
+}
+#footer-wrapper a {
+	color: #333;
+}
+.home-page-videos-pager .item-list + .view-filters {
+	margin-top: -50px;
+}
