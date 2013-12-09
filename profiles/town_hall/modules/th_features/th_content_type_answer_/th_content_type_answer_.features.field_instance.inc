@@ -271,7 +271,7 @@ function th_content_type_answer__field_default_field_instances() {
         'module' => 'viewfield',
         'settings' => array(),
         'type' => 'viewfield_default',
-        'weight' => 6,
+        'weight' => 4,
       ),
       'rss' => array(
         'label' => 'above',
@@ -565,7 +565,7 @@ function th_content_type_answer__field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 9,
       ),
       'rss' => array(
         'label' => 'hidden',
@@ -634,7 +634,7 @@ function th_content_type_answer__field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'rss' => array(
         'label' => 'above',
