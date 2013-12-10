@@ -1182,11 +1182,13 @@ div.field-type-taxonomy-term-reference {
     text-indent: -9999px;
     width: 22px;
 }
-.views-field-ops-1 .flag-comment-down a.flagged {
+.views-field-ops-1 .flag-comment-down a.unflag-action {
 	background: url("/profiles/town_hall/themes/townhalltheme/images/dislike-flag.gif") no-repeat;
 }
-.views-field-ops .flag-comment-up a.flagged {
+.views-field-ops .flag-comment-up a.unflag-action {
 	background: url("/profiles/town_hall/themes/townhalltheme/images/like-flag2.gif") no-repeat;
+}
 .field-name-field-th-comments-display .views-field-comment-body p {
 	margin: 0;
 }
+
