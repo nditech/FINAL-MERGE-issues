@@ -162,7 +162,7 @@ function th_blocks_content($delta) {
                                            . '<li><a href="https://twitter.com/tech4dem"><img src="/profiles/town_hall/themes/townhalltheme/images/twitter.gif" /></a></li>'. PHP_EOL
                                            . '<li><a href="http://plus.google.com"><img src="/profiles/town_hall/themes/townhalltheme/images/google.gif" /></a></li>'. PHP_EOL
                                            . '</ul>' . PHP_EOL
-                                           . '<a class="privacy_policy">Privacy and Use Policy</a>' . PHP_EOL;
+                                           . '<a href="/content/privacy-and-use-policy" class="privacy_policy">Privacy and Use Policy</a>' . PHP_EOL;
   $content['th_block_scroll_up_footer'] = '<div id="scroll-top">' . PHP_EOL
                                  . '<img src="/profiles/town_hall/themes/townhalltheme/images/scroll.png" />' . PHP_EOL
                                  .'<p class="top_text">TOP</p>'. PHP_EOL

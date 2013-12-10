@@ -52,7 +52,7 @@ function th_content_type_question__field_default_field_bases() {
     'entity_types' => array(),
     'field_name' => 'field_name',
     'field_permissions' => array(
-      'type' => 2,
+      'type' => 0,
     ),
     'foreign keys' => array(
       'format' => array(
