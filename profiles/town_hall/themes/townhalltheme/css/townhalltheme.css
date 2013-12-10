@@ -734,7 +734,7 @@ td ul li.comment_forbidden, td ul li.comment-comments {
 	width: 22px;
 	margin-right: 8px;
 }
-.flag-unlike a.flagged, .flag-unlike-questions a.unflag-action {
+.flag-unlike a.unflag-action, .flag-unlike-questions a.unflag-action {
 	background: url("/profiles/town_hall/themes/townhalltheme/images/dislike-flag.gif") no-repeat;
 }
 .flag-like a, .flag-like-questions a {
@@ -745,7 +745,7 @@ td ul li.comment_forbidden, td ul li.comment-comments {
 	width: 22px;
 	margin-right: 8px;
 }
-.flag-like a.flagged, .flag-like-questions a.unflag-action {
+.flag-like a.unflag-action, .flag-like-questions a.unflag-action {
 	background: url("/profiles/town_hall/themes/townhalltheme/images/like-flag2.gif") no-repeat;
 }
 .views-field-ops, .views-field-ops-1, ul li.views-field-comments-link, .views-field-comments-link {
