@@ -37,6 +37,11 @@ function th_search_db_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'grid';
   $handler->display->display_options['style_options']['columns'] = '1';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Header: Global: Result summary */
+  $handler->display->display_options['header']['result']['id'] = 'result';
+  $handler->display->display_options['header']['result']['table'] = 'views';
+  $handler->display->display_options['header']['result']['field'] = 'result';
+  $handler->display->display_options['header']['result']['content'] = '@per_page out of @total';
   /* Relationship: Entity Reference: Referencing entity */
   $handler->display->display_options['relationships']['reverse_field_th_candidate_node']['id'] = 'reverse_field_th_candidate_node';
   $handler->display->display_options['relationships']['reverse_field_th_candidate_node']['table'] = 'node';
@@ -46,6 +51,13 @@ function th_search_db_views_default_views() {
   $handler->display->display_options['relationships']['field_th_question_target_id']['id'] = 'field_th_question_target_id';
   $handler->display->display_options['relationships']['field_th_question_target_id']['table'] = 'field_data_field_th_question';
   $handler->display->display_options['relationships']['field_th_question_target_id']['field'] = 'field_th_question_target_id';
+  /* Relationship: Flags: like counter */
+  $handler->display->display_options['relationships']['flag_count_rel']['id'] = 'flag_count_rel';
+  $handler->display->display_options['relationships']['flag_count_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['flag_count_rel']['field'] = 'flag_count_rel';
+  $handler->display->display_options['relationships']['flag_count_rel']['label'] = 'Like video counter';
+  $handler->display->display_options['relationships']['flag_count_rel']['required'] = 0;
+  $handler->display->display_options['relationships']['flag_count_rel']['flag'] = 'like';
   /* Field: Content: Party video */
   $handler->display->display_options['fields']['field_th_video']['id'] = 'field_th_video';
   $handler->display->display_options['fields']['field_th_video']['table'] = 'field_data_field_th_video';
@@ -60,7 +72,7 @@ function th_search_db_views_default_views() {
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
-  /* Field: Content: Description */
+  /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
@@ -109,21 +121,29 @@ function th_search_db_views_default_views() {
   $handler->display->display_options['sorts']['timestamp']['field'] = 'timestamp';
   $handler->display->display_options['sorts']['timestamp']['order'] = 'DESC';
   $handler->display->display_options['sorts']['timestamp']['exposed'] = TRUE;
-  $handler->display->display_options['sorts']['timestamp']['expose']['label'] = 'Most recent view';
+  $handler->display->display_options['sorts']['timestamp']['expose']['label'] = 'Most recent';
+  /* Sort criterion: Content: Share count (th_share_count) */
+  $handler->display->display_options['sorts']['th_share_count_value']['id'] = 'th_share_count_value';
+  $handler->display->display_options['sorts']['th_share_count_value']['table'] = 'field_data_th_share_count';
+  $handler->display->display_options['sorts']['th_share_count_value']['field'] = 'th_share_count_value';
+  $handler->display->display_options['sorts']['th_share_count_value']['order'] = 'DESC';
+  $handler->display->display_options['sorts']['th_share_count_value']['exposed'] = TRUE;
+  $handler->display->display_options['sorts']['th_share_count_value']['expose']['label'] = 'Most shared';
+  /* Sort criterion: Flags: Flag counter */
+  $handler->display->display_options['sorts']['count']['id'] = 'count';
+  $handler->display->display_options['sorts']['count']['table'] = 'flag_counts';
+  $handler->display->display_options['sorts']['count']['field'] = 'count';
+  $handler->display->display_options['sorts']['count']['relationship'] = 'flag_count_rel';
+  $handler->display->display_options['sorts']['count']['order'] = 'DESC';
+  $handler->display->display_options['sorts']['count']['exposed'] = TRUE;
+  $handler->display->display_options['sorts']['count']['expose']['label'] = 'Most liked';
   /* Sort criterion: Content statistics: Total views */
   $handler->display->display_options['sorts']['totalcount']['id'] = 'totalcount';
   $handler->display->display_options['sorts']['totalcount']['table'] = 'node_counter';
   $handler->display->display_options['sorts']['totalcount']['field'] = 'totalcount';
   $handler->display->display_options['sorts']['totalcount']['order'] = 'DESC';
   $handler->display->display_options['sorts']['totalcount']['exposed'] = TRUE;
-  $handler->display->display_options['sorts']['totalcount']['expose']['label'] = 'Total views';
-  /* Sort criterion: Content statistics: Views today */
-  $handler->display->display_options['sorts']['daycount']['id'] = 'daycount';
-  $handler->display->display_options['sorts']['daycount']['table'] = 'node_counter';
-  $handler->display->display_options['sorts']['daycount']['field'] = 'daycount';
-  $handler->display->display_options['sorts']['daycount']['order'] = 'DESC';
-  $handler->display->display_options['sorts']['daycount']['exposed'] = TRUE;
-  $handler->display->display_options['sorts']['daycount']['expose']['label'] = 'Views today';
+  $handler->display->display_options['sorts']['totalcount']['expose']['label'] = 'Most viewed';
   $handler->display->display_options['filter_groups']['operator'] = 'OR';
   /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
