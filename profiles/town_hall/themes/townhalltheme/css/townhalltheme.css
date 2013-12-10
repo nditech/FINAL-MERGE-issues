@@ -734,6 +734,9 @@ td ul li.comment_forbidden, td ul li.comment-comments {
 	width: 22px;
 	margin-right: 8px;
 }
+.flag-unlike a.flagged, .flag-unlike-questions a.flagged {
+	background: url("/profiles/town_hall/themes/townhalltheme/images/dislike-flag.gif") no-repeat;
+}
 .flag-like a, .flag-like-questions a {
 	text-indent: -9999px;
 	overflow: hidden;
@@ -741,6 +744,9 @@ td ul li.comment_forbidden, td ul li.comment-comments {
 	display: block;
 	width: 22px;
 	margin-right: 8px;
+}
+.flag-like a.flagged, .flag-like-questions a.flagged {
+	background: url("/profiles/town_hall/themes/townhalltheme/images/like-flag2.gif") no-repeat;
 }
 .views-field-ops, .views-field-ops-1, ul li.views-field-comments-link, .views-field-comments-link {
 	float: left;	
