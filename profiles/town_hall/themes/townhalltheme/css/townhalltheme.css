@@ -139,6 +139,10 @@ a:hover, a:focus {
 	color: #000000;
 }
 
+.right {
+	float: right;
+}
+
 h1#page-title {
 	font: 29px/30px "open_sans_condensedbold";   
 }
@@ -1128,6 +1132,11 @@ div.field-type-taxonomy-term-reference {
     width: 20px;
 	margin: 0 auto;
 }
+
+.statistics_counter {
+	visibility: hidden;
+}
+
 .sidebar #block-th-blocks-th-block-feed-issue, .sidebar #block-th-blocks-th-block-feed-candidates, .sidebar #block-th-blocks-th-block-feed-parties {
 	padding: 0;
 }
