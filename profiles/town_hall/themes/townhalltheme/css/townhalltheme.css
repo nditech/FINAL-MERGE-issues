@@ -734,7 +734,7 @@ td ul li.comment_forbidden, td ul li.comment-comments {
 	width: 22px;
 	margin-right: 8px;
 }
-.flag-unlike a.flagged, .flag-unlike-questions a.flagged {
+.flag-unlike a.flagged, .flag-unlike-questions a.unflag-action {
 	background: url("/profiles/town_hall/themes/townhalltheme/images/dislike-flag.gif") no-repeat;
 }
 .flag-like a, .flag-like-questions a {
@@ -745,7 +745,7 @@ td ul li.comment_forbidden, td ul li.comment-comments {
 	width: 22px;
 	margin-right: 8px;
 }
-.flag-like a.flagged, .flag-like-questions a.flagged {
+.flag-like a.flagged, .flag-like-questions a.unflag-action {
 	background: url("/profiles/town_hall/themes/townhalltheme/images/like-flag2.gif") no-repeat;
 }
 .views-field-ops, .views-field-ops-1, ul li.views-field-comments-link, .views-field-comments-link {
@@ -1050,7 +1050,7 @@ div.field-type-taxonomy-term-reference {
 .view-id-solr2 .view-footer .view-id-search_learn_more_about_the_candidates, .view-id-solr2 .view-footer .view-id-search_learn_more_about_the_parties {
 	width: 330px;
 }
-.flag-message.flag-success-message {
+.flag-message.flag-success-message, .flag-message.flag-failure-message {
 	z-index: 1000;	
 	background-color: #ffffcc;	
 	font: 14px/21px "open_sansregular",Helvetica,Arial,sans-serif;
@@ -1182,6 +1182,11 @@ div.field-type-taxonomy-term-reference {
     text-indent: -9999px;
     width: 22px;
 }
+.views-field-ops-1 .flag-comment-down a.flagged {
+	background: url("/profiles/town_hall/themes/townhalltheme/images/dislike-flag.gif") no-repeat;
+}
+.views-field-ops .flag-comment-up a.flagged {
+	background: url("/profiles/town_hall/themes/townhalltheme/images/like-flag2.gif") no-repeat;
 .field-name-field-th-comments-display .views-field-comment-body p {
 	margin: 0;
 }
