@@ -134,3 +134,4 @@ dependencies[] = th_feed
 dependencies[] = th_hierarchical_select
 dependencies[] = th_rules_config
 dependencies[] = th_fe_block
+dependencies[] = th_content

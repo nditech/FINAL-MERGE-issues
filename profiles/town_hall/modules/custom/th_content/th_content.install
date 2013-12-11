@@ -1,0 +1,4 @@
+<?php
+function th_content_install() {
+  th_content_create();
+}
