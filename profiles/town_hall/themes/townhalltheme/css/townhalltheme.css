@@ -1203,3 +1203,6 @@ div.field-type-taxonomy-term-reference {
 .view-id-search .view-header span {
 	font:20px/25px "open_sans_condensedbold",Arial,Helvetica;
 }
+.node-video .field-name-field-th-flag-content .views-field-totalcount {
+	float: left;
+}
