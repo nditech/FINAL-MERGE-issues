@@ -1200,4 +1200,10 @@ div.field-type-taxonomy-term-reference {
 .field-name-field-th-comments-display .views-field-comment-body p {
 	margin: 0;
 }
-
+.view-id-search .view-header span {
+	font:20px/25px "open_sans_condensedbold",Arial,Helvetica;
+}
+.node-video .field-name-field-th-flag-content .views-field-totalcount {
+	float: left;
+	padding-left: 10px;
+}
