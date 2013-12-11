@@ -1205,4 +1205,5 @@ div.field-type-taxonomy-term-reference {
 }
 .node-video .field-name-field-th-flag-content .views-field-totalcount {
 	float: left;
+	padding-left: 10px;
 }
