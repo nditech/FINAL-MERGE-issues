@@ -13,7 +13,7 @@ function th_newsletter_default_rules_configuration() {
       "LABEL" : "TH Subscribe receive message",
       "PLUGIN" : "reaction rule",
       "REQUIRES" : [ "rules", "entityform" ],
-      "ON" : [ "entityform_insert", "entityform_presave" ],
+      "ON" : [ "entityform_presave" ],
       "DO" : [
         { "mail" : {
             "to" : "[entityform:field-th-email]",

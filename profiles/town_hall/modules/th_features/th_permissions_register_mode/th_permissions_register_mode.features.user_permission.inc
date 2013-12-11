@@ -518,15 +518,6 @@ function th_permissions_register_mode_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'create field_name'.
-  $permissions['create field_name'] = array(
-    'name' => 'create field_name',
-    'roles' => array(
-      'anonymous user' => 'anonymous user',
-    ),
-    'module' => 'field_permissions',
-  );
-
   // Exported permission: 'create files'.
   $permissions['create files'] = array(
     'name' => 'create files',
@@ -975,13 +966,6 @@ function th_permissions_register_mode_user_default_permissions() {
     'module' => 'file_entity',
   );
 
-  // Exported permission: 'edit field_name'.
-  $permissions['edit field_name'] = array(
-    'name' => 'edit field_name',
-    'roles' => array(),
-    'module' => 'field_permissions',
-  );
-
   // Exported permission: 'edit own audio files'.
   $permissions['edit own audio files'] = array(
     'name' => 'edit own audio files',
@@ -1025,13 +1009,6 @@ function th_permissions_register_mode_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'entityform',
-  );
-
-  // Exported permission: 'edit own field_name'.
-  $permissions['edit own field_name'] = array(
-    'name' => 'edit own field_name',
-    'roles' => array(),
-    'module' => 'field_permissions',
   );
 
   // Exported permission: 'edit own image files'.
@@ -1350,13 +1327,6 @@ function th_permissions_register_mode_user_default_permissions() {
     'module' => 'entityform',
   );
 
-  // Exported permission: 'view field_name'.
-  $permissions['view field_name'] = array(
-    'name' => 'view field_name',
-    'roles' => array(),
-    'module' => 'field_permissions',
-  );
-
   // Exported permission: 'view files'.
   $permissions['view files'] = array(
     'name' => 'view files',
@@ -1384,13 +1354,6 @@ function th_permissions_register_mode_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'entityform',
-  );
-
-  // Exported permission: 'view own field_name'.
-  $permissions['view own field_name'] = array(
-    'name' => 'view own field_name',
-    'roles' => array(),
-    'module' => 'field_permissions',
   );
 
   // Exported permission: 'view own files'.
