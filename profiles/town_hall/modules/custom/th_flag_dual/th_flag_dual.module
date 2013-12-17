@@ -80,3 +80,11 @@ function th_flag_dual_flag_flag($flag, $entity_id, $account, $flagging) {
     }
   }
 }
+
+function th_flag_dual_preprocess_flag(&$variables) {
+	if ($variables['after_flagging']) {
+		if (token_scan($variables['message_text'])) {
+			$variables['message_text'] = t("Thank you!");
+		}
+	}
+}
