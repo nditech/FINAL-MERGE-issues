@@ -89,10 +89,23 @@ function th_content_type_question__strongarm() {
         'title' => array(
           'weight' => '1',
         ),
+        'path' => array(
+          'weight' => '30',
+        ),
       ),
       'display' => array(
         'flag_unlike_questions' => array(
           'teaser' => 'array (',
+          'full' => array(
+            'weight' => '5',
+            'visible' => TRUE,
+          ),
+        ),
+        'flag_like_questions' => array(
+          'full' => array(
+            'weight' => '4',
+            'visible' => TRUE,
+          ),
         ),
       ),
     ),

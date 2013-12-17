@@ -109,7 +109,7 @@ function th_content_type_question__field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 3,
       ),
       'rss' => array(
         'label' => 'above',
@@ -254,7 +254,7 @@ function th_content_type_question__field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 8,
       ),
       'rss' => array(
         'label' => 'inline',
@@ -378,6 +378,108 @@ function th_content_type_question__field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-question-field_th_comments_display'
+  $field_instances['node-question-field_th_comments_display'] = array(
+    'bundle' => 'question',
+    'default_value' => array(
+      0 => array(
+        'vname' => 'comments_display|block',
+        'vargs' => '',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'viewfield',
+        'settings' => array(),
+        'type' => 'viewfield_default',
+        'weight' => 7,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'viewfield',
+        'settings' => array(),
+        'type' => 'viewfield_default',
+        'weight' => 6,
+      ),
+      'rss' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_th_comments_display',
+    'label' => 'Comments',
+    'required' => 0,
+    'settings' => array(
+      'allowed_views' => array(
+        'all_questions' => 0,
+        'all_questions_block' => 0,
+        'all_questions_by_issue' => 0,
+        'candidates' => 0,
+        'candidates_videos' => 0,
+        'comments_display' => 'comments_display',
+        'entityform_type_list' => 0,
+        'entityforms' => 0,
+        'home_page_videos' => 0,
+        'issues_videos' => 0,
+        'media_default' => 0,
+        'most_shared' => 0,
+        'most_watched' => 0,
+        'parties' => 0,
+        'questions_bulk_operations' => 0,
+        'rss_candidate' => 0,
+        'rss_issue' => 0,
+        'rss_party' => 0,
+        'search' => 0,
+        'th_candidates_home' => 0,
+        'th_ef_newsletter_signup' => 0,
+        'th_flag_content' => 0,
+        'th_parties_home' => 0,
+        'th_party_page_videos' => 0,
+        'th_taxonomy_terms' => 0,
+        'user_entityforms' => 0,
+      ),
+      'force_default' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'viewfield',
+      'settings' => array(),
+      'type' => 'viewfield_select',
+      'weight' => 32,
+    ),
+  );
+
   // Exported field_instance: 'node-question-field_th_status'
   $field_instances['node-question-field_th_status'] = array(
     'bundle' => 'question',
@@ -400,7 +502,7 @@ function th_content_type_question__field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 7,
       ),
       'rss' => array(
         'label' => 'above',
@@ -454,6 +556,7 @@ function th_content_type_question__field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Answered?');
+  t('Comments');
   t('Copy and paste video embed code to submit a video question.');
   t('Description');
   t('Issue');

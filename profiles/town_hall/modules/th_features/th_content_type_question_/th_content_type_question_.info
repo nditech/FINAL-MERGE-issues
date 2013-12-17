@@ -20,6 +20,7 @@ features[field_instance][] = node-question-field_html_code
 features[field_instance][] = node-question-field_issue
 features[field_instance][] = node-question-field_name
 features[field_instance][] = node-question-field_region
+features[field_instance][] = node-question-field_th_comments_display
 features[field_instance][] = node-question-field_th_status
 features[flag][] = like_questions
 features[flag][] = unlike_questions
