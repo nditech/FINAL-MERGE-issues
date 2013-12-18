@@ -664,7 +664,7 @@ font-weight: 600;
 #block-th-questions-block-th-questions-block .content {
 	margin: 0 0 0 12px;
 }
-#block-th-questions-block-th-questions-block .content p {
+#block-th-questions-block-th-questions-block .content p, #block-th-questions-block-th-questions-block .content b  {
 	font-family: "open_sanscondensed_light", Helvetica,Arial,sans-serif;
     font-size: 18px;
     line-height: 25px;
@@ -1210,4 +1210,17 @@ div.field-type-taxonomy-term-reference {
 .node-video .field-name-field-th-flag-content .views-field-totalcount {
 	float: left;
 	padding-left: 10px;
+}
+.view-id-search #views-exposed-form-search-page .views-widget-sort-by {
+	clear:both;
+}
+.view-id-search .item-list ul.pager  {
+	font: 14px/21px "open_sansregular",Arial,Helvetica;
+}
+.field-name-field-th-comments-display {
+	clear: both;
+	padding-top: 10px;
+}
+#block-th-blocks-th-block-feed-candidates, #block-th-blocks-th-block-feed-parties, #block-th-blocks-th-block-feed-issue {
+	display: none;
 }
