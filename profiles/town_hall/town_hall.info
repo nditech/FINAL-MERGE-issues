@@ -136,3 +136,4 @@ dependencies[] = th_rules_config
 dependencies[] = th_fe_block
 dependencies[] = th_content
 dependencies[] = google_analytics 
+dependencies[] = th_metatag
