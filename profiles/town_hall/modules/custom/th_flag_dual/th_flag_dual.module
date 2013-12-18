@@ -88,7 +88,6 @@ function th_flag_dual_preprocess_flag(&$variables) {
 				if (!preg_match('/\[node\:field\-th\-candidate\:field\-th\-first\-name\]|\[node\:field\-th\-candidate\:field\-th\-last\-name\]/', $variables['message_text'])) {
 					$variables['flag']->flag_message = 'Thank you for supporting [node:field-th-candidate:field-th-first-name] [node:field-th-candidate:field-th-last-name]';
 					$variables['message_text'] = $variables['flag']->get_label('flag_message', $variables['entity_id']);
-						//array(node_load($variables['entity_id'])), array('sanitize' => false));
 				}
 				else {
 					$variables['message_text'] = t("Thank you!");
