@@ -59,7 +59,7 @@ function th_demworks_sites_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'sharethis_publisherID';
-  $strongarm->value = '9160ae91-7e75-469f-b016-f34585a86864';
+  $strongarm->value = 'dr-87c8a51b-342f-47b1-a7bb-d07634a9ca3e';
   $export['sharethis_publisherID'] = $strongarm;
 
   $strongarm = new stdClass();
