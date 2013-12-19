@@ -23,17 +23,11 @@ function th_metatag_metatag_export_default() {
       'shortlink' => array(
         'value' => '[site:url]',
       ),
-      'og:type' => array(
-        'value' => 'website',
-      ),
       'og:title' => array(
         'value' => '[site:name]',
       ),
       'og:url' => array(
         'value' => '[site:url]',
-      ),
-      'twitter:description' => array(
-        'value' => '',
       ),
     ),
   );
