@@ -48,6 +48,7 @@ features[views_view][] = all_questions_block
 features[views_view][] = all_questions_by_issue
 features[views_view][] = home_page_videos
 features[views_view][] = questions_bulk_operations
+features[views_view][] = th_submitter
 features_exclude[dependencies][ctools] = ctools
 features_exclude[dependencies][features] = features
 features_exclude[dependencies][options] = options
