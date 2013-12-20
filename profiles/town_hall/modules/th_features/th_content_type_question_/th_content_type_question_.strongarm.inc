@@ -13,92 +13,6 @@ function th_content_type_question__strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'captcha_add_captcha_description';
-  $strongarm->value = 0;
-  $export['captcha_add_captcha_description'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'captcha_administration_mode';
-  $strongarm->value = 0;
-  $export['captcha_administration_mode'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'captcha_allow_on_admin_pages';
-  $strongarm->value = 0;
-  $export['captcha_allow_on_admin_pages'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'captcha_default_challenge';
-  $strongarm->value = 'captcha/Math';
-  $export['captcha_default_challenge'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'captcha_default_validation';
-  $strongarm->value = '1';
-  $export['captcha_default_validation'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'captcha_description';
-  $strongarm->value = 'This question is for testing whether or not you are a human visitor and to prevent automated spam submissions.';
-  $export['captcha_description'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'captcha_log_wrong_responses';
-  $strongarm->value = 0;
-  $export['captcha_log_wrong_responses'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'captcha_persistence';
-  $strongarm->value = '1';
-  $export['captcha_persistence'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'captcha_placement_map_cache';
-  $strongarm->value = array(
-    'question_node_form' => array(
-      'path' => array(),
-      'key' => 'actions',
-      'weight' => 99,
-    ),
-    'ctools_jump_menu' => array(
-      'path' => array(),
-      'key' => 'go',
-      'weight' => NULL,
-    ),
-    'views_exposed_form' => array(
-      'path' => array(),
-      'key' => 'submit',
-      'weight' => NULL,
-    ),
-    'th_newsletter_entityform_edit_form' => array(
-      'path' => array(
-        0 => 'actions',
-      ),
-      'key' => 'submit',
-      'weight' => NULL,
-    ),
-  );
-  $export['captcha_placement_map_cache'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_question';
   $strongarm->value = '0';
   $export['comment_anonymous_question'] = $strongarm;
@@ -107,7 +21,7 @@ function th_content_type_question__strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_mode_question';
-  $strongarm->value = '1';
+  $strongarm->value = 1;
   $export['comment_default_mode_question'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -121,7 +35,7 @@ function th_content_type_question__strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_form_location_question';
-  $strongarm->value = '1';
+  $strongarm->value = 1;
   $export['comment_form_location_question'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -183,13 +97,13 @@ function th_content_type_question__strongarm() {
         'flag_unlike_questions' => array(
           'teaser' => 'array (',
           'full' => array(
-            'weight' => '5',
+            'weight' => '6',
             'visible' => TRUE,
           ),
         ),
         'flag_like_questions' => array(
           'full' => array(
-            'weight' => '4',
+            'weight' => '5',
             'visible' => TRUE,
           ),
         ),
@@ -234,7 +148,7 @@ function th_content_type_question__strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_question';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['node_submitted_question'] = $strongarm;
 
   return $export;
