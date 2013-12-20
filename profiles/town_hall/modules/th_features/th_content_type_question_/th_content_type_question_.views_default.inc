@@ -718,7 +718,7 @@ function th_content_type_question__views_default_views() {
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '50';
   $handler->display->display_options['style_plugin'] = 'table';
-  /* Field: Broken/missing handler */
+  /* Field: Bulk operations: Content */
   $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
   $handler->display->display_options['fields']['views_bulk_operations']['table'] = 'node';
   $handler->display->display_options['fields']['views_bulk_operations']['field'] = 'views_bulk_operations';
@@ -771,6 +771,96 @@ function th_content_type_question__views_default_views() {
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
   $export['questions_bulk_operations'] = $view;
+
+  $view = new view();
+  $view->name = 'th_submitter';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'TH submitter';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'TH submitter';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'created' => 'created',
+    'field_name' => 'field_name',
+  );
+  /* Relationship: Content: Author */
+  $handler->display->display_options['relationships']['uid']['id'] = 'uid';
+  $handler->display->display_options['relationships']['uid']['table'] = 'node';
+  $handler->display->display_options['relationships']['uid']['field'] = 'uid';
+  /* Field: User: Uid */
+  $handler->display->display_options['fields']['uid']['id'] = 'uid';
+  $handler->display->display_options['fields']['uid']['table'] = 'users';
+  $handler->display->display_options['fields']['uid']['field'] = 'uid';
+  $handler->display->display_options['fields']['uid']['relationship'] = 'uid';
+  $handler->display->display_options['fields']['uid']['label'] = '';
+  $handler->display->display_options['fields']['uid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['uid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['uid']['link_to_user'] = FALSE;
+  /* Field: User: Name */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'users';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['relationship'] = 'uid';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['name']['link_to_user'] = FALSE;
+  /* Field: Content: Post date */
+  $handler->display->display_options['fields']['created']['id'] = 'created';
+  $handler->display->display_options['fields']['created']['table'] = 'node';
+  $handler->display->display_options['fields']['created']['field'] = 'created';
+  $handler->display->display_options['fields']['created']['label'] = 'Submitted on';
+  $handler->display->display_options['fields']['created']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['created']['date_format'] = 'short';
+  /* Field: Content: Your name (optional) */
+  $handler->display->display_options['fields']['field_name']['id'] = 'field_name';
+  $handler->display->display_options['fields']['field_name']['table'] = 'field_data_field_name';
+  $handler->display->display_options['fields']['field_name']['field'] = 'field_name';
+  $handler->display->display_options['fields']['field_name']['label'] = 'by';
+  $handler->display->display_options['fields']['field_name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_name']['empty'] = '[name]';
+  $handler->display->display_options['fields']['field_name']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['field_name']['type'] = 'text_plain';
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block');
+  $export['th_submitter'] = $view;
 
   return $export;
 }
