@@ -21,9 +21,7 @@ function th_comments_flag_default_flags() {
     'entity_type' => 'comment',
     'title' => 'Comment Down',
     'global' => 0,
-    'types' => array(
-      0 => 'comment_node_video',
-    ),
+    'types' => array(),
     'flag_short' => 'Down',
     'flag_long' => '',
     'flag_message' => '',
@@ -41,20 +39,18 @@ function th_comments_flag_default_flags() {
     'show_on_form' => 0,
     'access_author' => '',
     'show_contextual_link' => 0,
-    'api_version' => 3,
     'module' => 'th_comments',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 3,
   );
   // Exported flag: "Comment Up".
   $flags['comment_up'] = array(
     'entity_type' => 'comment',
     'title' => 'Comment Up',
     'global' => 0,
-    'types' => array(
-      0 => 'comment_node_video',
-    ),
+    'types' => array(),
     'flag_short' => 'Up',
     'flag_long' => '',
     'flag_message' => '',
@@ -72,11 +68,11 @@ function th_comments_flag_default_flags() {
     'show_on_form' => 0,
     'access_author' => '',
     'show_contextual_link' => 0,
-    'api_version' => 3,
     'module' => 'th_comments',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 3,
   );
   return $flags;
 

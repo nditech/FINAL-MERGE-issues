@@ -135,5 +135,5 @@ dependencies[] = th_hierarchical_select
 dependencies[] = th_rules_config
 dependencies[] = th_fe_block
 dependencies[] = th_content
-dependencies[] = google_analytics 
+dependencies[] = googleanalytics 
 dependencies[] = th_metatag
