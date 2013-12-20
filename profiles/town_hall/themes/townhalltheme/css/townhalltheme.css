@@ -1224,3 +1224,6 @@ div.field-type-taxonomy-term-reference {
 #block-th-blocks-th-block-feed-candidates, #block-th-blocks-th-block-feed-parties, #block-th-blocks-th-block-feed-issue {
 	display: none;
 }
+#block-th-questions-block-th-questions-block-user {
+	display: none;
+}
