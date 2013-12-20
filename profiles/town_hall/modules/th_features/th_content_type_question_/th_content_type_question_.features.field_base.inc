@@ -139,5 +139,24 @@ function th_content_type_question__field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
+  // Exported field_base: 'field_th_submitter'
+  $field_bases['field_th_submitter'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_th_submitter',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'foreign keys' => array(),
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'viewfield',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'viewfield',
+  );
+
   return $field_bases;
 }
