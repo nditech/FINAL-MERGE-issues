@@ -146,9 +146,6 @@ function th_content_type_question__field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_th_submitter',
-    'field_permissions' => array(
-      'type' => 0,
-    ),
     'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
