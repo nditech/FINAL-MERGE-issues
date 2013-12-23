@@ -83,7 +83,7 @@ function th_questions_block_contents() {
     {node}
   left join {field_data_field_th_status} on {node}.nid = {field_data_field_th_status}.entity_id
   where
-    {node}.type = 'question' and {field_data_field_th_status}.field_th_status_value = 0 and
+    {node}.type = 'question' and {node}.status = 1 and {field_data_field_th_status}.field_th_status_value = 0 and
     {node}.uid not in (
     select
       {users_roles}.uid
