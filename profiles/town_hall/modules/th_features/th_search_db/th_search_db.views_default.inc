@@ -39,6 +39,11 @@ function th_search_db_views_default_views() {
     'field_th_candidate_field_th_first_name' => 'field_th_candidate_field_th_first_name',
     'field_th_candidate_field_th_last_name' => 'field_th_candidate_field_th_last_name',
   );
+  /* Header: Global: Result summary */
+  $handler->display->display_options['header']['result_1']['id'] = 'result_1';
+  $handler->display->display_options['header']['result_1']['table'] = 'views';
+  $handler->display->display_options['header']['result_1']['field'] = 'result';
+  $handler->display->display_options['header']['result_1']['content'] = '@start of @total';
   /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['area']['id'] = 'area';
   $handler->display->display_options['empty']['area']['table'] = 'views';
