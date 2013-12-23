@@ -829,6 +829,12 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['ops_1']['relationship'] = 'flag_content_rel_1';
   $handler->display->display_options['fields']['ops_1']['label'] = '';
   $handler->display->display_options['fields']['ops_1']['element_label_colon'] = FALSE;
+  /* Field: Content: ShareThis Link */
+  $handler->display->display_options['fields']['sharethis']['id'] = 'sharethis';
+  $handler->display->display_options['fields']['sharethis']['table'] = 'node';
+  $handler->display->display_options['fields']['sharethis']['field'] = 'sharethis';
+  $handler->display->display_options['fields']['sharethis']['label'] = '';
+  $handler->display->display_options['fields']['sharethis']['element_label_colon'] = FALSE;
   /* Field: Content statistics: Total views */
   $handler->display->display_options['fields']['totalcount']['id'] = 'totalcount';
   $handler->display->display_options['fields']['totalcount']['table'] = 'node_counter';
