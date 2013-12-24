@@ -682,7 +682,7 @@ font-weight: 600;
 .issue_body_style {
 	float: left;
     margin-left: 120px;
-    margin-top: -70px;
+/*    margin-top: -70px; */
 	font: 18px/25px "open_sans_condensedbold", Helvetica,Arial,sans-serif;
 }
 .issue_title_style {
