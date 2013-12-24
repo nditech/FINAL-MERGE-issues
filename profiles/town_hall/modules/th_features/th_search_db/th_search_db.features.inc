@@ -28,6 +28,8 @@ function th_search_db_default_search_api_index() {
       "fields" : {
         "type" : { "type" : "string" },
         "title" : { "type" : "string" },
+        "views" : { "type" : "integer" },
+        "th_share_count" : { "type" : "integer" },
         "field_th_candidate" : { "type" : "integer", "entity_type" : "node" },
         "field_th_question" : { "type" : "integer", "entity_type" : "node" },
         "field_video_tags" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
@@ -41,6 +43,7 @@ function th_search_db_default_search_api_index() {
         "field_th_question:field_th_party" : { "type" : "integer", "entity_type" : "node" },
         "field_th_question:field_issue" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_th_question:field_region" : { "type" : "integer", "entity_type" : "taxonomy_term" },
+        "field_th_video:file" : { "type" : "integer", "entity_type" : "file" },
         "field_th_candidate:field_th_party:nid" : { "type" : "integer" },
         "field_th_candidate:field_th_party:title" : { "type" : "text" },
         "field_th_question:field_th_candidate:field_th_first_name" : { "type" : "text" },
@@ -230,6 +233,21 @@ function th_search_db_default_search_api_server() {
           },
           "field_th_question:field_th_party:field_th_party" : {
             "table" : "search_api_db_database_server_index_field_th_question_field__7",
+            "type" : "integer",
+            "boost" : "1.0"
+          },
+          "field_th_video:file" : {
+            "table" : "search_api_db_database_server_index_field_th_video_file",
+            "type" : "integer",
+            "boost" : "1.0"
+          },
+          "views" : {
+            "table" : "search_api_db_database_server_index_views",
+            "type" : "integer",
+            "boost" : "1.0"
+          },
+          "th_share_count" : {
+            "table" : "search_api_db_database_server_index_th_share_count",
             "type" : "integer",
             "boost" : "1.0"
           }
