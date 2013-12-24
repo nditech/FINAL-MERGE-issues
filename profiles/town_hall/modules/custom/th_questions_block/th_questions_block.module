@@ -109,19 +109,19 @@ function th_questions_block_contents() {
   );
 
   if ($user->uid) {
-		if ($count_votes) {
 			return array(
 				'#markup' => t("<p>@count_people people have submitted @count_questions and cast @count_votes.</p><b>But what do you think?</b>", $text_array) . "<p>" . l(t('submit a question'), 'node/add/question'). "<br />" . l(t('view all'), 'all-questions') . "</p>"
 			);
-		} else {
-			return array(
-				'#markup' => t("<p>@count_people people have submitted @count_questions and not cast</p><b>But what do you think?</b>", $text_array) . "<p>" . l(t('submit a question'), 'node/add/question'). "<br />" . l(t('view all'), 'all-questions') . "</p>"
-			);
-		}
   }
   else {
-    return array(
-      '#markup' => t("<p>@count_questions submitted and @count_votes casted!</p>", $text_array) . "<p>" . l(t('submit a question'), 'node/add/question'). "<br />" . l(t('view all'), 'all-questions') . "</p>"
-    );
+		if ($count_votes) {
+			return array(
+				'#markup' => t("<p>@count_questions submitted and @count_votes casted!</p>", $text_array) . "<p>" . l(t('submit a question'), 'node/add/question'). "<br />" . l(t('view all'), 'all-questions') . "</p>"
+			);
+		} else {
+			return array(
+				'#markup' => t("<p>@count_questions submitted and not casted!</p>", $text_array) . "<p>" . l(t('submit a question'), 'node/add/question'). "<br />" . l(t('view all'), 'all-questions') . "</p>"
+			);
+		}
   }
 }
