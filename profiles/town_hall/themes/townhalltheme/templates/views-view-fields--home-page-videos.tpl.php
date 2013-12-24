@@ -30,6 +30,12 @@
   <?php if (!empty($field->separator)): ?>
     <?php print $field->separator; ?>
   <?php endif; ?>
+	<?php if ($id == 'title'): ?>
+		<?php $field->wrapper_prefix = '<div class="title-body-wrapper">' ?>
+	<?php endif; ?>
+	<?php if ($id == 'body'): ?>
+		<?php $field->wrapper_suffix = '</div>' ?>
+	<?php endif; ?>
   <?php if ($id == 'view_1'): ?>
     <?php $field->wrapper_prefix = '<div class="candidates-parties-bloks-wrapper"><div class="candidates-block">' ?>
     <?php $field->wrapper_suffix = '</div>'; ?>
