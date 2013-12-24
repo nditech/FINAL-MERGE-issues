@@ -72,13 +72,6 @@ function th_comments_views_default_views() {
   $handler->display->display_options['relationships']['flag_count_rel_1']['label'] = 'Comment Down counter';
   $handler->display->display_options['relationships']['flag_count_rel_1']['required'] = 0;
   $handler->display->display_options['relationships']['flag_count_rel_1']['flag'] = 'comment_down';
-  /* Field: Comment: Title */
-  $handler->display->display_options['fields']['subject']['id'] = 'subject';
-  $handler->display->display_options['fields']['subject']['table'] = 'comment';
-  $handler->display->display_options['fields']['subject']['field'] = 'subject';
-  $handler->display->display_options['fields']['subject']['label'] = '';
-  $handler->display->display_options['fields']['subject']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['subject']['alter']['ellipsis'] = FALSE;
   /* Field: Comment: Post date */
   $handler->display->display_options['fields']['created']['id'] = 'created';
   $handler->display->display_options['fields']['created']['table'] = 'comment';
