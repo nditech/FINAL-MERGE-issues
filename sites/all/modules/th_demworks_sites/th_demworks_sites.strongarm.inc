@@ -76,19 +76,6 @@ function th_demworks_sites_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'captcha_placement_map_cache';
-  $strongarm->value = array(
-    'question_node_form' => array(
-      'path' => array(),
-      'key' => 'actions',
-      'weight' => 99,
-    ),
-  );
-  $export['captcha_placement_map_cache'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_bonus_customize_widget_per_form';
   $strongarm->value = 0;
   $export['hybridauth_bonus_customize_widget_per_form'] = $strongarm;
@@ -384,7 +371,7 @@ function th_demworks_sites_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_AOL_weight';
-  $strongarm->value = '0';
+  $strongarm->value = '14';
   $export['hybridauth_provider_AOL_weight'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -398,7 +385,7 @@ function th_demworks_sites_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_Disqus_weight';
-  $strongarm->value = '0';
+  $strongarm->value = '13';
   $export['hybridauth_provider_Disqus_weight'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -473,7 +460,7 @@ function th_demworks_sites_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_Facebook_weight';
-  $strongarm->value = '0';
+  $strongarm->value = '2';
   $export['hybridauth_provider_Facebook_weight'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -487,7 +474,7 @@ function th_demworks_sites_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_FamilySearch_weight';
-  $strongarm->value = '0';
+  $strongarm->value = '11';
   $export['hybridauth_provider_FamilySearch_weight'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -501,7 +488,7 @@ function th_demworks_sites_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_Foursquare_weight';
-  $strongarm->value = '0';
+  $strongarm->value = '3';
   $export['hybridauth_provider_Foursquare_weight'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -515,7 +502,7 @@ function th_demworks_sites_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_Geni_weight';
-  $strongarm->value = '0';
+  $strongarm->value = '10';
   $export['hybridauth_provider_Geni_weight'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -529,7 +516,7 @@ function th_demworks_sites_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_GitHub_weight';
-  $strongarm->value = '0';
+  $strongarm->value = '7';
   $export['hybridauth_provider_GitHub_weight'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -543,21 +530,21 @@ function th_demworks_sites_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_Goodreads_weight';
-  $strongarm->value = '0';
+  $strongarm->value = '8';
   $export['hybridauth_provider_Goodreads_weight'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_Google_enabled';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['hybridauth_provider_Google_enabled'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_Google_weight';
-  $strongarm->value = '0';
+  $strongarm->value = '5';
   $export['hybridauth_provider_Google_weight'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -571,7 +558,7 @@ function th_demworks_sites_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_Identica_weight';
-  $strongarm->value = '0';
+  $strongarm->value = '9';
   $export['hybridauth_provider_Identica_weight'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -585,7 +572,7 @@ function th_demworks_sites_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_Instagram_weight';
-  $strongarm->value = '0';
+  $strongarm->value = '-3';
   $export['hybridauth_provider_Instagram_weight'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -599,7 +586,7 @@ function th_demworks_sites_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_LastFM_weight';
-  $strongarm->value = '0';
+  $strongarm->value = '-4';
   $export['hybridauth_provider_LastFM_weight'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -613,7 +600,7 @@ function th_demworks_sites_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_LinkedIn_weight';
-  $strongarm->value = '0';
+  $strongarm->value = '1';
   $export['hybridauth_provider_LinkedIn_weight'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -627,7 +614,7 @@ function th_demworks_sites_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_Live_weight';
-  $strongarm->value = '0';
+  $strongarm->value = '-2';
   $export['hybridauth_provider_Live_weight'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -641,7 +628,7 @@ function th_demworks_sites_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_Mailru_weight';
-  $strongarm->value = '0';
+  $strongarm->value = '-15';
   $export['hybridauth_provider_Mailru_weight'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -655,7 +642,7 @@ function th_demworks_sites_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_Murmur_weight';
-  $strongarm->value = '0';
+  $strongarm->value = '-14';
   $export['hybridauth_provider_Murmur_weight'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -669,7 +656,7 @@ function th_demworks_sites_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_MyHeritage_weight';
-  $strongarm->value = '0';
+  $strongarm->value = '-16';
   $export['hybridauth_provider_MyHeritage_weight'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -683,7 +670,7 @@ function th_demworks_sites_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_MySpace_weight';
-  $strongarm->value = '0';
+  $strongarm->value = '-1';
   $export['hybridauth_provider_MySpace_weight'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -697,7 +684,7 @@ function th_demworks_sites_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_Odnoklassniki_weight';
-  $strongarm->value = '0';
+  $strongarm->value = '-17';
   $export['hybridauth_provider_Odnoklassniki_weight'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -725,7 +712,7 @@ function th_demworks_sites_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_Pixnet_weight';
-  $strongarm->value = '0';
+  $strongarm->value = '-20';
   $export['hybridauth_provider_Pixnet_weight'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -739,7 +726,7 @@ function th_demworks_sites_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_Plurk_weight';
-  $strongarm->value = '0';
+  $strongarm->value = '-19';
   $export['hybridauth_provider_Plurk_weight'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -753,7 +740,7 @@ function th_demworks_sites_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_px500_weight';
-  $strongarm->value = '0';
+  $strongarm->value = '12';
   $export['hybridauth_provider_px500_weight'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -767,7 +754,7 @@ function th_demworks_sites_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_QQ_weight';
-  $strongarm->value = '0';
+  $strongarm->value = '-18';
   $export['hybridauth_provider_QQ_weight'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -781,7 +768,7 @@ function th_demworks_sites_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_Sina_weight';
-  $strongarm->value = '0';
+  $strongarm->value = '-13';
   $export['hybridauth_provider_Sina_weight'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -795,7 +782,7 @@ function th_demworks_sites_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_Skyrock_weight';
-  $strongarm->value = '0';
+  $strongarm->value = '-12';
   $export['hybridauth_provider_Skyrock_weight'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -809,7 +796,7 @@ function th_demworks_sites_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_Steam_weight';
-  $strongarm->value = '0';
+  $strongarm->value = '-6';
   $export['hybridauth_provider_Steam_weight'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -823,7 +810,7 @@ function th_demworks_sites_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_Tumblr_weight';
-  $strongarm->value = '0';
+  $strongarm->value = '-5';
   $export['hybridauth_provider_Tumblr_weight'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -837,21 +824,21 @@ function th_demworks_sites_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_TwitchTV_weight';
-  $strongarm->value = '0';
+  $strongarm->value = '-7';
   $export['hybridauth_provider_TwitchTV_weight'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_Twitter_enabled';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['hybridauth_provider_Twitter_enabled'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_Twitter_weight';
-  $strongarm->value = '0';
+  $strongarm->value = '4';
   $export['hybridauth_provider_Twitter_weight'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -865,7 +852,7 @@ function th_demworks_sites_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_Viadeo_weight';
-  $strongarm->value = '0';
+  $strongarm->value = '-8';
   $export['hybridauth_provider_Viadeo_weight'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -879,7 +866,7 @@ function th_demworks_sites_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_Vimeo_weight';
-  $strongarm->value = '0';
+  $strongarm->value = '-11';
   $export['hybridauth_provider_Vimeo_weight'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -893,7 +880,7 @@ function th_demworks_sites_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_Vkontakte_weight';
-  $strongarm->value = '0';
+  $strongarm->value = '-10';
   $export['hybridauth_provider_Vkontakte_weight'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -907,7 +894,7 @@ function th_demworks_sites_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_Yahoo_weight';
-  $strongarm->value = '0';
+  $strongarm->value = '6';
   $export['hybridauth_provider_Yahoo_weight'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -921,7 +908,7 @@ function th_demworks_sites_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_provider_Yandex_weight';
-  $strongarm->value = '0';
+  $strongarm->value = '-9';
   $export['hybridauth_provider_Yandex_weight'] = $strongarm;
 
   $strongarm = new stdClass();

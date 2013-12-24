@@ -14,7 +14,6 @@ features[variable][] = captcha_description
 features[variable][] = captcha_enable_stats
 features[variable][] = captcha_log_wrong_responses
 features[variable][] = captcha_persistence
-features[variable][] = captcha_placement_map_cache
 features[variable][] = hybridauth_bonus_customize_widget_per_form
 features[variable][] = hybridauth_bonus_registration_role_choice
 features[variable][] = hybridauth_bonus_registration_roles
