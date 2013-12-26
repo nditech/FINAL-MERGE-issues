@@ -550,7 +550,6 @@ function th_permissions_register_mode_user_default_permissions() {
     'name' => 'create question content',
     'roles' => array(
       'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
