@@ -120,7 +120,7 @@ function th_questions_block_contents() {
 			);
 		} else {
 			return array(
-				'#markup' => t("<p>@count_questions submitted and not casted!</p>", $text_array) . "<p>" . l(t('submit a question'), 'node/add/question'). "<br />" . l(t('view all'), 'all-questions') . "</p>"
+				'#markup' => t("<p>@count_questions submitted and not cast!</p>", $text_array) . "<p>" . l(t('submit a question'), 'node/add/question'). "<br />" . l(t('view all'), 'all-questions') . "</p>"
 			);
 		}
   }
