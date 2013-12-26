@@ -42,7 +42,6 @@ function th_permissions_anonym_mode_user_default_permissions() {
     'name' => 'access comments',
     'roles' => array(
       'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'comment',
@@ -518,12 +517,10 @@ function th_permissions_anonym_mode_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'create field_name'.
-  $permissions['create field_name'] = array(
-    'name' => 'create field_name',
-    'roles' => array(
-      'anonymous user' => 'anonymous user',
-    ),
+  // Exported permission: 'create field_th_status'.
+  $permissions['create field_th_status'] = array(
+    'name' => 'create field_th_status',
+    'roles' => array(),
     'module' => 'field_permissions',
   );
 
@@ -559,7 +556,6 @@ function th_permissions_anonym_mode_user_default_permissions() {
     'name' => 'create question content',
     'roles' => array(
       'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
@@ -975,9 +971,9 @@ function th_permissions_anonym_mode_user_default_permissions() {
     'module' => 'file_entity',
   );
 
-  // Exported permission: 'edit field_name'.
-  $permissions['edit field_name'] = array(
-    'name' => 'edit field_name',
+  // Exported permission: 'edit field_th_status'.
+  $permissions['edit field_th_status'] = array(
+    'name' => 'edit field_th_status',
     'roles' => array(),
     'module' => 'field_permissions',
   );
@@ -1027,9 +1023,9 @@ function th_permissions_anonym_mode_user_default_permissions() {
     'module' => 'entityform',
   );
 
-  // Exported permission: 'edit own field_name'.
-  $permissions['edit own field_name'] = array(
-    'name' => 'edit own field_name',
+  // Exported permission: 'edit own field_th_status'.
+  $permissions['edit own field_th_status'] = array(
+    'name' => 'edit own field_th_status',
     'roles' => array(),
     'module' => 'field_permissions',
   );
@@ -1192,7 +1188,6 @@ function th_permissions_anonym_mode_user_default_permissions() {
     'name' => 'post comments',
     'roles' => array(
       'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'comment',
@@ -1350,9 +1345,9 @@ function th_permissions_anonym_mode_user_default_permissions() {
     'module' => 'entityform',
   );
 
-  // Exported permission: 'view field_name'.
-  $permissions['view field_name'] = array(
-    'name' => 'view field_name',
+  // Exported permission: 'view field_th_status'.
+  $permissions['view field_th_status'] = array(
+    'name' => 'view field_th_status',
     'roles' => array(),
     'module' => 'field_permissions',
   );
@@ -1386,9 +1381,9 @@ function th_permissions_anonym_mode_user_default_permissions() {
     'module' => 'entityform',
   );
 
-  // Exported permission: 'view own field_name'.
-  $permissions['view own field_name'] = array(
-    'name' => 'view own field_name',
+  // Exported permission: 'view own field_th_status'.
+  $permissions['view own field_th_status'] = array(
+    'name' => 'view own field_th_status',
     'roles' => array(),
     'module' => 'field_permissions',
   );
