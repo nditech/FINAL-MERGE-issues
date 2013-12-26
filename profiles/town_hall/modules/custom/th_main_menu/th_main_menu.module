@@ -41,13 +41,13 @@ function th_main_menu_block_view($delta = '') {
       $parteis_output = drupal_render($form);
     }
 
-		if (variable_get('th_permission_mode') && !$user->uid) {
+		if (!$user->uid) {
 			$url = url('user/login', array('absolute' => true));
 		}
 		else {
 			$url = url('node/add/question', array('absolute' => true));
 		}
-		
+
     $output = '<ul>';
 
     $output .= '<li>' . l('Issues', 'questions') . '</li>';
