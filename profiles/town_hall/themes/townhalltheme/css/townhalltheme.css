@@ -685,17 +685,17 @@ font-weight: 600;
 /*    margin-top: -70px; */
 	font: 18px/25px "open_sans_condensedbold", Helvetica,Arial,sans-serif;
 }
-.issue_title_style {
- 	background: url("/profiles/town_hall/themes/townhalltheme/images/question_green_bg.gif") no-repeat;
-    display: block;
-    float: left;
-    height: 100px;
-    width: 700px;
+.front .title-body-wrapper {
+	background: url("/profiles/town_hall/themes/townhalltheme/images/question_green_bg.gif") no-repeat;
+	min-height: 100px;
+}
+.issue_title_style { 	
+    display: block;  
+	margin-left: 120px;	
 	font: 18px/25px "open_sans_condensedbold", Helvetica,Arial,sans-serif;
 }
 .issue_title_style a {
-	display: block;
-    margin-left: 120px;
+	display: block;    
 }
 .videos_block_wrapper {
 	clear: both;
@@ -1094,6 +1094,9 @@ div.field-type-taxonomy-term-reference {
 .view-id-search td .views-field.views-field-body {
 	width: 330px;
 	float: left;
+}
+.view-id-search td .views-field.views-field-body:after {
+	clear:both;
 }
 .view-id-search td .views-field.views-field-field-issue {
 	clear: both;
