@@ -27,18 +27,21 @@ function th_search_db_default_search_api_index() {
       "cron_limit" : "50",
       "fields" : {
         "type" : { "type" : "string" },
-        "title" : { "type" : "string" },
+        "title" : { "type" : "text" },
         "views" : { "type" : "integer" },
         "th_share_count" : { "type" : "integer" },
         "field_th_candidate" : { "type" : "integer", "entity_type" : "node" },
         "field_th_question" : { "type" : "integer", "entity_type" : "node" },
         "field_video_tags" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_th_party" : { "type" : "integer", "entity_type" : "node" },
+        "field_issue" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_region" : { "type" : "integer", "entity_type" : "taxonomy_term" },
         "search_api_language" : { "type" : "string" },
+        "field_th_candidate:title" : { "type" : "text" },
         "field_th_candidate:field_th_first_name" : { "type" : "text" },
         "field_th_candidate:field_th_last_name" : { "type" : "text" },
         "field_th_candidate:field_th_party" : { "type" : "integer", "entity_type" : "node" },
+        "field_th_candidate:field_issue" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_th_question:title" : { "type" : "text" },
         "field_th_question:field_th_party" : { "type" : "integer", "entity_type" : "node" },
         "field_th_question:field_issue" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
@@ -46,12 +49,16 @@ function th_search_db_default_search_api_index() {
         "field_th_video:file" : { "type" : "integer", "entity_type" : "file" },
         "field_th_candidate:field_th_party:nid" : { "type" : "integer" },
         "field_th_candidate:field_th_party:title" : { "type" : "text" },
+        "field_th_candidate:field_th_party:field_issue" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
+        "field_th_question:field_th_candidate:title" : { "type" : "text" },
         "field_th_question:field_th_candidate:field_th_first_name" : { "type" : "text" },
         "field_th_question:field_th_candidate:field_th_last_name" : { "type" : "text" },
         "field_th_question:field_th_candidate:field_th_party" : { "type" : "integer", "entity_type" : "node" },
+        "field_th_question:field_th_candidate:field_issue" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_th_question:field_th_party:nid" : { "type" : "integer" },
         "field_th_question:field_th_party:title" : { "type" : "text" },
         "field_th_question:field_th_party:field_th_party" : { "type" : "integer", "entity_type" : "node" },
+        "field_th_question:field_th_party:field_issue" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_th_question:field_region:name" : { "type" : "text" }
       },
       "data_alter_callbacks" : {
@@ -123,12 +130,22 @@ function th_search_db_default_search_api_server() {
           },
           "title" : {
             "table" : "search_api_db_database_server_index_title",
-            "type" : "string",
+            "type" : "text",
             "boost" : "1.0"
           },
-          "field_video_tags" : {
-            "table" : "search_api_db_database_server_index_field_video_tags",
-            "type" : "list\\u003Cinteger\\u003E",
+          "views" : {
+            "table" : "search_api_db_database_server_index_views",
+            "type" : "integer",
+            "boost" : "1.0"
+          },
+          "th_share_count" : {
+            "table" : "search_api_db_database_server_index_th_share_count",
+            "type" : "integer",
+            "boost" : "1.0"
+          },
+          "field_th_candidate" : {
+            "table" : "search_api_db_database_server_index_field_th_candidate",
+            "type" : "integer",
             "boost" : "1.0"
           },
           "field_th_question" : {
@@ -136,8 +153,13 @@ function th_search_db_default_search_api_server() {
             "type" : "integer",
             "boost" : "1.0"
           },
-          "field_th_candidate" : {
-            "table" : "search_api_db_database_server_index_field_th_candidate",
+          "field_video_tags" : {
+            "table" : "search_api_db_database_server_index_field_video_tags",
+            "type" : "list\\u003Cinteger\\u003E",
+            "boost" : "1.0"
+          },
+          "field_th_party" : {
+            "table" : "search_api_db_database_server_index_field_th_party",
             "type" : "integer",
             "boost" : "1.0"
           },
@@ -151,21 +173,6 @@ function th_search_db_default_search_api_server() {
             "type" : "string",
             "boost" : "1.0"
           },
-          "field_th_question:title" : {
-            "table" : "search_api_db_database_server_index_field_th_question_title",
-            "type" : "text",
-            "boost" : "1.0"
-          },
-          "field_th_question:field_region" : {
-            "table" : "search_api_db_database_server_index_field_th_question_field_re",
-            "type" : "integer",
-            "boost" : "1.0"
-          },
-          "field_th_question:field_issue" : {
-            "table" : "search_api_db_database_server_index_field_th_question_field_is",
-            "type" : "list\\u003Cinteger\\u003E",
-            "boost" : "1.0"
-          },
           "field_th_candidate:field_th_first_name" : {
             "table" : "search_api_db_database_server_index_field_th_candidate_field_t",
             "type" : "text",
@@ -176,38 +183,33 @@ function th_search_db_default_search_api_server() {
             "type" : "text",
             "boost" : "1.0"
           },
-          "field_th_question:field_th_candidate:field_th_party" : {
-            "table" : "search_api_db_database_server_index_field_th_question_field_th",
-            "type" : "integer",
-            "boost" : "1.0"
-          },
-          "field_th_question:field_th_candidate:field_th_first_name" : {
-            "table" : "search_api_db_database_server_index_field_th_question_field__1",
-            "type" : "text",
-            "boost" : "1.0"
-          },
-          "field_th_question:field_th_candidate:field_th_last_name" : {
-            "table" : "search_api_db_database_server_index_field_th_question_field__2",
-            "type" : "text",
-            "boost" : "1.0"
-          },
-          "field_th_question:field_region:name" : {
-            "table" : "search_api_db_database_server_index_field_th_question_field__3",
-            "type" : "text",
-            "boost" : "1.0"
-          },
-          "field_th_party" : {
-            "table" : "search_api_db_database_server_index_field_th_party",
-            "type" : "integer",
-            "boost" : "1.0"
-          },
           "field_th_candidate:field_th_party" : {
             "table" : "search_api_db_database_server_index_field_th_candidate_field_2",
             "type" : "integer",
             "boost" : "1.0"
           },
+          "field_th_question:title" : {
+            "table" : "search_api_db_database_server_index_field_th_question_title",
+            "type" : "text",
+            "boost" : "1.0"
+          },
           "field_th_question:field_th_party" : {
-            "table" : "search_api_db_database_server_index_field_th_question_field__4",
+            "table" : "search_api_db_database_server_index_field_th_question_field_th",
+            "type" : "integer",
+            "boost" : "1.0"
+          },
+          "field_th_question:field_issue" : {
+            "table" : "search_api_db_database_server_index_field_th_question_field_is",
+            "type" : "list\\u003Cinteger\\u003E",
+            "boost" : "1.0"
+          },
+          "field_th_question:field_region" : {
+            "table" : "search_api_db_database_server_index_field_th_question_field_re",
+            "type" : "integer",
+            "boost" : "1.0"
+          },
+          "field_th_video:file" : {
+            "table" : "search_api_db_database_server_index_field_th_video_file",
             "type" : "integer",
             "boost" : "1.0"
           },
@@ -221,34 +223,74 @@ function th_search_db_default_search_api_server() {
             "type" : "text",
             "boost" : "1.0"
           },
+          "field_th_question:field_th_candidate:field_th_first_name" : {
+            "table" : "search_api_db_database_server_index_field_th_question_field__1",
+            "type" : "text",
+            "boost" : "1.0"
+          },
+          "field_th_question:field_th_candidate:field_th_last_name" : {
+            "table" : "search_api_db_database_server_index_field_th_question_field__2",
+            "type" : "text",
+            "boost" : "1.0"
+          },
+          "field_th_question:field_th_candidate:field_th_party" : {
+            "table" : "search_api_db_database_server_index_field_th_question_field__3",
+            "type" : "integer",
+            "boost" : "1.0"
+          },
           "field_th_question:field_th_party:nid" : {
-            "table" : "search_api_db_database_server_index_field_th_question_field__5",
+            "table" : "search_api_db_database_server_index_field_th_question_field__4",
             "type" : "integer",
             "boost" : "1.0"
           },
           "field_th_question:field_th_party:title" : {
-            "table" : "search_api_db_database_server_index_field_th_question_field__6",
+            "table" : "search_api_db_database_server_index_field_th_question_field__5",
             "type" : "text",
             "boost" : "1.0"
           },
           "field_th_question:field_th_party:field_th_party" : {
+            "table" : "search_api_db_database_server_index_field_th_question_field__6",
+            "type" : "integer",
+            "boost" : "1.0"
+          },
+          "field_th_question:field_region:name" : {
             "table" : "search_api_db_database_server_index_field_th_question_field__7",
-            "type" : "integer",
+            "type" : "text",
             "boost" : "1.0"
           },
-          "field_th_video:file" : {
-            "table" : "search_api_db_database_server_index_field_th_video_file",
-            "type" : "integer",
+          "field_th_candidate:title" : {
+            "table" : "search_api_db_database_server_index_field_th_candidate_title",
+            "type" : "text",
             "boost" : "1.0"
           },
-          "views" : {
-            "table" : "search_api_db_database_server_index_views",
-            "type" : "integer",
+          "field_th_question:field_th_candidate:title" : {
+            "table" : "search_api_db_database_server_index_field_th_question_field__8",
+            "type" : "text",
             "boost" : "1.0"
           },
-          "th_share_count" : {
-            "table" : "search_api_db_database_server_index_th_share_count",
-            "type" : "integer",
+          "field_issue" : {
+            "table" : "search_api_db_database_server_index_field_issue",
+            "type" : "list\\u003Cinteger\\u003E",
+            "boost" : "1.0"
+          },
+          "field_th_candidate:field_issue" : {
+            "table" : "search_api_db_database_server_index_field_th_candidate_field_i",
+            "type" : "list\\u003Cinteger\\u003E",
+            "boost" : "1.0"
+          },
+          "field_th_candidate:field_th_party:field_issue" : {
+            "table" : "search_api_db_database_server_index_field_th_candidate_field_5",
+            "type" : "list\\u003Cinteger\\u003E",
+            "boost" : "1.0"
+          },
+          "field_th_question:field_th_candidate:field_issue" : {
+            "table" : "search_api_db_database_server_index_field_th_question_field__9",
+            "type" : "list\\u003Cinteger\\u003E",
+            "boost" : "1.0"
+          },
+          "field_th_question:field_th_party:field_issue" : {
+            "table" : "search_api_db_database_server_index_field_th_question_field_10",
+            "type" : "list\\u003Cinteger\\u003E",
             "boost" : "1.0"
           }
         }
