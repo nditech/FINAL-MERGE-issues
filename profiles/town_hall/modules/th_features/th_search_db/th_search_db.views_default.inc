@@ -51,7 +51,7 @@ function th_search_db_views_default_views() {
   $handler->display->display_options['empty']['area']['table'] = 'views';
   $handler->display->display_options['empty']['area']['field'] = 'area';
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
-  $handler->display->display_options['empty']['area']['content'] = 'Nothing found';
+  $handler->display->display_options['empty']['area']['content'] = '<div class="not-found"><em>Not found</em></div>';
   $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
   /* Field: Indexed Node: Share count */
   $handler->display->display_options['fields']['th_share_count']['id'] = 'th_share_count';
