@@ -1095,10 +1095,13 @@ div.field-type-taxonomy-term-reference {
 	width: 330px;
 	float: left;
 }
+.view-id-search span.views-label {
+	font: bold 14px/16px "open_sanscondensed_light",Helvetica,Arial,sans-serif
+}
 .view-id-search td .views-field.views-field-body:after {
 	clear:both;
 }
-.view-id-search td .views-field.views-field-field-issue {
+.view-id-search td .views-field.views-field-field-issue, .view-id-search .views-field-field-th-candidate-field-th-party-title, .view-id-search .views-field-field-th-question-field-region, .view-id-search .views-field-field-th-question-field-issue {
 	clear: both;
 }
 .views-field-count .views-label, .views-field-count-1 .views-label {
