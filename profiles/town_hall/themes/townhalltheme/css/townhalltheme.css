@@ -679,11 +679,11 @@ font-weight: 600;
 #block-th-questions-block-th-questions-block h2 a {
 	color: #fff;
 }
-.issue_body_style {
+.title-body-wrapper .issue_body_style {
 	float: left;
     margin-left: 120px;
-/*    margin-top: -70px; */
-	font: 18px/25px "open_sans_condensedbold", Helvetica,Arial,sans-serif;
+/*    margin-top: -70px; */	
+	font: 14px/21px "open_sansregular",Helvetica,Arial,sans-serif;
 }
 .front .title-body-wrapper {
 	background: url("/profiles/town_hall/themes/townhalltheme/images/question_green_bg.gif") no-repeat;
