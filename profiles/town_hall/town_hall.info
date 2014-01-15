@@ -94,6 +94,7 @@ dependencies[] = th_questions_comments
 dependencies[] = th_blocks
 dependencies[] = th_video_view_count
 dependencies[] = th_config
+dependencies[] = th_common
 ; Rules
 dependencies[] = rules
 ; Search
