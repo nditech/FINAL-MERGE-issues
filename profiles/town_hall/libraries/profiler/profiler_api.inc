@@ -156,7 +156,7 @@ function profiler_install_profile_modules(&$install_state) {
  */
 function profiler_form_install_configure_form_alter($config, &$form, &$form_state) {
   $form['site_information']['site_name']['#default_value'] = 'Town Hall';
-  $form['site_information']['site_mail']['#default_value'] = 'nditech@ndi.org';
+  $form['site_information']['site_mail']['#default_value'] = '@'.$_SERVER['HTTP_HOST'];
 }
 
 /**

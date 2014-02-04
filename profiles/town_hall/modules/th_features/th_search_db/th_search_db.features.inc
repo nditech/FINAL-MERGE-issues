@@ -29,10 +29,10 @@ function th_search_db_default_search_api_index() {
         "type" : { "type" : "string" },
         "title" : { "type" : "text" },
         "views" : { "type" : "integer" },
-        "th_share_count" : { "type" : "integer" },
         "field_th_candidate" : { "type" : "integer", "entity_type" : "node" },
         "field_th_question" : { "type" : "integer", "entity_type" : "node" },
         "field_video_tags" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
+        "th_social_count" : { "type" : "integer" },
         "field_th_party" : { "type" : "integer", "entity_type" : "node" },
         "field_issue" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_region" : { "type" : "integer", "entity_type" : "taxonomy_term" },
@@ -135,11 +135,6 @@ function th_search_db_default_search_api_server() {
           },
           "views" : {
             "table" : "search_api_db_database_server_index_views",
-            "type" : "integer",
-            "boost" : "1.0"
-          },
-          "th_share_count" : {
-            "table" : "search_api_db_database_server_index_th_share_count",
             "type" : "integer",
             "boost" : "1.0"
           },
@@ -291,6 +286,11 @@ function th_search_db_default_search_api_server() {
           "field_th_question:field_th_party:field_issue" : {
             "table" : "search_api_db_database_server_index_field_th_question_field_10",
             "type" : "list\\u003Cinteger\\u003E",
+            "boost" : "1.0"
+          },
+          "th_social_count" : {
+            "table" : "search_api_db_database_server_index_th_social_count",
+            "type" : "integer",
             "boost" : "1.0"
           }
         }

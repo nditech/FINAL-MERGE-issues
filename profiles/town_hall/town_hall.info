@@ -84,7 +84,7 @@ dependencies[] = quicktabs_tabstyles
 dependencies[] = strongarm
 dependencies[] = token
 ; Town Hall
-dependencies[] = th_share_count
+dependencies[] = social_stats_index
 dependencies[] = th_flag_dual
 dependencies[] = th_issue_random
 dependencies[] = th_main_menu
@@ -94,6 +94,7 @@ dependencies[] = th_questions_comments
 dependencies[] = th_blocks
 dependencies[] = th_video_view_count
 dependencies[] = th_config
+dependencies[] = th_common
 ; Rules
 dependencies[] = rules
 ; Search
@@ -102,7 +103,8 @@ dependencies[] = search_api_db
 dependencies[] = search_api_solr
 dependencies[] = search_api_views
 ; Sharing
-dependencies[] = sharethis
+dependencies[] = service_links
+dependencies[] = social_stats
 ; Spam control
 dependencies[] = captcha
 dependencies[] = image_captcha
