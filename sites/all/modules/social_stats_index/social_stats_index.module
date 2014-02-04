@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Alter node to add social stats in search index
+ */
+
+/**
+ * Implements hook_entity_property_info_alter().
+ */
+function social_stats_index_entity_property_info_alter(&$info) {
+  // hook_entity_property_info_item.
+  $info['node']['bundles']['video']['properties']['th_social_count'] = array(
+    'type' => 'integer',
+    'label' => t('Social sharing count'),
+    'sanitized' => TRUE,
+    'getter callback' => 'social_stats_index_property_social_getter_callback',
+  );
+}
+
+/**
+ * Getter callback for th_social_count property.
+ */
+function social_stats_index_property_social_getter_callback($item){
+  return social_stats_index_value($item);
+}
+
+/**
+ * Helper function to get social count.
+ */
+function social_stats_index_value($node){
+  $query = db_select('social_stats_total', 'sst');
+  $query -> innerjoin('node', 'n', 'sst.nid = n.nid');
+  $query->fields('sst', array('total_virality'));
+  $query->condition('sst.nid', $node->nid);
+  $result = $query->execute()->fetchField();
+  return $result;
+}

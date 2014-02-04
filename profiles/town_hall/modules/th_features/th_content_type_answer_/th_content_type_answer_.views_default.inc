@@ -366,12 +366,12 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['totalcount']['table'] = 'node_counter';
   $handler->display->display_options['fields']['totalcount']['field'] = 'totalcount';
   $handler->display->display_options['fields']['totalcount']['label'] = 'views';
-  /* Field: Content: ShareThis Link */
-  $handler->display->display_options['fields']['sharethis']['id'] = 'sharethis';
-  $handler->display->display_options['fields']['sharethis']['table'] = 'node';
-  $handler->display->display_options['fields']['sharethis']['field'] = 'sharethis';
-  $handler->display->display_options['fields']['sharethis']['label'] = '';
-  $handler->display->display_options['fields']['sharethis']['element_label_colon'] = FALSE;
+  /* Field: Content: Service links */
+  $handler->display->display_options['fields']['service_links']['id'] = 'service_links';
+  $handler->display->display_options['fields']['service_links']['table'] = 'node';
+  $handler->display->display_options['fields']['service_links']['field'] = 'service_links';
+  $handler->display->display_options['fields']['service_links']['label'] = '';
+  $handler->display->display_options['fields']['service_links']['element_label_colon'] = FALSE;
   /* Field: Content: Issue */
   $handler->display->display_options['fields']['field_issue']['id'] = 'field_issue';
   $handler->display->display_options['fields']['field_issue']['table'] = 'field_data_field_issue';
@@ -498,18 +498,12 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['field_issue']['element_label_type'] = 'span';
   $handler->display->display_options['fields']['field_issue']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_issue']['delta_offset'] = '0';
-  /* Field: Content: Share count */
-  $handler->display->display_options['fields']['th_share_count']['id'] = 'th_share_count';
-  $handler->display->display_options['fields']['th_share_count']['table'] = 'field_data_th_share_count';
-  $handler->display->display_options['fields']['th_share_count']['field'] = 'th_share_count';
-  $handler->display->display_options['fields']['th_share_count']['label'] = 'Shares';
-  $handler->display->display_options['fields']['th_share_count']['element_type'] = 'span';
-  $handler->display->display_options['fields']['th_share_count']['empty'] = '0';
-  $handler->display->display_options['fields']['th_share_count']['hide_alter_empty'] = FALSE;
-  $handler->display->display_options['fields']['th_share_count']['settings'] = array(
-    'thousand_separator' => ' ',
-    'prefix_suffix' => 1,
-  );
+  /* Field: Social Stats: Total social shares */
+  $handler->display->display_options['fields']['total_virality']['id'] = 'total_virality';
+  $handler->display->display_options['fields']['total_virality']['table'] = 'social_stats_total';
+  $handler->display->display_options['fields']['total_virality']['field'] = 'total_virality';
+  $handler->display->display_options['fields']['total_virality']['label'] = 'Shares';
+  $handler->display->display_options['fields']['total_virality']['separator'] = ' ';
   /* Sort criterion: Content: Share count (th_share_count) */
   $handler->display->display_options['sorts']['th_share_count_value']['id'] = 'th_share_count_value';
   $handler->display->display_options['sorts']['th_share_count_value']['table'] = 'field_data_th_share_count';
@@ -534,12 +528,11 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['filters']['th_share_count_value']['table'] = 'field_data_th_share_count';
   $handler->display->display_options['filters']['th_share_count_value']['field'] = 'th_share_count_value';
   $handler->display->display_options['filters']['th_share_count_value']['operator'] = 'not empty';
-  /* Filter criterion: Content: Share count (th_share_count) */
-  $handler->display->display_options['filters']['th_share_count_value_1']['id'] = 'th_share_count_value_1';
-  $handler->display->display_options['filters']['th_share_count_value_1']['table'] = 'field_data_th_share_count';
-  $handler->display->display_options['filters']['th_share_count_value_1']['field'] = 'th_share_count_value';
-  $handler->display->display_options['filters']['th_share_count_value_1']['operator'] = '!=';
-  $handler->display->display_options['filters']['th_share_count_value_1']['value']['value'] = '0';
+  /* Filter criterion: Social Stats: Total social shares */
+  $handler->display->display_options['filters']['total_virality']['id'] = 'total_virality';
+  $handler->display->display_options['filters']['total_virality']['table'] = 'social_stats_total';
+  $handler->display->display_options['filters']['total_virality']['field'] = 'total_virality';
+  $handler->display->display_options['filters']['total_virality']['operator'] = 'not empty';
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
@@ -592,10 +585,6 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Broken/missing handler */
-  $handler->display->display_options['fields']['share_count']['id'] = 'share_count';
-  $handler->display->display_options['fields']['share_count']['table'] = 'field_data_share_count';
-  $handler->display->display_options['fields']['share_count']['field'] = 'share_count';
   $handler->display->display_options['path'] = 'th/admin/most-shared';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'Most Shared';
@@ -836,12 +825,12 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['totalcount']['label'] = 'views';
   $handler->display->display_options['fields']['totalcount']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['totalcount']['element_wrapper_class'] = 'right';
-  /* Field: Content: ShareThis Link */
-  $handler->display->display_options['fields']['sharethis']['id'] = 'sharethis';
-  $handler->display->display_options['fields']['sharethis']['table'] = 'node';
-  $handler->display->display_options['fields']['sharethis']['field'] = 'sharethis';
-  $handler->display->display_options['fields']['sharethis']['label'] = '';
-  $handler->display->display_options['fields']['sharethis']['element_label_colon'] = FALSE;
+  /* Field: Content: Service links */
+  $handler->display->display_options['fields']['service_links']['id'] = 'service_links';
+  $handler->display->display_options['fields']['service_links']['table'] = 'node';
+  $handler->display->display_options['fields']['service_links']['field'] = 'service_links';
+  $handler->display->display_options['fields']['service_links']['label'] = '';
+  $handler->display->display_options['fields']['service_links']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';

@@ -53,17 +53,15 @@ function th_search_db_views_default_views() {
   $handler->display->display_options['empty']['area']['empty'] = TRUE;
   $handler->display->display_options['empty']['area']['content'] = '<div class="not-found"><em>Not found</em></div>';
   $handler->display->display_options['empty']['area']['format'] = 'filtered_html';
-  /* Field: Indexed Node: Share count */
-  $handler->display->display_options['fields']['th_share_count']['id'] = 'th_share_count';
-  $handler->display->display_options['fields']['th_share_count']['table'] = 'search_api_index_database_server_index';
-  $handler->display->display_options['fields']['th_share_count']['field'] = 'th_share_count';
-  $handler->display->display_options['fields']['th_share_count']['label'] = '';
-  $handler->display->display_options['fields']['th_share_count']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['th_share_count']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['th_share_count']['settings'] = array(
-    'thousand_separator' => ' ',
-    'prefix_suffix' => 1,
-  );
+  /* Field: Indexed Node: Social sharing count */
+  $handler->display->display_options['fields']['th_social_count']['id'] = 'th_social_count';
+  $handler->display->display_options['fields']['th_social_count']['table'] = 'search_api_index_database_server_index';
+  $handler->display->display_options['fields']['th_social_count']['field'] = 'th_social_count';
+  $handler->display->display_options['fields']['th_social_count']['label'] = '';
+  $handler->display->display_options['fields']['th_social_count']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['th_social_count']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['th_social_count']['separator'] = ' ';
+  $handler->display->display_options['fields']['th_social_count']['link_to_entity'] = 0;
   /* Field: Global: View result counter */
   $handler->display->display_options['fields']['counter']['id'] = 'counter';
   $handler->display->display_options['fields']['counter']['table'] = 'views';
@@ -139,13 +137,6 @@ function th_search_db_views_default_views() {
   $handler->display->display_options['sorts']['search_api_relevance']['order'] = 'DESC';
   $handler->display->display_options['sorts']['search_api_relevance']['exposed'] = TRUE;
   $handler->display->display_options['sorts']['search_api_relevance']['expose']['label'] = 'Most recent';
-  /* Sort criterion: Indexed Node: Share count */
-  $handler->display->display_options['sorts']['th_share_count']['id'] = 'th_share_count';
-  $handler->display->display_options['sorts']['th_share_count']['table'] = 'search_api_index_database_server_index';
-  $handler->display->display_options['sorts']['th_share_count']['field'] = 'th_share_count';
-  $handler->display->display_options['sorts']['th_share_count']['order'] = 'DESC';
-  $handler->display->display_options['sorts']['th_share_count']['exposed'] = TRUE;
-  $handler->display->display_options['sorts']['th_share_count']['expose']['label'] = 'Most shared';
   /* Sort criterion: Indexed Node: Number of views */
   $handler->display->display_options['sorts']['views']['id'] = 'views';
   $handler->display->display_options['sorts']['views']['table'] = 'search_api_index_database_server_index';
@@ -153,6 +144,13 @@ function th_search_db_views_default_views() {
   $handler->display->display_options['sorts']['views']['order'] = 'DESC';
   $handler->display->display_options['sorts']['views']['exposed'] = TRUE;
   $handler->display->display_options['sorts']['views']['expose']['label'] = 'Most viewed';
+  /* Sort criterion: Indexed Node: Social sharing count */
+  $handler->display->display_options['sorts']['th_social_count']['id'] = 'th_social_count';
+  $handler->display->display_options['sorts']['th_social_count']['table'] = 'search_api_index_database_server_index';
+  $handler->display->display_options['sorts']['th_social_count']['field'] = 'th_social_count';
+  $handler->display->display_options['sorts']['th_social_count']['order'] = 'DESC';
+  $handler->display->display_options['sorts']['th_social_count']['exposed'] = TRUE;
+  $handler->display->display_options['sorts']['th_social_count']['expose']['label'] = 'Most shared';
   /* Filter criterion: Search: Fulltext search */
   $handler->display->display_options['filters']['search_api_views_fulltext']['id'] = 'search_api_views_fulltext';
   $handler->display->display_options['filters']['search_api_views_fulltext']['table'] = 'search_api_index_database_server_index';
@@ -205,7 +203,6 @@ function th_search_db_views_default_views() {
     1 => 0,
     3 => 0,
   );
-  $handler->display->display_options['filters']['field_th_question_field_issue']['expose']['reduce'] = 0;
   $handler->display->display_options['filters']['field_th_question_field_issue']['group_info']['label'] = 'Issue (indexed)';
   $handler->display->display_options['filters']['field_th_question_field_issue']['group_info']['identifier'] = 'field_th_question_field_issue';
   $handler->display->display_options['filters']['field_th_question_field_issue']['group_info']['remember'] = FALSE;
@@ -229,7 +226,6 @@ function th_search_db_views_default_views() {
     1 => 0,
     3 => 0,
   );
-  $handler->display->display_options['filters']['field_th_question_field_region']['expose']['reduce'] = 0;
   /* Filter criterion: VIdeo: The file. (indexed) */
   $handler->display->display_options['filters']['field_th_video_file']['id'] = 'field_th_video_file';
   $handler->display->display_options['filters']['field_th_video_file']['table'] = 'search_api_index_database_server_index';
