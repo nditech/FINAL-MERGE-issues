@@ -139,6 +139,7 @@ function th_comments_views_default_views() {
   $handler->display->display_options['sorts']['count_1']['table'] = 'flag_counts';
   $handler->display->display_options['sorts']['count_1']['field'] = 'count';
   $handler->display->display_options['sorts']['count_1']['relationship'] = 'flag_count_rel_1';
+  $handler->display->display_options['sorts']['count_1']['order'] = 'DESC';
   $handler->display->display_options['sorts']['count_1']['exposed'] = TRUE;
   $handler->display->display_options['sorts']['count_1']['expose']['label'] = 'Lowest Rated';
   /* Contextual filter: Comment: Nid */
