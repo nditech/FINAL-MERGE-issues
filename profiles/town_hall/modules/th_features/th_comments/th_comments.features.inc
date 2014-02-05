@@ -33,6 +33,7 @@ function th_comments_flag_default_flags() {
     'weight' => -6,
     'show_in_links' => array(
       'full' => 0,
+      'diff_standard' => 0,
       'token' => 0,
     ),
     'show_as_field' => 0,
@@ -62,6 +63,7 @@ function th_comments_flag_default_flags() {
     'weight' => -7,
     'show_in_links' => array(
       'full' => 0,
+      'diff_standard' => 0,
       'token' => 0,
     ),
     'show_as_field' => 0,
