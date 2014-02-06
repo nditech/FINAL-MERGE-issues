@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * th_permissions_anonym_mode.strongarm.inc
+ * th_social_sharing.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function th_permissions_anonym_mode_strongarm() {
+function th_social_sharing_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();
@@ -367,8 +367,15 @@ function th_permissions_anonym_mode_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'social_stats_next_execution';
-  $strongarm->value = 1391597050;
+  $strongarm->value = 1391603561;
   $export['social_stats_next_execution'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'social_stats_start_date';
+  $strongarm->value = 'January 1st, 1970';
+  $export['social_stats_start_date'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
