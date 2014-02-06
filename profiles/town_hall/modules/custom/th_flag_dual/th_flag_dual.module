@@ -60,7 +60,6 @@ function th_flag_dual_config($key) {
   if (!isset($pair[$key])) {
     return NULL;
   }
-  dpm($$pair[$key]);
   return $pair[$key];
 }
 
