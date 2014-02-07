@@ -367,7 +367,7 @@ function th_social_sharing_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'social_stats_next_execution';
-  $strongarm->value = 1391603561;
+  $strongarm->value = 1391774889;
   $export['social_stats_next_execution'] = $strongarm;
 
   $strongarm = new stdClass();
