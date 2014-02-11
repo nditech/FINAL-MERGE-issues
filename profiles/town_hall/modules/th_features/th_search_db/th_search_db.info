@@ -1,7 +1,6 @@
 name = TH search db
 core = 7.x
 package = Town Hall
-dependencies[] = ctools
 dependencies[] = entity
 dependencies[] = search_api
 dependencies[] = search_api_db
@@ -11,3 +10,4 @@ features[features_api][] = api:2
 features[search_api_index][] = database_server_index
 features[search_api_server][] = database_server
 features[views_view][] = search
+features_exclude[dependencies][ctools] = ctools
