@@ -66,22 +66,22 @@ function th_content_type_question__strongarm() {
   $strongarm->value = array(
     'view_modes' => array(
       'teaser' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => 'true',
       ),
       'full' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => 'false',
       ),
       'rss' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => 'false',
       ),
       'search_index' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => 'false',
       ),
       'search_result' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => 'false',
       ),
       'token' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => 'false',
       ),
     ),
     'extra_fields' => array(
@@ -100,18 +100,10 @@ function th_content_type_question__strongarm() {
             'weight' => '6',
             'visible' => TRUE,
           ),
-          'default' => array(
-            'weight' => '10',
-            'visible' => TRUE,
-          ),
         ),
         'flag_like_questions' => array(
           'full' => array(
             'weight' => '5',
-            'visible' => TRUE,
-          ),
-          'default' => array(
-            'weight' => '10',
             'visible' => TRUE,
           ),
         ),

@@ -333,12 +333,12 @@ function th_social_sharing_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'service_links_weight';
   $strongarm->value = array(
-    'facebook_share' => '0',
-    'twitter_widget' => '0',
-    'facebook_like' => '0',
-    'google_plus_one' => '0',
-    'linkedin_share_button' => '0',
-    'pinterest_button' => '0',
+    'facebook_share' => '-100',
+    'twitter_widget' => '-99',
+    'facebook_like' => '-97',
+    'google_plus_one' => '-98',
+    'linkedin_share_button' => '-96',
+    'pinterest_button' => '-95',
   );
   $export['service_links_weight'] = $strongarm;
 

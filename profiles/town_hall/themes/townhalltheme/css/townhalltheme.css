@@ -1233,3 +1233,14 @@ div.field-type-taxonomy-term-reference {
 #block-th-questions-block-th-questions-block-user {
 	display: none;
 }
+
+.views-field-service-links {
+    clear: both;
+    padding-top: 2px;
+}
+.views-field-service-links li {
+    list-style: none;
+}
+.service-links-google-plus-one, .service-links-facebook-share, .service-links-twitter-widget {
+    float: left;
+}
