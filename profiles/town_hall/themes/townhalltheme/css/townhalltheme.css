@@ -1244,3 +1244,6 @@ div.field-type-taxonomy-term-reference {
 .service-links-google-plus-one, .service-links-facebook-share, .service-links-twitter-widget {
     float: left;
 }
+.views-field-service-links ul.links li {
+    padding: 0 8px 0 0 !important;
+}
