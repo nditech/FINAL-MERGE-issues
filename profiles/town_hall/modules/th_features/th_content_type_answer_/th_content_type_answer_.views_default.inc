@@ -504,7 +504,7 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['total_virality']['field'] = 'total_virality';
   $handler->display->display_options['fields']['total_virality']['label'] = 'Shares';
   $handler->display->display_options['fields']['total_virality']['separator'] = ' ';
-  /* Sort criterion: Content: Share count (th_share_count) */
+  /* Sort criterion: Broken/missing handler */
   $handler->display->display_options['sorts']['th_share_count_value']['id'] = 'th_share_count_value';
   $handler->display->display_options['sorts']['th_share_count_value']['table'] = 'field_data_th_share_count';
   $handler->display->display_options['sorts']['th_share_count_value']['field'] = 'th_share_count_value';
@@ -523,7 +523,7 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'video' => 'video',
   );
-  /* Filter criterion: Content: Share count (th_share_count) */
+  /* Filter criterion: Broken/missing handler */
   $handler->display->display_options['filters']['th_share_count_value']['id'] = 'th_share_count_value';
   $handler->display->display_options['filters']['th_share_count_value']['table'] = 'field_data_th_share_count';
   $handler->display->display_options['filters']['th_share_count_value']['field'] = 'th_share_count_value';
