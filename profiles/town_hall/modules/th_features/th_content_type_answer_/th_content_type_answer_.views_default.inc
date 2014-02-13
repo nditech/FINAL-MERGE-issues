@@ -174,7 +174,7 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['field_video_tags']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_video_tags']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_video_tags']['delta_offset'] = '0';
-  /* Field: Content: ShareThis Link */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['sharethis']['id'] = 'sharethis';
   $handler->display->display_options['fields']['sharethis']['table'] = 'node';
   $handler->display->display_options['fields']['sharethis']['field'] = 'sharethis';
@@ -1036,7 +1036,7 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['field_th_candidate']['settings'] = array(
     'link' => 1,
   );
-  /* Field: Content: ShareThis Link */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['sharethis']['id'] = 'sharethis';
   $handler->display->display_options['fields']['sharethis']['table'] = 'node';
   $handler->display->display_options['fields']['sharethis']['field'] = 'sharethis';

@@ -1,10 +1,26 @@
 <?php
+
 function th_content_install() {
   th_content_create();
-	if (module_exists('captcha')) {
-		$path = drupal_get_path('module', 'captcha');
-		include_once($path . '/captcha.inc');
-		captcha_set_form_id_setting("question_node_form", "image_captcha/Image");
-	}
+  if (module_exists('captcha')) {
+    $path = drupal_get_path('module', 'captcha');
+    include_once($path . '/captcha.inc');
+    captcha_set_form_id_setting("question_node_form", "image_captcha/Image");
+    captcha_set_form_id_setting("user_register_form", "image_captcha/Image");
+  }
+}
 
+/**
+ * Add captcha for registration form
+ */
+function th_content_update_7000(&$sandbox) {
+  $messages = array();
+
+  if (module_exists('captcha')) {
+    $path = drupal_get_path('module', 'captcha');
+    include_once($path . '/captcha.inc');
+    captcha_set_form_id_setting("user_register_form", "image_captcha/Image");
+  }
+
+  return implode('<br />', $messages);
 }
