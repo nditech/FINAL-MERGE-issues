@@ -504,11 +504,11 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['fields']['total_virality']['field'] = 'total_virality';
   $handler->display->display_options['fields']['total_virality']['label'] = 'Shares';
   $handler->display->display_options['fields']['total_virality']['separator'] = ' ';
-  /* Sort criterion: Content: Share count (th_share_count) */
-  $handler->display->display_options['sorts']['th_share_count_value']['id'] = 'th_share_count_value';
-  $handler->display->display_options['sorts']['th_share_count_value']['table'] = 'field_data_th_share_count';
-  $handler->display->display_options['sorts']['th_share_count_value']['field'] = 'th_share_count_value';
-  $handler->display->display_options['sorts']['th_share_count_value']['order'] = 'DESC';
+  /* Sort criterion: Social Stats: Total social shares */
+  $handler->display->display_options['sorts']['total_virality']['id'] = 'total_virality';
+  $handler->display->display_options['sorts']['total_virality']['table'] = 'social_stats_total';
+  $handler->display->display_options['sorts']['total_virality']['field'] = 'total_virality';
+  $handler->display->display_options['sorts']['total_virality']['order'] = 'DESC';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -523,11 +523,6 @@ function th_content_type_answer__views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'video' => 'video',
   );
-  /* Filter criterion: Content: Share count (th_share_count) */
-  $handler->display->display_options['filters']['th_share_count_value']['id'] = 'th_share_count_value';
-  $handler->display->display_options['filters']['th_share_count_value']['table'] = 'field_data_th_share_count';
-  $handler->display->display_options['filters']['th_share_count_value']['field'] = 'th_share_count_value';
-  $handler->display->display_options['filters']['th_share_count_value']['operator'] = 'not empty';
   /* Filter criterion: Social Stats: Total social shares */
   $handler->display->display_options['filters']['total_virality']['id'] = 'total_virality';
   $handler->display->display_options['filters']['total_virality']['table'] = 'social_stats_total';
