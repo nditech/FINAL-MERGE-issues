@@ -1,5 +1,33 @@
 <?php
 
+/**
+ * Implements hook_menu().
+ */
+function th_main_menu_menu() {
+  $items = array();
+
+  $items['ask-a-question'] = array(
+    'title' => 'Ask a question',
+    'page callback' => 'th_main_menu_aaq_callback',
+    'access arguments' => array('access content'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}
+
+function th_main_menu_aaq_callback(){
+  if(user_access('create question content')){
+
+    return drupal_goto('node/add/question');
+  }
+  else{
+    $login = url('user', array('query' => array('destination' => 'node/add/question')));
+    $register = url('user/register', array('query' => array('destination' => 'node/add/question')));
+    return t('<a href="@login">Log in</a>/ <a href="@register">register</a> to post a question', array('@login' => $login, '@register' => $register));
+  }
+}
+
 function th_main_menu_block_info() {
   $blocks['th_main_menu'] = array(
     'info' => 'Town hall: Main menu',

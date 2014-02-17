@@ -145,6 +145,8 @@ function th_permissions_anonym_mode_user_default_permissions() {
     'name' => 'add media from remote sources',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'media_internet',
   );
@@ -521,6 +523,8 @@ function th_permissions_anonym_mode_user_default_permissions() {
     'name' => 'create files',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'file_entity',
   );
