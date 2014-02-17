@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file media_youtube/includes/themes/media-youtube-video.tpl.php
  *
@@ -21,28 +22,6 @@
  */
 
 ?>
-<script src="https://www.youtube.com/iframe_api"></script>
-<div id="media-youtube-<?php print $video_id; ?>"></div>
-<script>
-  setTimeout(function(){
-    (function(YT){
-      YT.ready(function(){
-        Drupal.settings.th_video_view_count['<?php print $video_id; ?>'] = [];
-        Drupal.settings.th_video_view_count['<?php print $video_id; ?>']['player'] = new YT.Player('media-youtube-<?php print $video_id; ?>', {
-          height: '<?php print $height; ?>',
-          width: '<?php print $width; ?>',
-          videoId: '<?php print $video_id; ?>',
-          events: {
-            'onStateChange': function(event) {
-              var id = '<?php print $video_id; ?>';
-              if (event !== undefined && event.data !== undefined) {
-                if (event.data == 1) {
-                  Drupal.th_video_view_count(id);
-                }
-              }
-            }
-          }
-        });
-      });
-    })(YT)}, 2000);
-</script>
+<div class="<?php print $classes; ?> media-youtube-<?php print $id; ?>">
+  <iframe class="media-youtube-player" <?php print $api_id_attribute; ?>width="<?php print $width; ?>" height="<?php print $height; ?>" title="<?php print $title; ?>" src="<?php print $url; ?>" frameborder="0" allowfullscreen><?php print $alternative_content; ?></iframe>
+</div>
