@@ -68,32 +68,13 @@ function th_main_menu_block_view($delta = '') {
       );
       $parteis_output = drupal_render($form);
     }
-/*
-		if (!$user->uid) {
-			$url = url('user/login', array('absolute' => true));
-		}
-		else {
-			$url = url('node/add/question', array('absolute' => true));
-		}
-*/
-    $default_perm_mode = variable_get('th_permission_mode');
-
-	if (!$default_perm_mode) {
-		
-			$url = url('user/login', array('absolute' => true));
-		}
-	
-	else {
-			
-			$url = url('node/add/question', array('absolute' => true));
-		}
 
     $output = '<ul>';
 
     $output .= '<li>' . l('Issues', 'questions') . '</li>';
     $output .= '<li>' . $candidates_output . '</li>';
     $output .= '<li>' . $parteis_output . '</li>';
-    $output .= '<li>' . l('Ask a question', $url) . '</li>';
+    $output .= '<li>' . l('Ask a question', 'ask-a-question') . '</li>';
     $output .= '<li>' . l('About', url('content/about', array('absolute' => true))) . '</li>';
 
     $output .= '</ul>';
