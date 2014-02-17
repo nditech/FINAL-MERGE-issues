@@ -72,6 +72,7 @@ function th_config_form_submit($form, &$form_state) {
     module_enable(array('th_permissions_anonym_mode'));
     db_query("UPDATE {system} SET weight = 99 WHERE name = 'th_permissions_anonym_mode'");
   }
-
+  features_rebuild();
+  features_revert();
   drupal_flush_all_caches();
 }
