@@ -27,6 +27,9 @@
   setTimeout(function(){
     (function(YT){
       YT.ready(function(){
+        if (Drupal.settings.th_video_view_count === undefined) {
+          Drupal.settings.th_video_view_count = [];
+        }
         Drupal.settings.th_video_view_count['<?php print $video_id; ?>'] = [];
         Drupal.settings.th_video_view_count['<?php print $video_id; ?>']['player'] = new YT.Player('media-youtube-<?php print $video_id; ?>', {
           height: '<?php print $height; ?>',
