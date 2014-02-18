@@ -19,8 +19,8 @@ function th_config_form($form, &$form_state) {
   $default_perm_mode = variable_get('th_permission_mode');
     $form['th_search_settings'] = array (
     '#type' => 'select',
-    '#title' => "Search options",
-    '#description' => 'By default, "Database" index is enabled. If you have Apache Solr , please enable "Apache Solr"',
+    '#title' => t('Search options'),
+    '#description' => t('By default, "Database" index is enabled. If you have Apache Solr , please enable "Apache Solr"'),
     '#options' => array(
       'thd_search' => t('Database'),
       'ths_search' => t('Apache Solr'),
@@ -29,8 +29,8 @@ function th_config_form($form, &$form_state) {
   );
   $form['th_permission_mode'] = array(
     '#type' => 'select',
-    '#title' => "Permission mode",
-    '#description' => "Site Permissions",
+    '#title' => t('Permission mode'),
+    '#description' => t('Attention! Not recommended to switch "Permission mode" at the working site, it can cause loss of data and settings'),
     '#options' => array(
       0 => t('Registered mode'),
       1 => t('Anonym'),
