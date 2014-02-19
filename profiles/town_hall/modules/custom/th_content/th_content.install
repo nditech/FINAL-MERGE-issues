@@ -11,7 +11,7 @@ function th_content_install() {
 }
 
 /**
- * Add captcha for registration form
+ * Add captcha for registration form.
  */
 function th_content_update_7000(&$sandbox) {
   $messages = array();
@@ -22,5 +22,16 @@ function th_content_update_7000(&$sandbox) {
     captcha_set_form_id_setting("user_register_form", "image_captcha/Image");
   }
 
+  return implode('<br />', $messages);
+}
+
+/**
+ * Uninstall field.
+ */
+function th_content_update_7001(&$sandbox) {
+  $messages = array();
+  if(field_info_field('field_html_code')){
+    field_delete_field('field_html_code');
+  }
   return implode('<br />', $messages);
 }
