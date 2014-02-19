@@ -1109,6 +1109,7 @@ function th_permissions_anonym_mode_user_default_permissions() {
     'name' => 'flag like',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'flag',
@@ -1119,6 +1120,7 @@ function th_permissions_anonym_mode_user_default_permissions() {
     'name' => 'flag like_questions',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'flag',
@@ -1129,6 +1131,7 @@ function th_permissions_anonym_mode_user_default_permissions() {
     'name' => 'flag unlike',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'flag',
@@ -1139,6 +1142,7 @@ function th_permissions_anonym_mode_user_default_permissions() {
     'name' => 'flag unlike_questions',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'flag',
@@ -1185,6 +1189,7 @@ function th_permissions_anonym_mode_user_default_permissions() {
     'name' => 'post comments',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'comment',
@@ -1251,6 +1256,7 @@ function th_permissions_anonym_mode_user_default_permissions() {
     'name' => 'unflag like',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'flag',
@@ -1261,6 +1267,7 @@ function th_permissions_anonym_mode_user_default_permissions() {
     'name' => 'unflag like_questions',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'flag',
@@ -1271,6 +1278,7 @@ function th_permissions_anonym_mode_user_default_permissions() {
     'name' => 'unflag unlike',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'flag',
@@ -1281,6 +1289,7 @@ function th_permissions_anonym_mode_user_default_permissions() {
     'name' => 'unflag unlike_questions',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'flag',

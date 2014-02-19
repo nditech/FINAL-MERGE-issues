@@ -158,6 +158,14 @@ function th_comments_views_default_views() {
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Comment status */
+  $handler->display->display_options['filters']['comment']['id'] = 'comment';
+  $handler->display->display_options['filters']['comment']['table'] = 'node';
+  $handler->display->display_options['filters']['comment']['field'] = 'comment';
+  $handler->display->display_options['filters']['comment']['relationship'] = 'nid';
+  $handler->display->display_options['filters']['comment']['value'] = array(
+    2 => '2',
+  );
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');

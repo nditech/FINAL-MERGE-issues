@@ -10,56 +10,6 @@
 function th_content_type_answer__file_default_displays() {
   $export = array();
 
- //
-
-  $file_display = new stdClass();
-  $file_display->api_version = 1;
-  $file_display->name = 'video__teaser__media_youtube_video';
-  $file_display->weight = -40;
-  $file_display->status = TRUE;
-  $file_display->settings = array(
-    'width' => '330',
-    'height' => '201',
-  );
-  $export['video__teaser__media_youtube_video'] = $file_display;
-
-  $file_display = new stdClass();
-  $file_display->api_version = 1;
-  $file_display->name = 'video__teaser__media_vimeo_video';
-  $file_display->weight = -40;
-  $file_display->status = TRUE;
-  $file_display->settings = array(
-    'width' => '330',
-    'height' => '201',
-  );
-  $export['video__teaser__media_vimeo_video'] = $file_display;
-
-  //
-
-  $display = new stdClass();
-  $display->api_version = 1;
-  $display->status = TRUE;
-  $display->weight = -99;
-  $display->settings = array(
-    'image_style' => 'thumbnail'
-  );
-  $display->name = "video__preview__media_vimeo_image";
-  $export['video__preview__media_vimeo_image'] = $display;
-
-  //
-
-  $display = new stdClass();
-  $display->api_version = 1;
-  $display->status = TRUE;
-  $display->weight = -99;
-  $display->settings = array(
-    'image_style' => 'thumbnail'
-  );
-  $display->name = "video__preview__media_youtube_image";
-  $export['video__preview__media_youtube_image'] = $display;
-
-  //
-
   $file_display = new stdClass();
   $file_display->api_version = 1;
   $file_display->name = 'image__full__file_image';
@@ -294,6 +244,16 @@ function th_content_type_answer__file_default_displays() {
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
+  $file_display->name = 'video__preview__media_vimeo_image';
+  $file_display->weight = -99;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => 'thumbnail',
+  );
+  $export['video__preview__media_vimeo_image'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
   $file_display->name = 'video__preview__media_vimeo_video';
   $file_display->weight = -39;
   $file_display->status = TRUE;
@@ -310,6 +270,16 @@ function th_content_type_answer__file_default_displays() {
     'api' => 0,
   );
   $export['video__preview__media_vimeo_video'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__preview__media_youtube_image';
+  $file_display->weight = -99;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'image_style' => 'thumbnail',
+  );
+  $export['video__preview__media_youtube_image'] = $file_display;
 
   $file_display = new stdClass();
   $file_display->api_version = 1;
@@ -398,6 +368,28 @@ function th_content_type_answer__file_default_displays() {
     'title' => '',
   );
   $export['video__teaser__file_image'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__teaser__media_vimeo_video';
+  $file_display->weight = -40;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'width' => '330',
+    'height' => '201',
+  );
+  $export['video__teaser__media_vimeo_video'] = $file_display;
+
+  $file_display = new stdClass();
+  $file_display->api_version = 1;
+  $file_display->name = 'video__teaser__media_youtube_video';
+  $file_display->weight = -40;
+  $file_display->status = TRUE;
+  $file_display->settings = array(
+    'width' => '330',
+    'height' => '201',
+  );
+  $export['video__teaser__media_youtube_video'] = $file_display;
 
   return $export;
 }

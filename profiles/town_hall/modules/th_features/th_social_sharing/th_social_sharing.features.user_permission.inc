@@ -24,6 +24,8 @@ function th_social_sharing_user_default_permissions() {
     'name' => 'access service links',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'service_links',
   );
