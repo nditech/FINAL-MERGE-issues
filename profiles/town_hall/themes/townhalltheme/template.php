@@ -7,7 +7,7 @@ function townhalltheme_preprocess_html(&$variables){
 }
 
 function townhalltheme_preprocess_node(&$variables) {
-  if($variables['comment'] == 0){
+  if($variables['comment'] == 0 || $variables['comment'] == 1){
     $variables['content']['field_th_comments_display']['#access'] = FALSE;
   }
 }
