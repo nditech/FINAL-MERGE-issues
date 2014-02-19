@@ -421,9 +421,10 @@ function th_content_type_question__field_default_field_instances() {
         'weight' => 7,
       ),
       'full' => array(
-        'label' => 'hidden',
+        'label' => 'above',
+        'module' => 'viewfield',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'viewfield_default',
         'weight' => 7,
       ),
       'rss' => array(

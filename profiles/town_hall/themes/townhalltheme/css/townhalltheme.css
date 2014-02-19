@@ -1111,11 +1111,11 @@ div.field-type-taxonomy-term-reference {
 	float: left;
 	font: bold 14px/16px "open_sanscondensed_light",Helvetica,Arial,sans-serif;
 }
-.not-logged-in .views-field-count {
+.blende .views-field-count {
 	padding-right:22px;
 	background: url("/profiles/town_hall/themes/townhalltheme/images/like.gif") no-repeat top right;
 }
-.not-logged-in .views-field-count-1 {
+.blende .views-field-count-1 {
 	padding-right:22px;
 	background: url("/profiles/town_hall/themes/townhalltheme/images/dislike.gif") no-repeat top right;
 }

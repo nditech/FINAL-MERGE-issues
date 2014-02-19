@@ -58,7 +58,7 @@ function th_rules_config_default_rules_configuration() {
       "PLUGIN" : "reaction rule",
       "TAGS" : [ "TH" ],
       "REQUIRES" : [ "rules" ],
-      "ON" : [ "node_update" ],
+      "ON" : [ "node_update", "node_insert" ],
       "IF" : [
         { "node_is_of_type" : { "node" : [ "node" ], "type" : { "value" : { "video" : "video" } } } },
         { "entity_has_field" : { "entity" : [ "node" ], "field" : "field_th_question" } },
@@ -68,7 +68,7 @@ function th_rules_config_default_rules_configuration() {
       ],
       "DO" : [
         { "data_set" : { "data" : [ "node:field-th-question:field-th-status" ], "value" : 1 } },
-        { "data_set" : { "data" : [ "node:field-th-question:comment" ], "value" : "1" } },
+        { "data_set" : { "data" : [ "node:field-th-question:comment" ], "value" : "2" } },
         { "drupal_message" : { "message" : "Status of Question \\u003Ca href=\\u0022[node:field-th-question:url]\\u0022\\u003E[node:field-th-question]\\u003C\\/a\\u003E has been set to \\u0022Answered\\u0022 and comments have been disabled." } }
       ]
     }
