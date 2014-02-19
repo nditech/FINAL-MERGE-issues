@@ -11,7 +11,7 @@ function th_content_install() {
 }
 
 /**
- * Add captcha for registration form
+ * Add captcha for registration form.
  */
 function th_content_update_7000(&$sandbox) {
   $messages = array();
@@ -26,7 +26,7 @@ function th_content_update_7000(&$sandbox) {
 }
 
 /**
- * <Describe here what your update function does>
+ * Uninstall field.
  */
 function th_content_update_7001(&$sandbox) {
   $messages = array();
