@@ -28,6 +28,7 @@ dependencies[] = rules
 dependencies[] = search
 dependencies[] = search_api
 dependencies[] = service_links
+dependencies[] = session_api
 dependencies[] = shortcut
 dependencies[] = simplify
 dependencies[] = social_stats
