@@ -22,7 +22,7 @@
  * the view is modified.
  */
 ?>
-<?php if (isset($user) && $user->uid): ?>
+<?php if (user_access('post comments')): ?>
   <div class="views-field views-field-comments-link">
     <span class="field-content">
       <ul class="links inline">
