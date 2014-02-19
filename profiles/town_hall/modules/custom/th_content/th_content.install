@@ -24,3 +24,14 @@ function th_content_update_7000(&$sandbox) {
 
   return implode('<br />', $messages);
 }
+
+/**
+ * <Describe here what your update function does>
+ */
+function th_content_update_7001(&$sandbox) {
+  $messages = array();
+  if(field_info_field('field_html_code')){
+    field_delete_field('field_html_code');
+  }
+  return implode('<br />', $messages);
+}
