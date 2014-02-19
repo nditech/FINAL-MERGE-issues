@@ -30,7 +30,7 @@ function th_content_update_7000(&$sandbox) {
  */
 function th_content_update_7001(&$sandbox) {
   $messages = array();
-  if(field_info_field('field_html_code')){
+  if(!is_null(field_info_field('field_html_code'))){
     field_delete_field('field_html_code');
   }
   return implode('<br />', $messages);
