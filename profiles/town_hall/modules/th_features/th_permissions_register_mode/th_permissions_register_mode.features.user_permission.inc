@@ -1080,6 +1080,26 @@ function th_permissions_register_mode_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
+  // Exported permission: 'flag comment_down'.
+  $permissions['flag comment_down'] = array(
+    'name' => 'flag comment_down',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'flag',
+  );
+
+  // Exported permission: 'flag comment_up'.
+  $permissions['flag comment_up'] = array(
+    'name' => 'flag comment_up',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'flag',
+  );
+
   // Exported permission: 'flag like'.
   $permissions['flag like'] = array(
     'name' => 'flag like',
@@ -1220,6 +1240,26 @@ function th_permissions_register_mode_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'shortcut',
+  );
+
+  // Exported permission: 'unflag comment_down'.
+  $permissions['unflag comment_down'] = array(
+    'name' => 'unflag comment_down',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'flag',
+  );
+
+  // Exported permission: 'unflag comment_up'.
+  $permissions['unflag comment_up'] = array(
+    'name' => 'unflag comment_up',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'flag',
   );
 
   // Exported permission: 'unflag like'.
