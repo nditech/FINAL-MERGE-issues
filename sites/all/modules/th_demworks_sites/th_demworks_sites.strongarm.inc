@@ -948,7 +948,7 @@ function th_demworks_sites_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hybridauth_username';
-  $strongarm->value = '[user:hybridauth:emailVerified]';
+  $strongarm->value = '[user:hybridauth:firstName]';
   $export['hybridauth_username'] = $strongarm;
 
   $strongarm = new stdClass();
