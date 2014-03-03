@@ -145,6 +145,7 @@ a:hover, a:focus {
 
 h1#page-title {
 	font: 29px/30px "open_sans_condensedbold";   
+	background: none repeat scroll 0 0 #fff;
 }
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	vertical-align:baseline;
@@ -162,6 +163,7 @@ input.form-text, textarea.form-textarea, select.form-select {
     position: relative;
     width: 960px;
 	box-shadow: 0px -1px 16px rgba(50, 50, 50, 0.1);
+	background: none repeat scroll 0 0 #FFFFFF;
 }
 #header {
 	background-color: #fff;
@@ -375,6 +377,10 @@ user-select: none;
 .chosen-container a.chosen-single div:before {content: '\e80c';}
 #footer {
 	width: 960px;
+}
+#page {
+	margin: 0;
+	padding: 0;
 }
 #page #footer-wrapper {
 	background: #fff url("../images/footer_bg.jpg") bottom left;
@@ -1246,4 +1252,7 @@ div.field-type-taxonomy-term-reference {
 }
 .views-field-service-links ul.links li {
     padding: 0 8px 0 0 !important;
+}
+div.ctools-modal-content fieldset {
+	clear: none;
 }
