@@ -28,9 +28,6 @@ jQuery("#block-th-main-menu-th-main-menu #edit_jump_chosen a.chosen-single").cli
 	}
   return false;
  });
- jQuery("#block-th-main-menu-th-main-menu #edit_jump__2_chosen li.active-result").click(function() {
- jQuery("#block-th-main-menu-th-main-menu #edit_jump__2_chosen a.chosen-single span").innerHTML="";
- });
 jQuery("#block-th-main-menu-th-main-menu #edit_jump__2_chosen a.chosen-single").click(function() {
 if (visibility2==false)
 	{
