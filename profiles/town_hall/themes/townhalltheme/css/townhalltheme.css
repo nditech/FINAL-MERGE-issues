@@ -1256,3 +1256,6 @@ div.field-type-taxonomy-term-reference {
 div.ctools-modal-content fieldset {
 	clear: none;
 }
+#edit-field-th-video .ctools-modal-media-file-edit, #edit-field-question-video .ctools-modal-media-file-edit{
+	display: none !important;
+}
