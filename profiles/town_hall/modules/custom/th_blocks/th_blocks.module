@@ -28,6 +28,11 @@ function th_blocks_block_info() {
     'status' => 1,
   );
 
+  $blocks['th_block_mobile_share_this'] = array(
+    'info' => t('Town hall: Mobile Share this'),
+    'status' => 1,
+  );
+
   $blocks['th_block_partners'] = array(
     'info' => t('Town hall: Partners'),
     'status' => 1,
@@ -78,6 +83,10 @@ function th_blocks_block_view($delta = '') {
       $block['content'] = array('#markup' => th_blocks_content($delta));
       break;
     case 'th_block_share_this' :
+      $block['subject'] = '';
+      $block['content'] = array('#markup' => th_blocks_content($delta));
+      break;
+    case 'th_block_mobile_share_this' :
       $block['subject'] = '';
       $block['content'] = array('#markup' => th_blocks_content($delta));
       break;
@@ -176,6 +185,12 @@ function th_blocks_content($delta) {
                                   . 'var options={ "publisher": "9160ae91-7e75-469f-b016-f34585a86864", "position": "right", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}, "chicklets": { "items": ["facebook", "twitter", "googleplus"]}};'. PHP_EOL
                                   . 'var st_hover_widget = new sharethis.widgets.hoverbuttons(options);'. PHP_EOL
                                   . '</script>'. PHP_EOL;
+
+  $content['th_block_mobile_share_this'] = '<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>'. PHP_EOL
+                                  . '<script type="text/javascript">stLight.options({publisher: "ur-3f57e015-b418-23dd-477f-5efce52b46a", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>'. PHP_EOL
+                                  . '<span class="st_facebook_large" displayText="Facebook"></span>'. PHP_EOL
+                                  . '<span class="st_twitter_large" displayText="Tweet"></span>'. PHP_EOL
+                                  . '<span class="st_googleplus_large" displayText="Google +"></span>'. PHP_EOL;
 
   $content['th_block_partners'] = '<img src="/profiles/town_hall/themes/townhalltheme/images/placeholder.jpg" style="width:100%"/>' . PHP_EOL
                                 . '<img src="/profiles/town_hall/themes/townhalltheme/images/placeholder.jpg" style="width:100%"/>'. PHP_EOL;
@@ -292,6 +307,10 @@ function th_blocks_block_info_alter(&$blocks, $theme, $code_blocks) {
 
     if (isset($blocks['th_blocks']['th_block_share_this'])) {
       $blocks['th_blocks']['th_block_share_this']['region'] = 'header';
+    }
+
+    if (isset($blocks['th_blocks']['th_block_mobile_share_this'])) {
+      $blocks['th_blocks']['th_block_mobile_share_this']['region'] = 'header';
     }
 
     if (isset($blocks['th_blocks']['th_block_partners'])) {

@@ -4,6 +4,10 @@ core = 7.x
 base theme = bartik
 
 stylesheets[all][] = css/townhalltheme.css
+stylesheets[all][] = css/townhall-layout-tablet.css
+stylesheets[all][] = css/townhall-layout-mobile.css
+stylesheets[all][] = css/townhall-responsive.css
+
 scripts[] = 'js/chosen/chosen.jquery.min.js'
 scripts[] = 'js/script.js'
 regions[header] = Header
@@ -32,4 +36,3 @@ settings[shortcut_module_link] = 0
 features[] = logo
 features[] = name
 features[] = favicon
-

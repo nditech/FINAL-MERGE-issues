@@ -1,0 +1,54 @@
+/***
+ * This file contains layout CSS rules and media queries for 768px - 960px range screens.
+ **/
+
+@media only screen and (max-width: 960px) {
+
+  /* Layout elements */
+
+  #page-wrapper {
+    min-width: 340px;
+    width: 768px;
+  }
+
+  #featured,
+  #featured div.section,
+  #messages div.section,
+  #main,
+  #triptych,
+  #footer-columns {
+    width: 768px;
+  }
+
+  #header {
+    padding: 10px 15px 0;
+  }
+
+    #header div.section {
+      width: 100%;
+    }
+
+  .one-sidebar #content,
+  #sidebar-first,
+  #sidebar-second {
+    width: 100%;
+  }
+
+  .sidebar .section {
+    padding: 0 15px;
+  }
+
+  .sidebar .block {
+    padding-left: 0;
+  }
+
+  #page #footer-wrapper {
+    padding: 10px 0 20px !important;
+  }
+
+  #footer {
+    min-width: 340px;
+    width: 100%;
+  }
+
+}
