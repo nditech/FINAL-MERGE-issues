@@ -64,14 +64,20 @@
   .view-id-th_party_page_videos table td {
     display: block;
     padding: 0;
-    text-align: center;
-    width: 320px;
+    width: 100%;
+    max-width: 480px;
     margin: 0 auto 20px;
   }
 
     .view-id-issues_videos table td .views-field-field-th-video iframe {
       width: 100%;
     }
+
+  /* Candidates-Parties block */
+
+  .candidates-parties-bloks-wrapper {
+    display: none;
+  }
 
 }
 
@@ -114,6 +120,7 @@
   #footer #block-views-th-ef-newsletter-signup-block {
     float: none;
     display: block;
+    position: relative;
     width: auto;
     padding: 0;
     margin: 10px;
@@ -139,6 +146,45 @@
     float: none;
     display: inline-block;
     width: auto;
+  }
+
+}
+
+@media only screen and (max-width: 599px) {
+
+  h1.title-candidates,
+  .node-party h1.title-candidates {
+    margin-left: 0;
+  }
+
+  .node-candidate .field-name-field-image,
+  .node-party .field-name-field-image {
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .node-candidate .field-name-field-th-party,
+  .node-candidate .field-type-text-with-summary,
+  .node-party .field-type-text-with-summary,
+  .node-party .field-name-field-th-video {
+    margin-left: 0;
+  }
+
+  .node-candidate .field-type-media + .field-type-link-field,
+  .node-candidate .field-name-body + .field-type-link-field,
+  .node-candidate .field-name-field-th-party + .field-type-link-field,
+  .node-party .field-type-media + .field-type-link-field,
+  .node-party .field-name-body + .field-type-link-field {
+    margin-left: 0;
+  }
+
+  #views-exposed-form-th-party-page-videos-block .views-exposed-form,
+  #views-exposed-form-candidates-videos-block .views-exposed-form {
+    padding-left: 100px;
+    margin-left: 10px;
   }
 
 }

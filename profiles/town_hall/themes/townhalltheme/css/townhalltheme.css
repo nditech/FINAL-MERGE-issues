@@ -811,18 +811,13 @@ td ul li.comment_forbidden, td ul li.comment-comments {
   background: url("/profiles/town_hall/themes/townhalltheme/images/comments.gif") no-repeat;
 }
 .node-candidate .field-name-field-th-party, .node-candidate .field-type-text-with-summary {
-  float: right;
-  width: 500px;
+  margin-left: 193px;
 }
 .node-party .field-type-text-with-summary, .node-party .field-name-field-th-video {
-  float: right;
-  width: 470px;
+  margin-left: 220px;
 }
 .node-party h1.title-candidates {
   margin-left: 220px;
-}
-.node-party .field-name-field-th-video iframe {
-  width: 450px !important;
 }
 h1.title-candidates {
   margin-left: 190px;
@@ -848,7 +843,6 @@ h1.title-candidates {
   clear: both;
 }
 .node-party .field-name-field-th-fb-page, .node-party .field-name-field-th-website, .node-party .field-name-field-fb-social-networks ,  .node-candidate .field-name-field-th-fb-page, .node-candidate .field-name-field-th-website, .node-candidate .field-name-field-fb-social-networks {
-  float: left;  
   font: 14px/21px "open_sanssemibold", Helvetica, Arial;
 }
 .node-party .field-name-field-th-volunteer-link {
@@ -1253,6 +1247,9 @@ div.field-type-taxonomy-term-reference {
 .service-links-google-plus-one, .service-links-facebook-share, .service-links-twitter-widget {
     float: left;
 }
+.service-links-twitter-widget iframe {
+  width: 95px !important;
+}
 .views-field-service-links ul.links li {
     padding: 0 8px 0 0 !important;
 }
@@ -1264,4 +1261,24 @@ div.ctools-modal-content fieldset {
 }
 #block-th-blocks-th-block-mobile-share-this {
   display: none;
+}
+
+/* Responsive YouTube video embed. */
+.field-name-field-th-video .content,
+.views-field-field-th-video .content {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+.field-name-field-th-video .content iframe,
+.field-name-field-th-video .content object,
+.field-name-field-th-video .content embed,
+.views-field-field-th-video .content iframe,
+.views-field-field-th-video .content object,
+.views-field-field-th-video .content embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
