@@ -144,7 +144,7 @@ a:hover, a:focus {
 }
 
 h1#page-title {
-  font: 29px/30px "open_sans_condensedbold";   
+  font: 29px/30px "open_sans_condensedbold";
   background: none repeat scroll 0 0 #fff;
 }
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -810,20 +810,11 @@ td ul li.comment_forbidden, td ul li.comment-comments {
   display: block;
   background: url("/profiles/town_hall/themes/townhalltheme/images/comments.gif") no-repeat;
 }
-.node-candidate .field-name-field-th-party, .node-candidate .field-type-text-with-summary {
-  margin-left: 193px;
-}
-.node-party .field-type-text-with-summary, .node-party .field-name-field-th-video {
-  margin-left: 220px;
-}
 .node-party h1.title-candidates {
   margin-left: 220px;
 }
 h1.title-candidates {
   margin-left: 190px;
-}
-.node-party .field-name-field-image, .node-candidate .field-name-field-image {
-  margin-top: -40px;
 }
 .node-candidate .field-name-field-image, .node-party .field-name-field-image {
   float: left;
@@ -994,13 +985,11 @@ div.field-type-taxonomy-term-reference {
   text-transform:capitalize;
 }
 .view-id-home_page_videos .home-page-videos-pager ul.pager li.pager-previous, .view-id-home_page_videos .home-page-videos-pager ul.pager li.pager-current {
-  float: left;  
-  margin-left: 15px;
+  float: left;
   font: 14px/21px "open_sansregular", Arial, Helvetica; 
 }
 .view-id-home_page_videos .home-page-videos-pager ul.pager li.pager-next {
   float: right;
-  margin-right: 15px;
   font: 14px/21px "open_sansregular", Arial, Helvetica;
 }
 .view-id-home_page_videos .home-page-videos-pager .view-filters {
@@ -1012,8 +1001,9 @@ div.field-type-taxonomy-term-reference {
   width: 200px; 
 }
 .view-id-home_page_videos .home-page-videos-pager .view-filters form select {
+  width: 195px;
   border: 1px solid #8BC53E;
-  margin-left: 25px;
+  margin-left: 15px;
 }
 .view-id-home_page_videos .home-page-videos-pager li.pager-current {
   display: none;
@@ -1069,15 +1059,55 @@ div.field-type-taxonomy-term-reference {
 #main {
   margin-bottom: 0;
 }
-.node-party .field-type-media + .field-type-link-field,
-.node-party .field-name-body + .field-type-link-field {
+
+/* Node Party - Full view mode */
+
+.node-party.view-mode-full .group-left {
+  width: 220px;
+}
+
+.node-party.view-mode-full .group-right {
+  float: none;
+  width: auto;
   margin-left: 220px;
 }
-.node-candidate .field-type-media + .field-type-link-field,
-.node-candidate .field-name-body + .field-type-link-field, .node-candidate .field-name-field-th-party + .field-type-link-field {
-  clear: both;
-  margin-left: 190px;
+
+.node-party.view-mode-full .field-name-field-th-fb-page,
+.node-party.view-mode-full .field-name-field-th-website,
+.node-party.view-mode-full .field-name-field-fb-social-networks {
+  display: inline-block;
+  vertical-align: top;
 }
+
+.node-party.view-mode-full h1 {
+  font: 29px/30px "open_sans_condensedbold";
+  background: none repeat scroll 0 0 #fff;
+}
+
+/* Node Candidate - Full view mode */
+
+.node-candidate.view-mode-full .group-left {
+  width: 220px;
+}
+
+.node-candidate.view-mode-full .group-right {
+  float: none;
+  width: auto;
+  margin-left: 220px;
+}
+
+.node-candidate.view-mode-full .field-name-field-th-fb-page,
+.node-candidate.view-mode-full .field-name-field-th-website,
+.node-candidate.view-mode-full .field-name-field-fb-social-networks {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.node-candidate.view-mode-full h1 {
+  font: 29px/30px "open_sans_condensedbold";
+  background: none repeat scroll 0 0 #fff;
+}
+
 .form-actions {
   margin-bottom: 0;
 }
