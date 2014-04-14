@@ -2,7 +2,7 @@
  * This file contains layout CSS rules and media queries for mobile screens lesser than 768px.
  **/
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 782px) {
 
   /* Layout elements */
 
@@ -20,6 +20,11 @@
   #footer-columns,
   #footer {
     width: 100%;
+  }
+
+  #featured,
+  #featured div.section {
+    margin: 0;
   }
 
   .one-sidebar #content,

@@ -185,7 +185,7 @@ input.form-text, textarea.form-textarea, select.form-select {
   padding-top: 15px;
   margin: 0;
 }
-#header #site-name a {
+#site-name a {
   font-family: "latolight";
     font-size: 46px;
     
@@ -259,18 +259,38 @@ input.form-text, textarea.form-textarea, select.form-select {
 .view-id-issues_videos table.views-view-grid, .view-id-candidates_videos table, .view-id-th_party_page_videos table {
   width: auto;
 }
+
+/* Main Menu block */
+
+#block-th-main-menu-th-main-menu .mobile-menu-control {
+  display: none;
+  width: 302px;
+  line-height: 40px;
+  margin: 0 auto;
+  background-color: #ec973a;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 #block-th-main-menu-th-main-menu .content ul {
   background: #fff url("/profiles/town_hall/themes/townhalltheme/images/menu_bg.jpg") bottom left;
-    border: 1px solid #C0C0C0;
-    letter-spacing: 0.05em;
-    list-style: none outside none;
-    margin: 0 auto;
-    padding: 0;
-    text-transform: uppercase;
+  border: 1px solid #C0C0C0;
+  letter-spacing: 0.05em;
+  list-style: none outside none;
+  margin: 0 auto;
+  padding: 0;
+  text-transform: uppercase;
 }
-#block-th-main-menu-th-main-menu .chosen-drop ul>:first-child {
+
+#block-th-main-menu-th-main-menu .content ul.mobile-disabled {
+  display: block !important;
+}
+
+#block-th-main-menu-th-main-menu .chosen-drop ul > :first-child {
   display: none;
 }
+
 #block-th-main-menu-th-main-menu .content ul li {
   float: left;
   border-right: 1px solid #C0C0C0;
@@ -278,6 +298,71 @@ input.form-text, textarea.form-textarea, select.form-select {
   letter-spacing: 0.05em;
   font: 14px/21px "open_sansregular",Helvetica,Arial,sans-serif;
 }
+
+#block-th-main-menu-th-main-menu .content ul li a {
+  display: block;
+  line-height: 46px;
+  text-align: center;
+}
+
+#block-th-main-menu-th-main-menu .content ul li .view .view-header {
+  padding: 10px 0;
+  line-height: 25px;
+}
+
+  #block-th-main-menu-th-main-menu .content ul li .view .view-header p {
+    display: inline-block;
+  }
+
+  #block-th-main-menu-th-main-menu .content ul li .view .view-header p:after {
+    font-family: 'fontello';
+    content: '\e80c';
+    padding-left: 5px;
+  }
+
+#block-th-main-menu-th-main-menu .content ul li .view .view-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  top: 100%;
+  left: -1px;
+  z-index: 100;
+}
+
+#block-th-main-menu-th-main-menu .content ul li:hover .view .view-header {
+  color: #fff;
+}
+
+#block-th-main-menu-th-main-menu .content ul li:hover .view .view-content {
+  display: block;
+}
+
+#block-th-main-menu-th-main-menu .content ul.mobile-disabled li .view .view-content {
+  display: none !important;
+}
+
+#block-th-main-menu-th-main-menu .content ul.mobile-disabled li:hover .view .view-content {
+  display: block !important;
+}
+
+  #block-th-main-menu-th-main-menu .content ul li .view .view-content ul {
+    background-image: none;
+  }
+
+    #block-th-main-menu-th-main-menu .content ul li .view .view-content ul li {
+      border-bottom: 1px solid #C0C0C0;
+      padding: 0;
+      border-right: none;
+    }
+
+    #block-th-main-menu-th-main-menu .content ul li .view .view-content ul li.views-row-last {
+      border-bottom: none;
+    }
+
+      #block-th-main-menu-th-main-menu .content ul li .view .view-content ul li a {
+        font-size: 11.2px;
+      }
+
 #block-th-main-menu-th-main-menu .content ul li.th-last {
   border-right: none;
 }
@@ -328,12 +413,19 @@ user-select: none;
 .chosen-drop  ul.chosen-results li {
   float: left;
 }
+
 #block-th-main-menu-th-main-menu .content ul li {
-  width: 130px;
-  height: 25px;
-    padding: 10px 28px;
-    text-align: center;
+  width: 186px;
+  text-align: center;
 }
+
+#block-th-main-menu-th-main-menu .content > ul > li {
+  width: 20%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
 #block-th-main-menu-th-main-menu .content ul:before, #block-th-main-menu-th-main-menu ul:after {
     content: " ";
     display: table;
@@ -1117,16 +1209,11 @@ div.field-type-taxonomy-term-reference {
 .view-id-search td .views-field.views-field-field-th-video {
   width: 340px;
   float: left;
+  margin-right: 10px;
 }
 .view-id-search td .views-field.views-field-title {
   font: bold 20px/20px "open_sanscondensed_light",Helvetica,Arial,sans-serif;
-  width: 330px;
-  float: left;
   margin: 10px 0;
-}
-.view-id-search td .views-field.views-field-body {
-  width: 330px;
-  float: left;
 }
 .view-id-search span.views-label {
   font: bold 14px/16px "open_sanscondensed_light",Helvetica,Arial,sans-serif
