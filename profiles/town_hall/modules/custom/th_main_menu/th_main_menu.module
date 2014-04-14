@@ -22,7 +22,7 @@ function th_main_menu_aaq_callback(){
     return drupal_goto('node/add/question');
   }
   else{
-    return l( t('Log in'), 'user', array('query' => array('destination' => 'node/add/question'))) . ' / ' . l(t('register'), 'user/register', array('query' => array('destination' => 'node/add/question'))) . ' to post a question';
+    return l( t('Log in'), 'user', array('query' => array('destination' => 'node/add/question'))) . ' / ' . l(t('register'), 'user/register', array('query' => array('destination' => 'node/add/question'))) . ' ' . t("to post a question.");
   }
 }
 
