@@ -2,7 +2,7 @@
  * This file contains CSS rules and media queries for the website elements.
  **/
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 974px) {
 
   /* Connect With Us - footer block */
 
@@ -33,9 +33,41 @@
     display: block;
   }
 
+  /* All Questions block */
+
+  #block-views-all-questions-block-block .content .views-row {
+    float: left;
+    width: 24%;
+    margin-right: 1%;
+  }
+
+    #block-views-all-questions-block-block .content .views-row a {
+      display: block;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+  /* Add A Question form */
+
+  #question-node-form {
+    padding: 0;
+  }
+
+  #question-node-form label {
+    padding: 0 0 4px;
+  }
+
+  #question-node-form input[type=text] {
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 782px) {
 
   #footer #block-th-blocks-th-block-scroll-up-footer {
     float: none;
@@ -73,6 +105,61 @@
       width: 100%;
     }
 
+  /* Main Menu block */
+
+  #block-th-main-menu-th-main-menu .mobile-menu-control {
+    display: block;
+  }
+
+  #block-th-main-menu-th-main-menu .content ul {
+    width: 300px;
+    background: url("/profiles/town_hall/themes/townhalltheme/images/menu_bg.jpg") repeat-x bottom left;
+    margin: 0 auto;
+  }
+
+  #block-th-main-menu-th-main-menu .content ul.mobile-enabled {
+    display: none;
+  }
+
+  #block-th-main-menu-th-main-menu .content ul li {
+    float: none;
+    display: block;
+    width: 100%;
+    border-right: none;
+  }
+
+  #block-th-main-menu-th-main-menu .content ul li:hover {
+    background-color: transparent;
+  }
+
+  #block-th-main-menu-th-main-menu .content ul li:hover a,
+  #block-th-main-menu-th-main-menu .content ul li:hover .view .view-header {
+    color: #000;
+  }
+
+  #block-th-main-menu-th-main-menu .content ul li a,
+  #block-th-main-menu-th-main-menu .content ul li .view .view-header {
+    text-align: left;
+    line-height: 45px;
+    padding: 0 20px;
+    cursor: pointer;
+  }
+
+    #block-th-main-menu-th-main-menu .content ul li .view .view-content,
+    #block-th-main-menu-th-main-menu .content ul li:hover .view .view-content {
+      display: none;
+      position: relative;
+    }
+
+    #block-th-main-menu-th-main-menu .content ul li .view .view-content ul li {
+      border: none;
+    }
+
+    #block-th-main-menu-th-main-menu .content ul li .view .view-content ul li a {
+      padding: 0 30px;
+      line-height: 30px;
+    }
+
   /* Candidates-Parties block */
 
   .candidates-parties-bloks-wrapper {
@@ -81,7 +168,19 @@
 
 }
 
-@media only screen and (max-width: 669px) {
+@media only screen and (max-width: 699px) {
+
+  /* All Questions block */
+
+  #block-views-all-questions-block-block .content .views-row {
+    float: left;
+    width: 48%;
+    margin-right: 2%;
+  }
+
+}
+
+@media only screen and (max-width: 689px) {
 
   /* Logo Image */
   #logo {
@@ -110,6 +209,14 @@
     .region-header .block {
       margin: 0;
     }
+
+  /* Search results */
+
+  .view-id-search td .views-field.views-field-field-th-video {
+    width: 100%;
+    float: none;
+    margin-right: 0;
+  }
 
 }
 
@@ -147,10 +254,6 @@
     display: inline-block;
     width: auto;
   }
-
-}
-
-@media only screen and (max-width: 599px) {
 
   /* Node Party - Full view mode */
 
@@ -202,6 +305,21 @@
   #views-exposed-form-candidates-videos-block .views-exposed-form {
     padding-left: 100px;
     margin-left: 10px;
+  }
+
+}
+
+@media only screen and (max-width: 399px) {
+
+  #site-name a {
+    font-size: 40px;
+  }
+
+  /* All Questions block */
+
+  #block-views-all-questions-block-block .content .views-row {
+    width: 100%;
+    margin-right: 0;
   }
 
 }

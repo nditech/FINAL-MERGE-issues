@@ -2,7 +2,7 @@
  * This file contains layout CSS rules and media queries for 768px - 960px range screens.
  **/
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 974px) {
 
   /* Layout elements */
 
@@ -11,13 +11,16 @@
     width: 768px;
   }
 
-  #featured,
-  #featured div.section,
   #messages div.section,
   #main,
   #triptych,
   #footer-columns {
     width: 768px;
+  }
+
+  #featured,
+  #featured div.section {
+    width: 748px;
   }
 
   #header {
@@ -29,6 +32,7 @@
     }
 
   .one-sidebar #content,
+  .two-sidebars #content,
   #sidebar-first,
   #sidebar-second {
     width: 100%;
