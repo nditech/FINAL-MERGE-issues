@@ -22,9 +22,7 @@ function th_main_menu_aaq_callback(){
     return drupal_goto('node/add/question');
   }
   else{
-    $login = url('user', array('query' => array('destination' => 'node/add/question')));
-    $register = url('user/register', array('query' => array('destination' => 'node/add/question')));
-    return t('<a href="@login">Log in</a>/ <a href="@register">register</a> to post a question', array('@login' => $login, '@register' => $register));
+    return l( t('Log in'), 'user', array('query' => array('destination' => 'node/add/question'))) . ' / ' . l(t('register'), 'user/register', array('query' => array('destination' => 'node/add/question'))) . ' to post a question';
   }
 }
 
@@ -44,7 +42,7 @@ function th_main_menu_block_view($delta = '') {
     $candidates_output = views_embed_view('candidates', 'block_1');
     $parteis_output = views_embed_view('parties', 'block_1');
 
-    $output = '<div class="mobile-menu-control">+ Menu</div>';
+    $output = '<div class="mobile-menu-control">' . t('+ Menu') . '</div>';
 
     $output .= '<ul>';
 
