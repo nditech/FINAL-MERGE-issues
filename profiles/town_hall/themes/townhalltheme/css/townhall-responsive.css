@@ -166,6 +166,12 @@
     display: none;
   }
 
+  /* Views filters */
+
+  .views-exposed-form .views-exposed-widget {
+    float: none;
+  }
+
 }
 
 @media only screen and (max-width: 699px) {
@@ -312,7 +318,7 @@
 @media only screen and (max-width: 399px) {
 
   #site-name a {
-    font-size: 40px;
+    font-size: 35px;
   }
 
   /* All Questions block */

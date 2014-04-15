@@ -7,7 +7,7 @@
   /* Layout elements */
 
   #page-wrapper {
-    min-width: 340px;
+    min-width: 320px;
     width: 768px;
   }
 
@@ -51,7 +51,7 @@
   }
 
   #footer {
-    min-width: 340px;
+    min-width: 320px;
     width: 100%;
   }
 
