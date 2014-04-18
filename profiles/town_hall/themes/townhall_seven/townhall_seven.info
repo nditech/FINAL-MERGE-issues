@@ -1,0 +1,6 @@
+name = Townhall Seven
+description = Custom townhall administration theme.
+core = 7.x
+base theme = seven
+
+stylesheets[all][] = style.css

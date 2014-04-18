@@ -184,6 +184,19 @@
     margin-right: 2%;
   }
 
+  /* Submit a Question - Media popup window */
+
+  .page-node-add-question .ui-dialog.media-wrapper {
+    width: 100% !important;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+
+    .page-node-add-question .ui-dialog.media-wrapper > .ui-dialog-content {
+      width: 100% !important;
+    }
+
 }
 
 @media only screen and (max-width: 689px) {
