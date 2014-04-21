@@ -257,6 +257,9 @@
   }
 
   #block-views-th-ef-newsletter-signup-block #th-newsletter-entityform-edit-form label {
+    width: 300px;
+    left: 50%;
+    margin-left: -165px;
     position: absolute;
     top: 7px;
     padding: 0;
@@ -264,8 +267,14 @@
 
   #footer #edit-field-th-email {
     display: inline-block;
+    vertical-align: top;
     float: none;
     width: auto;
+  }
+
+  #block-views-th-ef-newsletter-signup-block input.form-submit {
+    vertical-align: top;
+    margin-left: 4px;
   }
 
   #footer #edit-actions, #footer #edit-actions--2 {

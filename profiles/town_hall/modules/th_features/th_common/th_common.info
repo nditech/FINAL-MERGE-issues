@@ -6,5 +6,6 @@ dependencies[] = strongarm
 dependencies[] = th_social_sharing
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
+features[variable][] = admin_theme
 features[variable][] = site_frontpage
 project path = profiles/town_hall/modules/th_features
