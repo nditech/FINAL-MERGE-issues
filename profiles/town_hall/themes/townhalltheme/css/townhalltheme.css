@@ -1067,22 +1067,42 @@ div.field-type-taxonomy-term-reference {
   border-bottom: 1px solid #C0C0C0;
   margin-bottom: 10px;
   box-shadow: 0 4px 2px -2px #F0F0F0;
+  padding-top: 10px;
 }
 .view-id-home_page_videos .home-page-videos-pager ul.pager {
+  position: relative;
   margin: 0;
-  overflow: hidden;
   padding: 0;
 }
-.view-id-home_page_videos .home-page-videos-pager ul.pager li.pager-previous, .view-id-home_page_videos .home-page-videos-pager ul.pager li.pager-next {
-  text-transform:capitalize;
+.view-id-home_page_videos .home-page-videos-pager ul.pager li.pager-previous,
+.view-id-home_page_videos .home-page-videos-pager ul.pager li.pager-next {
+  position: absolute;
+  top: -41px;
 }
-.view-id-home_page_videos .home-page-videos-pager ul.pager li.pager-previous, .view-id-home_page_videos .home-page-videos-pager ul.pager li.pager-current {
-  float: left;
-  font: 14px/21px "open_sansregular", Arial, Helvetica; 
+.view-id-home_page_videos .home-page-videos-pager ul.pager li.pager-previous {
+  left: 50%;
+  margin-left: -140px;
 }
 .view-id-home_page_videos .home-page-videos-pager ul.pager li.pager-next {
-  float: right;
+  right: 50%;
+  margin-right: -140px;
+}
+.view-id-home_page_videos .home-page-videos-pager ul.pager li.pager-previous a,
+.view-id-home_page_videos .home-page-videos-pager ul.pager li.pager-next a {
+  display: block;
+  width: 25px;
+  height: 30px;
+  text-indent: 2014px;
+  white-space: nowrap;
+  overflow: hidden;
   font: 14px/21px "open_sansregular", Arial, Helvetica;
+  background: url(../images/sprite-arrows.png) no-repeat;
+}
+.view-id-home_page_videos .home-page-videos-pager ul.pager li.pager-previous a {
+  background-position: left center;
+}
+.view-id-home_page_videos .home-page-videos-pager ul.pager li.pager-next a {
+  background-position: right center
 }
 .view-id-home_page_videos .home-page-videos-pager .view-filters {
   text-align: center;
@@ -1095,7 +1115,12 @@ div.field-type-taxonomy-term-reference {
 .view-id-home_page_videos .home-page-videos-pager .view-filters form select {
   width: 195px;
   border: 1px solid #8BC53E;
-  margin-left: 15px;
+}
+.view-id-home_page_videos .home-page-videos-pager .view-filters .views-exposed-form {
+  display: inline-block;
+}
+.view-id-home_page_videos .home-page-videos-pager .view-filters .views-exposed-widget {
+  padding: .5em 0 0;
 }
 .view-id-home_page_videos .home-page-videos-pager li.pager-current {
   display: none;
@@ -1289,7 +1314,7 @@ div.field-type-taxonomy-term-reference {
   color: #333;
 }
 .home-page-videos-pager .item-list + .view-filters {
-  margin-top: -50px;
+  margin-top: -45px;
 }
 .field-name-field-th-comments-display .field-label {
   font:25px/28px "open_sans_condensedbold",Arial,Helvetica;
