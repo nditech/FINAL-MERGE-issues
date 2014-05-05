@@ -193,6 +193,10 @@ input.form-text, textarea.form-textarea, select.form-select {
     margin: 15px 0 5px;
   color: #181818;
 }
+.sthoverbuttons-label {
+  margin: 5px 0 5px 3px !important;
+  white-space: nowrap;
+}
 .region-header {
   width: 270px;
 }
@@ -1393,7 +1397,8 @@ div.field-type-taxonomy-term-reference {
   width: 95px !important;
 }
 .views-field-service-links ul.links li {
-    padding: 0 8px 0 0 !important;
+  max-width: 30%;
+  padding: 0 8px 0 0 !important;
 }
 div.ctools-modal-content fieldset {
   clear: none;
