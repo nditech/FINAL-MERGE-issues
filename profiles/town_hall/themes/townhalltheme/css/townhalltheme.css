@@ -1411,12 +1411,16 @@ div.ctools-modal-content fieldset {
 }
 
 /* Responsive YouTube video embed. */
+.youtube-video-container,
 .field-name-field-th-video .content,
 .views-field-field-th-video .content {
     position: relative;
     padding-bottom: 56.25%;
     padding-top: 30px; height: 0; overflow: hidden;
 }
+.youtube-video-container iframe,
+.youtube-video-container object,
+.youtube-video-container embed,
 .field-name-field-th-video .content iframe,
 .field-name-field-th-video .content object,
 .field-name-field-th-video .content embed,
