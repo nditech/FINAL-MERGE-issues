@@ -21,7 +21,7 @@ function th_newsletter_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'mimemail_format';
-  $strongarm->value = 'mime_mail';
+  $strongarm->value = 'full_html';
   $export['mimemail_format'] = $strongarm;
 
   $strongarm = new stdClass();
