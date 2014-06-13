@@ -38,7 +38,7 @@ Drupal.flagLink = function(context) {
     Drupal.attachBehaviors($newLink.get(0));
 
     $('.flag-message', $newLink).fadeIn();
-    setTimeout(function(){ $('.flag-message.flag-auto-remove', $newLink).fadeOut() }, 6000);
+    setTimeout(function(){ $('.flag-message.flag-auto-remove', $newLink).fadeOut() }, 3000);
     return $newLink.get(0);
   }
 
