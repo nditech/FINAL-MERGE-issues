@@ -1,0 +1,5 @@
+name = Town Hall Content
+description = Default page.
+core = 7.x
+package = Town Hall
+dependencies[] = captcha

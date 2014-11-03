@@ -1,0 +1,61 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function th_main_menu_menu() {
+  $items = array();
+
+  $items['ask-a-question'] = array(
+    'title' => 'Ask a question',
+    'page callback' => 'th_main_menu_aaq_callback',
+    'access arguments' => array('access content'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}
+
+function th_main_menu_aaq_callback(){
+  if(user_access('create question content')){
+
+    return drupal_goto('node/add/question');
+  }
+  else{
+    return l( t('Log in'), 'user', array('query' => array('destination' => 'node/add/question'))) . ' / ' . l(t('register'), 'user/register', array('query' => array('destination' => 'node/add/question'))) . ' ' . t("to post a question.");
+  }
+}
+
+function th_main_menu_block_info() {
+  $blocks['th_main_menu'] = array(
+    'info' => 'Town hall: Main menu',
+    'cache' => DRUPAL_NO_CACHE,
+    'status' => 1,
+  );
+
+  return $blocks;
+}
+
+function th_main_menu_block_view($delta = '') {
+	global $user;
+  if ($delta == 'th_main_menu') {
+    $candidates_output = views_embed_view('candidates', 'block_1');
+    $parteis_output = views_embed_view('parties', 'block_1');
+
+    $output = '<div class="mobile-menu-control">' . t('+ Menu') . '</div>';
+
+    $output .= '<ul>';
+
+    $output .= '<li>' . l(t('Issues'), 'questions') . '</li>';
+    $output .= '<li>' . $candidates_output . '</li>';
+    $output .= '<li>' . $parteis_output . '</li>';
+    $output .= '<li>' . l(t('Ask a question'), 'ask-a-question') . '</li>';
+    $output .= '<li>' . l(t('About'), url('content/about', array('absolute' => true))) . '</li>';
+
+    $output .= '</ul>';
+
+    $block['content'] = array('#markup' => $output);
+
+    return $block;
+  }
+}

@@ -1,0 +1,8 @@
+<?php
+/**
+ * @file
+ * Code for the TH search db feature.
+ */
+
+include_once 'th_search_db.features.inc';
+

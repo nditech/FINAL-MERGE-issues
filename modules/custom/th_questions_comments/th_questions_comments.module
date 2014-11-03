@@ -1,0 +1,27 @@
+<?php
+function th_questions_comments_node_save($node) {
+  //entity reference field to question
+  $field_name = 'field_th_question';
+  $node_type = 'video';
+
+  if ($node->type == $node_type) {
+    if (property_exists($node, $field_name)) {
+      $item = field_get_items('node', $node, $field_name);
+      if ($item) {
+        $nid = array_shift($item);
+        $nid = $nid['target_id'];
+
+        $target_node = node_load($nid);
+
+        if ($target_node) {
+          $target_node->comment = COMMENT_NODE_HIDDEN;
+          node_save($target_node);
+        }
+      }
+    }
+  }
+}
+
+function th_questions_comments_node_update($node) {
+  th_questions_comments_node_save($node);
+}

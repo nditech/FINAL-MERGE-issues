@@ -1,0 +1,4 @@
+name = Town Hall Config
+description = Global configuration of Town Hall.
+core = 7.x
+package = Town Hall

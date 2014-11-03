@@ -1,0 +1,40 @@
+/***
+ * This file contains layout CSS rules and media queries for mobile screens lesser than 768px.
+ **/
+
+@media only screen and (max-width: 782px) {
+
+  /* Layout elements */
+
+  #page-wrapper {
+    min-width: 320px;
+    width: 100%;
+  }
+
+  #header div.section,
+  #featured,
+  #featured div.section,
+  #messages div.section,
+  #main,
+  #triptych,
+  #footer-columns,
+  #footer {
+    width: 100%;
+  }
+
+  #featured,
+  #featured div.section {
+    margin: 0;
+  }
+
+  .one-sidebar #content,
+  #sidebar-first,
+  #sidebar-second {
+    width: 100%;
+  }
+
+  #content .section {
+    padding: 0 10px;
+  }
+
+}

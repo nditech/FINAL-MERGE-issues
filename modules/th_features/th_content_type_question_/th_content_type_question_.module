@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the TH content type (Question) feature.
+ */
+
+include_once 'th_content_type_question_.features.inc';

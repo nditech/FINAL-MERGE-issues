@@ -1,0 +1,5 @@
+name = Town Hall blocks
+description = Various blocks defined for Town Hall.
+core = 7.x
+package = Town Hall
+dependencies[] = block

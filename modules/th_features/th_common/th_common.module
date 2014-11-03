@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the TH common feature.
+ */
+
+include_once 'th_common.features.inc';

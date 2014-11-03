@@ -1,0 +1,6 @@
+name = Create terms
+description = Create terms.
+core = 7.x
+package = Town Hall
+dependencies[] = taxonomy
+dependencies[] = taxonomy_manager

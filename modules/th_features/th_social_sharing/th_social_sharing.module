@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the TH Social Sharing feature.
+ */
+
+include_once 'th_social_sharing.features.inc';

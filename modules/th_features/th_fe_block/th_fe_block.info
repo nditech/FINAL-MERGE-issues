@@ -1,0 +1,10 @@
+name = TH FE Block
+core = 7.x
+package = Town Hall
+dependencies[] = fe_block
+dependencies[] = views
+features[fe_block_settings][] = user-login
+features[fe_block_settings][] = views-candidates_videos-block
+features[fe_block_settings][] = views-issues_videos-block
+features[features_api][] = api:2
+project path = profiles/town_hall/modules/th_features

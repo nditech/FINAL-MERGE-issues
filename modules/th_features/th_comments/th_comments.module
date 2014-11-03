@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the TH comments feature.
+ */
+
+include_once 'th_comments.features.inc';

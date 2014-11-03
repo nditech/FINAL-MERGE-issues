@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the TH feed feature.
+ */
+
+include_once 'th_feed.features.inc';

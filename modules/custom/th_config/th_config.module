@@ -1,0 +1,78 @@
+<?php
+function th_config_menu() {
+
+  $items['admin/config/th_config'] = array(
+    'title' => 'Town Hall config',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('th_config_form'),
+    'access arguments' => array('administer site configuration'),
+  );
+
+  return $items;
+}
+
+function th_config_form($form, &$form_state) {
+  $form = system_settings_form($form);
+
+  $form['#submit'][] = 'th_config_form_submit';
+  $default_search = variable_get('th_search_settings');
+  $default_perm_mode = variable_get('th_permission_mode');
+    $form['th_search_settings'] = array (
+    '#type' => 'select',
+    '#title' => t('Search options'),
+    '#description' => t('By default, "Database" index is enabled. If you have Apache Solr , please enable "Apache Solr"'),
+    '#options' => array(
+      'thd_search' => t('Database'),
+      'ths_search' => t('Apache Solr'),
+    ),
+    '#default_value' => $default_search ? $default_search : '',
+  );
+  $form['th_permission_mode'] = array(
+    '#type' => 'select',
+    '#title' => t('Permission mode'),
+    '#description' => t('Attention! Not recommended to switch "Permission mode" at the working site, it can cause loss of data and settings'),
+    '#options' => array(
+      0 => t('Registered mode'),
+      1 => t('Anonym'),
+    ),
+    '#default_value' => $default_perm_mode ? $default_perm_mode : '',
+  );
+
+  return $form;
+}
+
+function th_config_form_submit($form, &$form_state) {
+
+  if ($form_state['values']['th_search_settings'] == 'thd_search') {
+    if (module_exists('th_search_solr2')) {
+      module_disable(array('th_search_solr2'));
+    }
+    module_enable(array('th_search_db'));
+    db_query("UPDATE {system} SET weight = 99 WHERE name = 'th_search_db'");
+  }
+  else if ($form_state['values']['th_search_settings'] == 'ths_search') {
+    if (module_exists('th_search_db')) {
+      module_disable(array('th_search_db'));
+    }
+    module_enable(array('th_search_solr2'));
+    db_query("UPDATE {system} SET weight = 99 WHERE name = 'th_search_solr2'");
+  }
+
+  if ($form_state['values']['th_permission_mode'] == 0) {
+    if (module_exists('th_permissions_anonym_mode')) {
+      module_disable(array('th_permissions_anonym_mode'));
+    }
+    module_enable(array('th_permissions_register_mode'));
+    db_query("UPDATE {system} SET weight = 99 WHERE name = 'th_permissions_register_mode'");
+  }
+  else if ($form_state['values']['th_permission_mode'] == 1) {
+    if (module_exists('th_permissions_register_mode')) {
+      module_disable(array('th_permissions_register_mode'));
+    }
+    module_enable(array('th_permissions_anonym_mode'));
+    db_query("UPDATE {system} SET weight = 99 WHERE name = 'th_permissions_anonym_mode'");
+  }
+  features_rebuild();
+  features_revert();
+  drupal_flush_all_caches();
+}

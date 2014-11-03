@@ -1,0 +1,96 @@
+<?php
+
+function th_flag_dual_form_flag_form_alter(&$form, &$form_state, $form_id) {
+  $form['messages']['flag_message']['#maxlength'] = 255;
+  $form['messages']['unflag_message']['#maxlength'] = 255;
+}
+
+function th_flag_dual_menu() {
+
+  $items['th_flag_dual/get_json/%/%'] = array(
+    'page callback' => 'th_flag_dual_json',
+    'page arguments' => array(2,3),
+    'access callback' => true,
+    'type' => MENU_CALLBACK,
+  );
+
+  return $items;
+}
+
+function th_flag_dual_json($flag_name, $entity_id) {
+  global $user;
+  $json = array();
+  $flag_name = th_flag_dual_config($flag_name);
+  $flags = flag_get_flags(NULL, NULL, $user);
+  if (isset($flags[$flag_name])) {
+    $flag = $flags[$flag_name];
+    $action = $flag->is_flagged($entity_id) ? 'unflag' : 'flag';
+
+    $link_type = $flag->get_link_type();
+    $link = module_invoke($link_type['module'], 'flag_link', $flag, $action, $entity_id);
+
+    if (isset($link['title']) && empty($link['html'])) {
+      $link['title'] = check_plain($link['title']);
+    }
+
+    unset($link['query']['destination']);
+
+    $json['link_href'] = check_url(url($link['href'], $link));
+    $json['link_text'] = isset($link['title']) ? $link['title'] : $flag->get_label($action . '_short', $entity_id);
+    $json['link_title'] = isset($link['attributes']['title']) ? check_plain($link['attributes']['title']) : check_plain(strip_tags($flag->get_label($action . '_long', $entity_id)));
+    $json['selector'] = '.flag-' . str_replace('_', '-', $flag->name) . '-' . $entity_id;
+    $json['action_class'] = $action . '-action';
+
+
+    drupal_json_output($json);
+    drupal_exit();
+  }
+}
+
+function th_flag_dual_config($key) {
+  $pair = array(
+    'like' => 'unlike',
+    'unlike' => 'like',
+    'unlike_questions' => 'like_questions',
+    'like_questions' => 'unlike_questions',
+    'comment_up' => 'comment_down',
+    'comment_down' => 'comment_up',
+  );
+
+  if (!isset($pair[$key])) {
+    return NULL;
+  }
+  return $pair[$key];
+}
+
+function th_flag_dual_flag_flag($flag, $entity_id, $account, $flagging) {
+  $flags = flag_get_flags(NULL, NULL, $account);
+
+  if ($pair = th_flag_dual_config($flag->name)) {
+    if (isset($flags[$pair])) {
+      $flag_pair = $flags[$pair];
+
+      if ($flag_pair->is_flagged($entity_id)) {
+        $flag_pair->flag('unflag', $entity_id, $account);
+
+      }
+
+    }
+  }
+}
+
+function th_flag_dual_preprocess_flag(&$variables) {
+	if ($variables['after_flagging']) {
+		if (token_scan($variables['message_text'])) {
+			if (preg_match('/\[node\:field\-th\-candidate\:field\-th\-party\:title\]|\[node\:field\-th\-question\:field\-region\:name\]/', $variables['message_text'])) {
+				if (!preg_match('/\[node\:field\-th\-candidate\:field\-th\-first\-name\]|\[node\:field\-th\-candidate\:field\-th\-last\-name\]/', $variables['message_text'])) {
+					$variables['flag']->flag_message = 'Thank you for supporting [node:field-th-candidate:field-th-first-name] [node:field-th-candidate:field-th-last-name]';
+					$variables['message_text'] = $variables['flag']->get_label('flag_message', $variables['entity_id']);
+				}
+				else {
+					$variables['message_text'] = t("Thank you!");
+				}
+			}
+		}
+	}
+}

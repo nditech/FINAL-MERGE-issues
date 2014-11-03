@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the TH Social Sharing module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function th_social_sharing_install() {
+  if(module_exists('sharethis')){
+    module_disable('sharethis');
+    drupal_uninstall_modules(array('sharethis'));
+    drupal_set_message('Share this uninstalled successfully');
+  }
+}

@@ -1,0 +1,353 @@
+/***
+ * This file contains CSS rules and media queries for the website elements.
+ **/
+
+@media only screen and (max-width: 974px) {
+
+  /* Connect With Us - footer block */
+
+  #footer #block-th-blocks-th-block-social-links-footer {
+    display: block;
+    float: none;
+    clear: both;
+    padding-top: 10px;
+    margin: 0 auto;
+  }
+
+  /* partners - right sidebar block */
+
+  #block-th-blocks-th-block-partners .content {
+    text-align: center;
+  }
+
+    #block-th-blocks-th-block-partners img {
+      max-width: 200px;
+      margin: 10px;
+    }
+
+  body > #sthoverbuttons {
+    display: none;
+  }
+
+  #block-th-blocks-th-block-mobile-share-this {
+    display: block;
+  }
+
+  /* All Questions block */
+
+  #block-views-all-questions-block-block .content .views-row {
+    float: left;
+    width: 24%;
+    margin-right: 1%;
+  }
+
+    #block-views-all-questions-block-block .content .views-row a {
+      display: block;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+  /* Add A Question form */
+
+  #question-node-form {
+    padding: 0;
+  }
+
+  #question-node-form label {
+    padding: 0 0 4px;
+  }
+
+  #question-node-form input[type=text] {
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+
+}
+
+@media only screen and (max-width: 782px) {
+
+  #footer #block-th-blocks-th-block-scroll-up-footer {
+    float: none;
+    display: block;
+    width: 55px;
+    margin: 0 auto 10px;
+  }
+
+  #footer #block-views-th-ef-newsletter-signup-block {
+    float: none;
+    display: block;
+    padding: 0;
+    margin: 10px auto;
+  }
+
+  /* Content Styles */
+
+  .view-id-issues_videos table.views-view-grid,
+  .view-id-candidates_videos table,
+  .view-id-th_party_page_videos table {
+    width: 100%;
+  }
+
+  .view-id-issues_videos table td,
+  .view-id-candidates_videos table td,
+  .view-id-th_party_page_videos table td {
+    display: block;
+    padding: 0;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto 20px;
+  }
+
+    .view-id-issues_videos table td .views-field-field-th-video iframe {
+      width: 100%;
+    }
+
+  /* Main Menu block */
+
+  #block-th-main-menu-th-main-menu .mobile-menu-control {
+    display: block;
+  }
+
+  #block-th-main-menu-th-main-menu .content ul {
+    width: 300px;
+    background: url("/profiles/town_hall/themes/townhalltheme/images/menu_bg.jpg") repeat-x bottom left;
+    margin: 0 auto;
+  }
+
+  #block-th-main-menu-th-main-menu .content ul.mobile-enabled {
+    display: none;
+  }
+
+  #block-th-main-menu-th-main-menu .content ul li {
+    float: none;
+    display: block;
+    width: 100%;
+    border-right: none;
+  }
+
+  #block-th-main-menu-th-main-menu .content ul li:hover {
+    background-color: transparent;
+  }
+
+  #block-th-main-menu-th-main-menu .content ul li:hover a,
+  #block-th-main-menu-th-main-menu .content ul li:hover .view .view-header {
+    color: #000;
+  }
+
+  #block-th-main-menu-th-main-menu .content ul li a,
+  #block-th-main-menu-th-main-menu .content ul li .view .view-header {
+    text-align: left;
+    line-height: 45px;
+    padding: 0 20px;
+    cursor: pointer;
+  }
+
+    #block-th-main-menu-th-main-menu .content ul li .view .view-content,
+    #block-th-main-menu-th-main-menu .content ul li:hover .view .view-content {
+      display: none;
+      position: relative;
+    }
+
+    #block-th-main-menu-th-main-menu .content ul li .view .view-content ul li {
+      border: none;
+    }
+
+    #block-th-main-menu-th-main-menu .content ul li .view .view-content ul li a {
+      padding: 0 30px;
+      line-height: 30px;
+    }
+
+  /* Candidates-Parties block */
+
+  .candidates-parties-bloks-wrapper {
+    display: none;
+  }
+
+  /* Views filters */
+
+  .views-exposed-form .views-exposed-widget {
+    float: none;
+  }
+
+}
+
+@media only screen and (max-width: 699px) {
+
+  /* All Questions block */
+
+  #block-views-all-questions-block-block .content .views-row {
+    float: left;
+    width: 48%;
+    margin-right: 2%;
+  }
+
+  /* Submit a Question - Media popup window */
+
+  .page-node-add-question .ui-dialog.media-wrapper {
+    width: 100% !important;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+
+    .page-node-add-question .ui-dialog.media-wrapper > .ui-dialog-content {
+      width: 100% !important;
+    }
+
+}
+
+@media only screen and (max-width: 689px) {
+
+  /* Logo Image */
+  #logo {
+    float: none;
+    display: inline-block;
+    padding: 0;
+  }
+
+  /* Logo Text */
+  #name-and-slogan {
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 0;
+  }
+
+  /* Search Form */
+
+  .region-header {
+    float: none;
+    overflow: hidden;
+    clear: both;
+    margin: 15px 0 0;
+  }
+
+    .region-header .block {
+      margin: 0;
+    }
+
+  /* Search results */
+
+  .view-id-search td .views-field.views-field-field-th-video {
+    width: 100%;
+    float: none;
+    margin-right: 0;
+  }
+
+}
+
+@media only screen and (max-width: 599px) {
+
+  /* Newsletter Signup */
+
+  #footer #block-views-th-ef-newsletter-signup-block {
+    float: none;
+    display: block;
+    position: relative;
+    width: auto;
+    padding: 0;
+    margin: 10px;
+  }
+
+  #footer .view-id-th_ef_newsletter_signup {
+    padding: 40px 0 0;
+  }
+
+  #block-views-th-ef-newsletter-signup-block #th-newsletter-entityform-edit-form label {
+    width: 300px;
+    left: 50%;
+    margin-left: -165px;
+    position: absolute;
+    top: 7px;
+    padding: 0;
+  }
+
+  #footer #edit-field-th-email {
+    display: inline-block;
+    vertical-align: top;
+    float: none;
+    width: auto;
+  }
+
+  #block-views-th-ef-newsletter-signup-block input.form-submit {
+    vertical-align: top;
+    margin-left: 4px;
+  }
+
+  #footer #edit-actions, #footer #edit-actions--2 {
+    float: none;
+    display: inline-block;
+    width: auto;
+  }
+
+  /* Node Party - Full view mode */
+
+  .node-party.view-mode-full .group-left {
+    float: none;
+    width: 100%;
+  }
+
+  .node-party.view-mode-full .group-right {
+    margin-left: 0;
+  }
+
+  /* Node Candidate - Full view mode */
+
+  .node-candidate.view-mode-full .group-left {
+    float: none;
+    width: 100%;
+  }
+
+  .node-candidate.view-mode-full .group-right {
+    margin-left: 0;
+  }
+
+  .node-candidate .field-name-field-image,
+  .node-party .field-name-field-image {
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .node-candidate .field-name-field-th-party,
+  .node-candidate .field-type-text-with-summary,
+  .node-party .field-type-text-with-summary,
+  .node-party .field-name-field-th-video {
+    margin-left: 0;
+  }
+
+  .node-candidate .field-type-media + .field-type-link-field,
+  .node-candidate .field-name-body + .field-type-link-field,
+  .node-candidate .field-name-field-th-party + .field-type-link-field,
+  .node-party .field-type-media + .field-type-link-field,
+  .node-party .field-name-body + .field-type-link-field {
+    margin-left: 0;
+  }
+
+  #views-exposed-form-th-party-page-videos-block .views-exposed-form,
+  #views-exposed-form-candidates-videos-block .views-exposed-form {
+    padding-left: 100px;
+    margin-left: 10px;
+  }
+
+}
+
+@media only screen and (max-width: 399px) {
+
+  #site-name a {
+    font-size: 35px;
+  }
+
+  /* All Questions block */
+
+  #block-views-all-questions-block-block .content .views-row {
+    width: 100%;
+    margin-right: 0;
+  }
+
+}
